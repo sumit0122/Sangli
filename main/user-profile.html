@@ -46,6 +46,8 @@
     <!-- Loader end -->
 
     <!-- header start -->
+   
+
     <header class="inner-page">
         <div class="container">
             <div class="row">
@@ -53,8 +55,8 @@
                     <div class="menu">
                         <div class="brand-logo">
                             <a href="layout-10.html">
-                                <img src="../assets/images/sangli-properties.png" alt="" class="img-fluid for-light">
-                                <img src="../assets/images/sangli-properties.png" alt="" class="img-fluid for-dark">
+                                <img src="../assets/images/sangli-properties.png" alt="" class="img-fluid for-light" style="border-radius: 15px;">
+                                <img src="../assets/images/sangli-properties.png" alt="" class="img-fluid for-dark" style="border-radius: 15px;">
                             </a>
                         </div>
                         <nav>
@@ -71,7 +73,7 @@
                                             </div>
                                         </li>
                                         <li>
-                                            <a class="menu-title" href="layout-10.html">Home</a>
+                                            <a class="menu-title"  href="layout-10.html">Home</a>
                                         </li>
                                         <li>
                                             <a class="menu-title" href="about-us-2.html">About</a>
@@ -79,23 +81,40 @@
                                         <li>
                                             <a class="menu-title" href="tab-layout.html">Property Listing</a>
                                         </li>
+
                                         <li>
                                             <a class="menu-title" href="tablayout-left-sidebar.html">Project Listing</a>
                                         </li>
                                         <li>
-                                            <a class="menu-title" href="services.html">Services</a>
+                                            <a class="menu-title" href="contact-3.html">Contact Us</a>
                                         </li>
                                         <li>
-                                            <a class="menu-title" href="contact-3.html">Contact Us</a>
+                                            <button style="border-radius: 8px;" type="button"
+                                                onclick="document.location='submit-property.html'"
+                                                class="btn btn-solid color-3 btn-flat">submit property</button>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                         </nav>
                         <ul class="header-right">
-                            <li>
+                            <li style="margin-right: 10px;">
+                                <a href="SubscriptionPlan.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" fill="currentColor" class="bi bi-currency-rupee" viewBox="0 0 16 16">
+                                        <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4z"/>
+                                      </svg>
+                                </a>
+                            </li>
+                            <li style="margin-right: 10px;">
+                                <a href="submit-property.html"><i data-feather="bell"></i></a>
+                            </li>
+
+                            <li style="margin-right: 10px;">
                                 <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#login-modal"><i
                                         data-feather="user"></i></a>
+                            </li>
+                            <li>
+                                <a href="user-profile.html"><i data-feather="menu"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -103,11 +122,13 @@
             </div>
         </div>
     </header>
+
+    
     <!--  header end -->
 
 
     <!-- breadcrumb start -->
-    <section class="breadcrumb-section p-0">
+    <!-- <section class="breadcrumb-section p-0">
         <img src="../assets/images/inner-background.jpg" class="bg-img img-fluid" alt="">
         <div class="container">
             <div class="breadcrumb-content">
@@ -122,12 +143,12 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- breadcrumb end -->
 
     <!-- user dashboard section start -->
     <section class="user-dashboard small-section">
-        <div class="container">
+        <div style="padding-top: 80px;" class="container">
             <div class="row">
                 <div class="col-lg-3">
                     <div class="sidebar-user sticky-cls">
@@ -146,31 +167,22 @@
                                     <h6 class="font-roboto mb-0">+91 846 - 547 - 210</h6>
                                 </div>
                             </div>
-                            <div class="connected-social">
-                                <ul class="agent-social">
-                                    <li><a href="https://www.facebook.com/" class="facebook"><i
-                                                class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="https://twitter.com/" class="twitter"><i
-                                                class="fab fa-twitter"></i></a></li>
-                                    <li><a href="https://account.google.com/" class="google"><i
-                                                class="fab fa-google"></i></a></li>
-                                    <li><a href="https://www.linkedin.com/" class="linkedin"><i
-                                                class="fab fa-linkedin-in"></i></a></li>
-                                </ul>
-                            </div>
                         </div>
                         <div class="dashboard-list">
                             <ul class="nav nav-tabs right-line-tab">
+                                <li class="nav-item"><a class="nav-link active" href="user-profile.html">My profile</a></li>
                                 <li class="nav-item"><a class="nav-link" href="user-listing.html">My Listing</a></li>
-                                <li class="nav-item"><a class="nav-link" href="user-create.html">create property</a>
-                                </li>
-                                <li class="nav-item"><a class="nav-link active" href="user-profile.html">My profile</a>
-                                </li>
-                                <li class="nav-item"><a class="nav-link" href="user-favourites.html">favourites</a></li>
+                                <li class="nav-item"><a class="nav-link" href="user-create.html">Create Property</a></li>
+                                <li class="nav-item"><a class="nav-link" href="properties.html">Interested in Your Properties</a></li>
+                                <li class="nav-item"><a class="nav-link" href="Owners.html">Owners you Contacted</a></li>
+                                <li class="nav-item"><a class="nav-link" href="RentedProperties.html">My Rental Properties</a></li>
+                                <li class="nav-item"><a class="nav-link" href="Subscription.html">Subscription</a></li>
+                                <!-- <li class="nav-item"><a class="nav-link" href="Payments.html">Your Payments</a></li> -->
+                                <li class="nav-item"><a class="nav-link" href="user-favourites.html">Favourites</a></li>
                                 <li class="nav-item"><a class="nav-link" href="user-privacy.html">Privacy</a></li>
-                                <li class="nav-item"><a href="javascript:void(0)" data-bs-toggle="modal"
-                                        data-bs-target="#logout" class="nav-link">Log out</a></li>
+                                <li class="nav-item"><a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#logout" class="nav-link">Log out</a></li>
                             </ul>
+                            
                         </div>
                     </div>
                 </div>
@@ -181,7 +193,7 @@
                                 <div class="common-card">
                                     <div class="user-name media">
                                         <div class="media-body">
-                                            <h5>Priti Patil <span class="label label-success">Real estate agent</span>
+                                            <h5>Priti Patil 
                                             </h5>
                                         </div>
                                         <span data-bs-toggle="modal" data-bs-target="#edit-profile"
@@ -197,13 +209,13 @@
                                             <span>priti@gmail.com</span>
                                         </li>
                                         <li>
-                                            <i data-feather="check-square"></i>
-                                            <span>Licensed for 2 years</span>
+                                            <i data-feather="phone"></i>
+                                            <span>9359404565</span>
                                         </li>
                                     </ul>
-                                    <p class="font-roboto">Residences can be classified by and how they are connected to
+                                    <!-- <p class="font-roboto">Residences can be classified by and how they are connected to
                                         neighbouring residences and land.
-                                        Different types of housing tenure can be used for the same physical type.</p>
+                                        Different types of housing tenure can be used for the same physical type.</p> -->
                                 </div>
                                 <div class="common-card">
                                     <div class="row">
@@ -292,8 +304,8 @@
                                 <li><a href="contact-3.html"><i class="fas fa-map-marker-alt"></i></a></li>
                                 <li><a href="contact-3.html"><i class="fas fa-phone-alt"></i></a></li>
                                 <li><a href="signup.html"><i class="fas fa-envelope"></i></a></li>
-                                <li><a href="contact-3.html"><i class="fas fa-globe"></i></a></li>
-                                <li><a href="contact-3.html"><i class="fas fa-wifi"></i></a></li>
+                                <!-- <li><a href="contact-3.html"><i class="fas fa-globe"></i></a></li>
+                                <li><a href="contact-3.html"><i class="fas fa-wifi"></i></a></li> -->
                             </ul>
                         </div>
                     </div>
@@ -332,6 +344,12 @@
                                         <li>
                                             <a href="services.html">Services</a>
                                         </li>
+                                        <!-- <li>
+                                        <a href="agency-list.html">Agency</a>
+                                    </li>
+                                    <li>
+                                        <a href="agent-grid.html">Agents</a>
+                                    </li> -->
                                         <li>
                                             <a href="pricing.html">Pricing</a>
                                         </li>
@@ -356,7 +374,9 @@
                                         <li>
                                             <a href="https://twitter.com/">Twitter</a>
                                         </li>
-
+                                        <!-- <li>
+                                        <a href="https://login.mailchimp.com/">Mail chimp</a>
+                                    </li> -->
                                         <li>
                                             <a href="https://accounts.google.com/">Gmail</a>
                                         </li>
@@ -387,6 +407,70 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- <div class="bottom-blog">
+                        <div class="slick-between">
+                            <div class="footer-slider">
+                                <div>
+                                    <div class="media">
+                                        <a href="blog-detail-left-sidebar.html">
+                                            <div class="img-overlay">
+                                                <img src="../assets/images/footer/1.jpg" alt="">
+                                            </div>
+                                        </a>
+                                        <div class="media-body">
+                                            <h6><a href="blog-detail-left-sidebar.html">Real Estate Industry</a>
+                                            </h6>
+                                            <p class="font-roboto"><a href="blog-detail-right-sidebar.html">An
+                                                    Electronic version of the real estate industry.</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="media">
+                                        <a href="blog-detail-left-sidebar.html">
+                                            <div class="img-overlay">
+                                                <img src="../assets/images/footer/2.jpg" alt="">
+                                            </div>
+                                        </a>
+                                        <div class="media-body">
+                                            <h6><a href="blog-detail-left-sidebar.html">Entertaining Spaces</a></h6>
+                                            <p class="font-roboto"><a href="blog-detail-right-sidebar.html">This
+                                                    home provides
+                                                    wonderful entertaining spaces.</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="media">
+                                        <a href="blog-detail-left-sidebar.html">
+                                            <div class="img-overlay">
+                                                <img src="../assets/images/footer/3.jpg" alt="">
+                                            </div>
+                                        </a>
+                                        <div class="media-body">
+                                            <h6><a href="blog-detail-left-sidebar.html">Estate Agents Work</a></h6>
+                                            <p class="font-roboto"><a href="blog-detail-right-sidebar.html">The
+                                                    market of buying and selling real estate.</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="media">
+                                        <a href="blog-detail-left-sidebar.html">
+                                            <div class="img-overlay">
+                                                <img src="../assets/images/footer/4.jpg" alt="">
+                                            </div>
+                                        </a>
+                                        <div class="media-body">
+                                            <h6><a href="blog-detail-left-sidebar.html">Increase in Demand</a></h6>
+                                            <p class="font-roboto"><a href="blog-detail-right-sidebar.html">The
+                                                    effects of an increase demand in short run.</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
                     </div>
                 </div>
             </div>
@@ -1086,6 +1170,7 @@
 
     <!-- Customizer js-->
     <script src="../assets/js/customizer.js"></script>
+    
 
     <script>
 

@@ -1,5 +1,6 @@
 
-var map = L.map('mapleaf').setView([25.204500, 55.347245], 13);
+// var map = L.map('mapleaf').setView([25.204500, 55.347245], 13);
+var map = L.map('mapleaf').setView([16.8524, 74.5815], 13);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -9,12 +10,12 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 var markersData = {
     'House': [
         {
-            name: 'Sea Breezes',
-            location_latitude: 25.206426,
-            location_longitude: 55.346465,
+            name: 'Little Acorn Farm',
+            location_latitude: 16.8624,
+            location_longitude: 74.5747,
             map_image_url: '../assets/images/property/15.jpg',
-            name_point: 'Sea Breezes',
-            price: '$1200',
+            name_point: 'Little Acorn Farm',
+            price: '₹1,20,000',
             label: 'for sale',
             bed: '4',
             bath: '4',
@@ -24,11 +25,11 @@ var markersData = {
         },
         {
             name: 'Orchard House',
-            location_latitude: 25.222578,
-            location_longitude: 55.319011,
+            location_latitude: 16.8499,
+            location_longitude: 74.5890,
             map_image_url: '../assets/images/6.jpg',
             name_point: 'Orchard House',
-            price: '$1200',
+            price: '₹12,000',
             label: 'for rent',
             bed: '8',
             bath: '6',
@@ -37,12 +38,12 @@ var markersData = {
             url_point: 'single-property-8.html'
         },
         {
-            name: 'Neverland',
-            location_latitude: 25.209843,
-            location_longitude: 55.293616,
+            name: 'Magnolia Ranch',
+            location_latitude: 16.8222,
+            location_longitude: 74.6509,
             map_image_url: '../assets/images/property/14.jpg',
             name_point: 'Neverland',
-            price: '$1200',
+            price: '₹20,000',
             label: 'for sale',
             bed: '4',
             bath: '4',
@@ -52,11 +53,11 @@ var markersData = {
         },
         {
             name: 'Home in Merrick Way',
-            location_latitude: 25.229721,
-            location_longitude: 55.328229,
+            location_latitude: 16.8222,
+            location_longitude: 74.6509,
             map_image_url: '../assets/images/feature/9.jpg',
             name_point: 'Home in Merrick Way',
-            price: '$1200',
+            price: '₹3,00,000',
             label: 'for rent',
             bed: '5',
             bath: '3',

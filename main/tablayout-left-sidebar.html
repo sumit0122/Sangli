@@ -52,6 +52,8 @@
     <!-- Loader end -->
 
     <!-- header start -->
+
+
     <header class="inner-page">
         <div class="container">
             <div class="row">
@@ -59,8 +61,8 @@
                     <div class="menu">
                         <div class="brand-logo">
                             <a href="layout-10.html">
-                                <img src="../assets/images/sangli-properties.png" alt="" class="img-fluid for-light">
-                                <img src="../assets/images/sangli-properties.png" alt="" class="img-fluid for-dark">
+                                <img src="../assets/images/sangli-properties.png" alt="" class="img-fluid for-light" style="border-radius: 15px;">
+                                <img src="../assets/images/sangli-properties.png" alt="" class="img-fluid for-dark" style="border-radius: 15px;">
                             </a>
                         </div>
                         <nav>
@@ -77,7 +79,7 @@
                                             </div>
                                         </li>
                                         <li>
-                                            <a class="menu-title" href="layout-10.html">Home</a>
+                                            <a class="menu-title"  href="layout-10.html">Home</a>
                                         </li>
                                         <li>
                                             <a class="menu-title" href="about-us-2.html">About</a>
@@ -85,23 +87,40 @@
                                         <li>
                                             <a class="menu-title" href="tab-layout.html">Property Listing</a>
                                         </li>
+
                                         <li>
                                             <a class="menu-title" href="tablayout-left-sidebar.html">Project Listing</a>
                                         </li>
                                         <li>
-                                            <a class="menu-title" href="services.html">Services</a>
+                                            <a class="menu-title" href="contact-3.html">Contact Us</a>
                                         </li>
                                         <li>
-                                            <a class="menu-title" href="contact-3.html">Contact Us</a>
+                                            <button style="border-radius: 8px;" type="button"
+                                                onclick="document.location='submit-property.html'"
+                                                class="btn btn-solid color-3 btn-flat">submit property</button>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                         </nav>
                         <ul class="header-right">
-                            <li>
+                            <li style="margin-right: 10px;">
+                                <a href="SubscriptionPlan.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" fill="currentColor" class="bi bi-currency-rupee" viewBox="0 0 16 16">
+                                        <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4z"/>
+                                      </svg>
+                                </a>
+                            </li>
+                            <li style="margin-right: 10px;">
+                                <a href="submit-property.html"><i data-feather="bell"></i></a>
+                            </li>
+
+                            <li style="margin-right: 10px;">
                                 <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#login-modal"><i
                                         data-feather="user"></i></a>
+                            </li>
+                            <li>
+                                <a href="user-profile.html"><i data-feather="menu"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -109,6 +128,8 @@
             </div>
         </div>
     </header>
+
+    
     <!--  header end -->
 
     <!-- breadcrumb start -->
@@ -130,15 +151,59 @@
     </section> -->
     <!-- breadcrumb end -->
 
- 
 
-       <!-- property grid start -->
-    <!-- Section 1  start-->
-    <section style="padding-top: 150px;" class="property-section">
+    <section style="padding-top: 140px; padding-bottom: 0px;" class="property-section">
         <div class="container">
+            <div class="col-12">
+
+                <!-- <p>kskskks</p> -->
+
+                <div class="row align-items-center">
+                    <div class="filter-panel" style="    padding: 0px;
+                        margin-bottom: 0px;
+                        border-bottom: none">
+                        <div class="top-panel">
+                            <div class="search-input-container d-flex align-items-center">
+                                <div id="tags-container" class="tags-container"></div>
+                                <input style="border-radius: 15px; width: 400px; height: 40px;" type="text"
+                                    id="search-input" class="form-control" placeholder="Search your location">
+                                &nbsp;&nbsp;&nbsp;
+                                <button type="button" class="btn btn-gradient color-4 search-btn ml-2">
+                                    Search
+                                </button>
+                            </div>
+                            <ul class="grid-list-filter d-flex">
+                                <li>
+                                    <a href="javascript:void(0)" class="listdata">
+                                        List View
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" class="view-map">
+                                        Map View
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- </div> -->
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- property grid start -->
+    <!-- Section 1  start-->
+    <section class="property-section" id="section1">
+        <div class="container">
+
+
             <div class="row ratio_63">
 
-                <div style="overflow-y: auto; height: 1020px;" class="col-xl-3 col-lg-4">
+                <div style="overflow-y: auto; height: 1030px;" class="col-xl-3 col-lg-4">
                     <div class="left-sidebar">
                         <div class="filter-cards">
                             <div class="advance-card">
@@ -168,8 +233,6 @@
 
                             <div class="advance-card">
                                 <!-- First Section: BHK Type Dropdown (Shown by default) -->
-
-
                                 <div id="bhkDropdown" class="row gx-2">
                                     <div class="advance-card">
                                         <div class="row gx-2">
@@ -193,26 +256,15 @@
 
                                             <!-- Rent Range -->
                                             <div class="col-12">
-                                                <p class="pt-3 text-success"><b>Rent Range: ₹ 0 to ₹ 5 Lacs</b></p>
+                                                <p class="pt-3" style="color: black;"><b>Price Range: ₹ 0 to ₹ 5 Lacs</b></p>
                                                 <div id="slider-range" class="theme-range-2"></div>
                                             </div>
 
-                                            <!-- Visit Properties -->
-                                            <div class="col-12">
-                                                <p class="pt-3 text-success"><b>Visit properties within next 2 days</b>
-                                                </p>
-                                                <div style="display: flex; align-items: center;">
-                                                    <input
-                                                        style="height: 20px;width: 20px; margin-right: 8px; cursor: pointer;"
-                                                        type="checkbox" name="check">
-                                                    <p style="margin: 0;">Show properties where owner is hosting a visit
-                                                    </p>
-                                                </div>
-                                            </div>
+                                           
 
                                             <!-- Availability -->
                                             <div class="col-12">
-                                                <p class="pt-3 text-success"><b>Availability</b></p>
+                                                <p class="pt-3 " style="color: black;"><b>Availability</b></p>
                                                 <div class="d-flex flex-column gap-3">
                                                     <div class="d-flex flex-wrap">
                                                         <div class="d-flex align-items-center w-50">
@@ -241,40 +293,11 @@
                                                 </div>
                                             </div>
 
-                                            <!-- Preferred Tenants -->
-                                            <div class="col-12">
-                                                <p class="pt-3 text-success"><b>Preferred Tenants</b></p>
-                                                <div class="d-flex flex-column gap-3">
-                                                    <div class="d-flex flex-wrap">
-                                                        <div class="d-flex align-items-center w-50">
-                                                            <input style="height: 20px;width: 20px; margin-right: 8px;"
-                                                                type="checkbox" name="tenant-type">
-                                                            <p style="margin: 0;">Family</p>
-                                                        </div>
-                                                        <div class="d-flex align-items-center w-50">
-                                                            <input style="height: 20px;width: 20px; margin-right: 8px;"
-                                                                type="checkbox" name="tenant-type">
-                                                            <p style="margin: 0;">Company</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="d-flex flex-wrap">
-                                                        <div class="d-flex align-items-center w-50">
-                                                            <input style="height: 20px;width: 20px; margin-right: 8px;"
-                                                                type="checkbox" name="tenant-type">
-                                                            <p style="margin: 0;">Bachelor Male</p>
-                                                        </div>
-                                                        <div class="d-flex align-items-center w-50">
-                                                            <input style="height: 20px;width: 20px; margin-right: 8px;"
-                                                                type="checkbox" name="tenant-type">
-                                                            <p style="margin: 0;">Bachelor Female</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                          
 
                                             <!-- Property Type -->
                                             <div class="col-12">
-                                                <p class="pt-3 text-success"><b>Property Type</b></p>
+                                                <p class="pt-3 " style="color: black;"><b>Property Type</b></p>
                                                 <div class="d-flex flex-column gap-3">
                                                     <div class="d-flex flex-wrap align-items-center pb-2">
                                                         <input style="height: 20px;width: 20px; margin-right: 8px;"
@@ -296,7 +319,7 @@
 
                                             <!-- Furnishing -->
                                             <div class="col-12">
-                                                <p class="pt-3 text-success"><b>Furnishing</b></p>
+                                                <p class="pt-3" style="color: black;"><b>Furnishing</b></p>
                                                 <div class="d-flex flex-column gap-3">
                                                     <div class="d-flex flex-wrap">
                                                         <div class="d-flex align-items-center">
@@ -319,8 +342,8 @@
                                             </div>
 
                                             <!-- Parking -->
-                                            <div class="col-12">
-                                                <h6 class="pt-3 text-success"><b>Parking</b></h6>
+                                            <div style="margin-bottom: 30px;" class="col-12">
+                                                <h6 class="pt-3 " style="color: black;"><b>Parking</b></h6>
                                                 <div class="d-flex flex-column gap-3">
                                                     <div class="d-flex flex-wrap">
                                                         <div class="d-flex align-items-center">
@@ -344,60 +367,23 @@
                                                 </div>
                                             </div>
 
-                                            <!-- Auction Property -->
-                                            <div class="col-12">
-                                                <h6 class="pt-3 text-success"><b>Auction Property</b></h6>
-                                                <div class="d-flex align-items-center">
-                                                    <input style="height: 20px;width: 20px; margin-right: 8px;"
-                                                        type="checkbox" name="auction">
-                                                    <p style="margin: 0;">Show Only Auction Property</p>
-                                                </div>
+
+                                            <div style="display: flex;
+                                            justify-content: center;">
+
+                                                <a href="PropertyBuyers.html">
+                                                    <button type="submit"
+                                                        class="btn btn-gradient color-2 btn-block btn-pill">Property
+                                                        Buyers Guide</button>
+                                                </a>
+
                                             </div>
 
 
 
-                                            <div style="padding-top: 10px;">
-                                                <h6 style="padding-top: 12px; color: green;"><b>Core View</b>
-                                                </h6>
-                                                <div class="recent-property">
-                                                    <ul>
-                                                        <li>
-                                                            <div class="media">
-                                                                <img src="../assets/images/property/9.jpg"
-                                                                    class="img-fluid" alt="">
-                                                                <div class="media-body">
-                                                                    <h5>Sea Breezes</h5>
-                                                                    ₹58.0 L - 74.0L
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="media">
-                                                                <img src="../assets/images/property/10.jpg"
-                                                                    class="img-fluid" alt="">
-                                                                <div class="media-body">
-                                                                    <h5>Orchard House</h5>
-                                                                    ₹88.0 L - 92.0L
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="media">
-                                                                <img src="../assets/images/property/11.jpg"
-                                                                    class="img-fluid" alt="">
-                                                                <div class="media-body">
-                                                                    <h5>Neverland</h5>
-                                                                    ₹78.0 L - 88.0L
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
 
-
-                                            <div>
-                                                <h6 style="padding-top: 12px; color: green;"><b>Mortgage</b></h6>
+                                            <div style="margin-top: 20px;">
+                                                <h6 style="padding-top: 12px; color: black;;"><b>Mortgage</b></h6>
                                                 <div class="category-property">
                                                     <form>
                                                         <div class="input-group mb-3">
@@ -420,8 +406,13 @@
                                                             <input type="number" class="form-control"
                                                                 placeholder="Number Of years" required>
                                                         </div>
-                                                        <button type="submit"
-                                                            class="btn btn-gradient color-2 btn-block btn-pill">Calculate</button>
+                                                        
+
+                                                        <div style="display: flex;
+                                                        justify-content: center;">
+                                                            <button type="submit"
+                                                                class="btn btn-gradient color-2 btn-block btn-pill">Calculate</button>
+                                                        </div>
                                                     </form>
                                                 </div>
                                             </div>
@@ -438,7 +429,7 @@
                                         <div class="row gx-2">
 
                                             <div class="col-12">
-                                                <p style=" padding-top: 12px; color: green"><b>Built Up Area(sq.
+                                                <p style=" padding-top: 12px; color: black;"><b>Built Up Area(sq.
                                                         ft.)</b></p>
                                                 <div id="slider-range" class="theme-range-2"></div>
                                             </div>
@@ -463,133 +454,26 @@
                                             </div>
 
 
-
-
                                             <div class="col-12">
-                                                <p style="padding-top: 12px; color: green;">
-                                                    <b>Property Age</b>
-                                                </p>
-
-                                                <div style="display: flex; flex-direction: column; gap: 20px;">
-                                                    <!-- First Line -->
-                                                    <div style="display: flex; align-items: center; gap: 20px;">
-
-                                                        <div style="display: flex; align-items: center; width: 50%;">
-                                                            <input
-                                                                style="height: 20px;width: 20px; margin-right: 8px;cursor: pointer;"
-                                                                type="checkbox" name="check">
-                                                            <p style="margin: 0;">
-                                                                < 1 year </p>
-                                                        </div>
-                                                        <div style="display: flex; align-items: center; width: 50%;">
-                                                            <input
-                                                                style="height: 20px;width: 20px; margin-right: 8px;cursor: pointer;"
-                                                                type="checkbox" name="check">
-                                                            <p style="margin: 0;">
-                                                                < 3 years</p>
-                                                        </div>
-
-                                                    </div>
-
-
-                                                    <div style="display: flex; align-items: center; gap: 20px; ">
-                                                        <div style="display: flex; align-items: center;width: 50%;">
-                                                            <input
-                                                                style="height: 20px;width: 20px; margin-right: 8px;cursor: pointer;"
-                                                                type="checkbox" name="check">
-                                                            <p style="margin: 0;">
-                                                                < 5 years </p>
-                                                        </div>
-
-
-                                                        <div style="display: flex; align-items: center;width: 50%;">
-                                                            <input
-                                                                style="height: 20px;width: 20px; margin-right: 8px;cursor: pointer;"
-                                                                type="checkbox" name="check">
-                                                            <p style="margin: 0;">
-                                                                < 10 years </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="col-12">
-                                                <p style="padding-top: 12px; color: green;">
-                                                    <b>Show Only</b>
-                                                </p>
-
-
-                                                <div style="display: flex; flex-direction: column; gap: 20px;">
-                                                    <!-- First Line -->
-                                                    <div style="display: flex; align-items: center; gap: 20px;">
-
-                                                        <div style="display: flex; align-items: center; width: 50%;">
-                                                            <div
-                                                                style="background-color:#e5e7e9; height: 30px;width: 180px;text-align: center;padding-top: 5px;">
-                                                                Gated Societies</div>
-                                                        </div>
-                                                        <div style="display: flex; align-items: center; width: 50%;">
-                                                            <div
-                                                                style="background-color:#e5e7e9; height: 30px;width: 180px;text-align: center;padding-top: 5px;">
-                                                                Non Veg Allowed</div>
-                                                        </div>
-
-                                                    </div>
-
-
-                                                    <div style="display: flex; align-items: center; gap: 20px; ">
-                                                        <div style="display: flex; align-items: center;width: 50%;">
-                                                            <div
-                                                                style="background-color:#e5e7e9; height: 30px;width: 180px;text-align: center;padding-top: 5px;">
-                                                                With Photos</div>
-                                                        </div>
-
-
-                                                        <div style="display: flex; align-items: center;width: 50%;">
-                                                            <div
-                                                                style="background-color:#e5e7e9; height: 30px;width: 180px;text-align: center;padding-top: 5px;">
-                                                                Gym</div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div style="display: flex; align-items: center; gap: 20px;">
-                                                        <div
-                                                            style="display: flex; align-items: center; padding-bottom: 10px;">
-
-                                                            <input
-                                                                style="height: 20px;width: 20px; margin-right: 8px;cursor: pointer;"
-                                                                type="checkbox" name="check">
-
-                                                            <p style="margin: 0;">Remove Seen Properties</p>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-
-                                            <div class="col-12">
-                                                <p style="padding-top: 12px; color: green;">
+                                                <p style="padding-top: 12px; color: black;;">
                                                     <b>Furnishing</b>
                                                 </p>
-                                              
+
                                                 <div style="display: flex; flex-direction: column; gap: 20px;">
                                                     <!-- First Line -->
                                                     <div style="display: flex; align-items: center; gap: 20px;">
 
                                                         <div style="display: flex; align-items: center; width: 50%;">
                                                             <input
-                                                            style="height: 20px;width: 20px; margin-right: 8px; cursor: pointer;"
-                                                            type="radio" name="check">
-                                                        <p style="margin: 0;">1 or more
+                                                                style="height: 20px;width: 20px; margin-right: 8px; cursor: pointer;"
+                                                                type="radio" name="check">
+                                                            <p style="margin: 0;">1 or more
                                                         </div>
                                                         <div style="display: flex; align-items: center; width: 50%;">
                                                             <input
-                                                            style="height: 20px;width: 20px; margin-right: 8px; cursor: pointer;"
-                                                            type="radio" name="check">
-                                                        <p style="margin: 0;">2 or more</p>
+                                                                style="height: 20px;width: 20px; margin-right: 8px; cursor: pointer;"
+                                                                type="radio" name="check">
+                                                            <p style="margin: 0;">2 or more</p>
                                                         </div>
 
                                                     </div>
@@ -604,7 +488,8 @@
                                                         </div>
 
 
-                                                        <div style="display: flex; align-items: center;width: 50%;"></div>
+                                                        <div style="display: flex; align-items: center;width: 50%;">
+                                                        </div>
                                                     </div>
 
                                                 </div>
@@ -614,8 +499,8 @@
 
 
 
-                                            <div class="col-12">
-                                                <p style="padding-top: 12px; color: green;">
+                                            <div style="margin-bottom: 30px;" class="col-12">
+                                                <p style="padding-top: 12px; color: black;;">
                                                     <b>Floors</b>
                                                 </p>
                                                 <div style="display: flex; flex-direction: column; gap: 20px;">
@@ -670,50 +555,20 @@
                                             </div>
 
 
+                                            <div style="display: flex;
+                                            justify-content: center;">
 
+                                                <a href="PropertyBuyers.html">
+                                                    <button type="submit"
+                                                        class="btn btn-gradient color-2 btn-block btn-pill">Property
+                                                        Buyers Guide</button>
+                                                </a>
 
-                                            <div style="padding-top: 10px;">
-                                                <h6 style="padding-top: 12px; color: green;"><b>Auction Property</b>
-                                                </h6>
-                                                <div class="recent-property">
-                                                    <ul>
-                                                        <li>
-                                                            <div class="media">
-                                                                <img src="../assets/images/property/9.jpg"
-                                                                    class="img-fluid" alt="">
-                                                                <div class="media-body">
-                                                                    <h5>Sea Breezes</h5>
-                                                                    <span>₹9800 / <span>Month</span></span>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="media">
-                                                                <img src="../assets/images/property/10.jpg"
-                                                                    class="img-fluid" alt="">
-                                                                <div class="media-body">
-                                                                    <h5>Orchard House</h5>
-                                                                    <span>₹7500 / <span>Month</span></span>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="media">
-                                                                <img src="../assets/images/property/11.jpg"
-                                                                    class="img-fluid" alt="">
-                                                                <div class="media-body">
-                                                                    <h5>Neverland</h5>
-                                                                    <span>₹5000 / <span>Month</span></span>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
                                             </div>
 
 
-                                            <div>
-                                                <h6 style="padding-top: 12px; color: green;"><b>Mortgage</b></h6>
+                                            <div style="margin-top: 20px;">
+                                                <h6 style="padding-top: 12px; color: black;;"><b>Mortgage</b></h6>
                                                 <div class="category-property">
                                                     <form>
                                                         <div class="input-group mb-3">
@@ -736,8 +591,14 @@
                                                             <input type="number" class="form-control"
                                                                 placeholder="Number Of years" required>
                                                         </div>
-                                                        <button type="submit"
-                                                            class="btn btn-gradient color-2 btn-block btn-pill">Calculate</button>
+
+
+                                                        <div style="display: flex;
+                                                        justify-content: center;">
+                                                            <button type="submit"
+                                                                class="btn btn-gradient color-2 btn-block btn-pill">Calculate</button>
+                                                        </div>
+
                                                     </form>
                                                 </div>
                                             </div>
@@ -766,18 +627,22 @@
 
 
 
-             
+
 
                 <div class="col-xl-9 col-lg-8 property-grid-2">
                     <div class="filter-panel">
                         <div class="top-panel">
+
                             <div>
-                                <b style="    font-weight: 300;
-                                font-size: 25px;
-                                color: #f39c12;
-                            ">Project Listing</b>
+                                <div>
+                                    <b style="font-weight: 600;font-size: 25px;color: #ff5c41;">
+                                        Project Listing
+                                    </b>
+    
+                                </div>
 
                             </div>
+                           
                             <ul class="grid-list-filter d-flex">
                                 <li>
                                     <div class="dropdown">
@@ -792,26 +657,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <!-- <li class="collection-grid-view">
-                                    <ul>
-                                        <li><img src="../assets/images/icon/2.png" alt="" class="product-2-layout-view">
-                                        </li>
-                                        <li><img src="../assets/images/icon/3.png" alt="" class="product-3-layout-view">
-                                        </li>
-                                        <li><img src="../assets/images/icon/4.png" alt="" class="product-4-layout-view">
-                                        </li>
-                                    </ul>
-                                </li> -->
-                                <!-- <li class="grid-btn active">
-                                    <a href="javascript:void(0)" class="grid-layout-view">
-                                        <i data-feather="grid"></i>
-                                    </a>
-                                </li> -->
-                                <!-- <li class="list-btn">
-                                    <a href="javascript:void(0)" class="list-layout-view">
-                                        <i data-feather="list"></i>
-                                    </a>
-                                </li> -->
+
                                 <li class="d-lg-none d-block">
                                     <div>
                                         <h6 class="mb-0 mobile-filter font-roboto">Advance search <i
@@ -847,7 +693,7 @@
 
                                             </a>
                                         </div>
-                                        
+
                                         <div class="seen-data">
                                             <i data-feather="camera"></i>
                                             <!-- <span>42</span> -->
@@ -878,17 +724,17 @@
                                                     <path
                                                         d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
                                                 </svg> &nbsp;6 : BHK</li>
-                                            <!-- <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/bathroom.svg"
-                                                    class="img-fluid" alt="">4: Baths</li> -->
                                             <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/square-ruler-tool.svg"
                                                     class="img-fluid ruler-tool" alt="">500 - 800: Sq Ft</li>
                                         </ul>
 
 
                                         <ul>
-                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
-                                                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
-                                              </svg> &nbsp; Aug 4, 2024</li>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
+                                                </svg> &nbsp; Aug 4, 2024</li>
                                             <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     fill="currentColor" class="bi bi-p-circle" viewBox="0 0 16 16">
                                                     <path
@@ -896,8 +742,17 @@
                                                 </svg> &nbsp; Bike And Car</li>
                                         </ul>
                                         <div class="property-btn d-flex">
-                                            <span></span>
-                                            <button type="button" onclick="document.location='single-property-1.html'"
+                                            <span> <b> Developed By : &nbsp;</b>Patil Contraction</span>
+                                            <!-- <button type="button" onclick="document.location='single-property-1.html'"
+                                                class="btn btn-dashed btn-pill color-2">Details</button> -->
+                                        </div>
+
+
+                                        <div style="display: flex;justify-content: center; padding-top: 10px;"
+                                            class="property-btn d-flex">
+                                            <!-- <span> <b> Developed By : &nbsp;</b>Patil contraction</span> -->
+                                            <button style="width: 200px;" type="button"
+                                                onclick="document.location='single-property-1.html'"
                                                 class="btn btn-dashed btn-pill color-2">Details</button>
                                         </div>
                                     </div>
@@ -926,7 +781,7 @@
 
                                             </a>
                                         </div>
-                                      
+
                                         <div class="seen-data">
                                             <i data-feather="camera"></i>
                                             <!-- <span>42</span> -->
@@ -965,9 +820,11 @@
                                         </ul>
 
                                         <ul>
-                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
-                                                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
-                                              </svg> &nbsp;  Jan 4, 2024</li>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
+                                                </svg> &nbsp; Feb 4, 2022</li>
                                             <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     fill="currentColor" class="bi bi-p-circle" viewBox="0 0 16 16">
                                                     <path
@@ -975,12 +832,22 @@
                                                 </svg> &nbsp; Bike And Car</li>
                                         </ul>
 
-
                                         <div class="property-btn d-flex">
-                                            <span></span>
-                                            <button type="button" onclick="document.location='single-property-1.html'"
+                                            <span> <b> Developed By : &nbsp;</b>Patil Contraction</span>
+                                            <!-- <button type="button" onclick="document.location='single-property-1.html'"
+                                                class="btn btn-dashed btn-pill color-2">Details</button> -->
+                                        </div>
+
+
+                                        <div style="display: flex;justify-content: center; padding-top: 10px;"
+                                            class="property-btn d-flex">
+                                            <!-- <span> <b> Developed By : &nbsp;</b>Patil contraction</span> -->
+                                            <button style="width: 200px;" type="button"
+                                                onclick="document.location='single-property-1.html'"
                                                 class="btn btn-dashed btn-pill color-2">Details</button>
                                         </div>
+
+
                                     </div>
                                 </div>
                             </div>
@@ -1006,7 +873,7 @@
 
                                             </a>
                                         </div>
-                                      
+
                                         <div class="seen-data">
                                             <i data-feather="camera"></i>
                                             <!-- <span>42</span> -->
@@ -1045,9 +912,11 @@
                                         </ul>
 
                                         <ul>
-                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
-                                                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
-                                              </svg> &nbsp;  Aug 7, 2021</li>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
+                                                </svg> &nbsp; Aug 7, 2021</li>
                                             <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     fill="currentColor" class="bi bi-p-circle" viewBox="0 0 16 16">
                                                     <path
@@ -1055,12 +924,22 @@
                                                 </svg> &nbsp; Bike And Car</li>
                                         </ul>
 
-
                                         <div class="property-btn d-flex">
-                                            <span></span>
-                                            <button type="button" onclick="document.location='single-property-1.html'"
+                                            <span> <b> Developed By : &nbsp;</b>Patil Contraction</span>
+                                            <!-- <button type="button" onclick="document.location='single-property-1.html'"
+                                                class="btn btn-dashed btn-pill color-2">Details</button> -->
+                                        </div>
+
+
+                                        <div style="display: flex;justify-content: center; padding-top: 10px;"
+                                            class="property-btn d-flex">
+                                            <!-- <span> <b> Developed By : &nbsp;</b>Patil contraction</span> -->
+                                            <button style="width: 200px;" type="button"
+                                                onclick="document.location='single-property-1.html'"
                                                 class="btn btn-dashed btn-pill color-2">Details</button>
                                         </div>
+
+
                                     </div>
                                 </div>
                             </div>
@@ -1087,7 +966,7 @@
 
                                             </a>
                                         </div>
-                                       
+
                                         <div class="seen-data">
                                             <i data-feather="camera"></i>
                                             <!-- <span>42</span> -->
@@ -1129,20 +1008,34 @@
                                         </ul>
 
                                         <ul>
-                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
-                                                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
-                                              </svg> &nbsp;  Feb 4, 2024</li>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
+                                                </svg> &nbsp; Feb 4, 2024</li>
                                             <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     fill="currentColor" class="bi bi-p-circle" viewBox="0 0 16 16">
                                                     <path
                                                         d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.5 4.002h2.962C10.045 4.002 11 5.104 11 6.586c0 1.494-.967 2.578-2.55 2.578H6.784V12H5.5zm2.77 4.072c.893 0 1.419-.545 1.419-1.488s-.526-1.482-1.42-1.482H6.778v2.97z" />
                                                 </svg> &nbsp; Bike And Car</li>
                                         </ul>
+
+
                                         <div class="property-btn d-flex">
-                                            <span></span>
-                                            <button type="button" onclick="document.location='single-property-1.html'"
+                                            <span> <b> Developed By : &nbsp;</b>Patil Contraction</span>
+                                            <!-- <button type="button" onclick="document.location='single-property-1.html'"
+                                                class="btn btn-dashed btn-pill color-2">Details</button> -->
+                                        </div>
+
+
+                                        <div style="display: flex;justify-content: center; padding-top: 10px;"
+                                            class="property-btn d-flex">
+                                            <!-- <span> <b> Developed By : &nbsp;</b>Patil contraction</span> -->
+                                            <button style="width: 200px;" type="button"
+                                                onclick="document.location='single-property-1.html'"
                                                 class="btn btn-dashed btn-pill color-2">Details</button>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -1169,7 +1062,7 @@
 
                                             </a>
                                         </div>
-                                       
+
                                         <div class="seen-data">
                                             <i data-feather="camera"></i>
                                             <!-- <span>10</span> -->
@@ -1210,9 +1103,11 @@
                                         </ul>
 
                                         <ul>
-                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
-                                                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
-                                              </svg>&nbsp;  Mar 4, 2024</li>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
+                                                </svg>&nbsp; Mar 4, 2024</li>
                                             <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     fill="currentColor" class="bi bi-p-circle" viewBox="0 0 16 16">
                                                     <path
@@ -1221,14 +1116,18 @@
                                         </ul>
 
 
-
-
-
-
-
                                         <div class="property-btn d-flex">
-                                            <span></span>
-                                            <button type="button" onclick="document.location='single-property-1.html'"
+                                            <span> <b> Developed By : &nbsp;</b>Patil Contraction</span>
+                                            <!-- <button type="button" onclick="document.location='single-property-1.html'"
+                                                class="btn btn-dashed btn-pill color-2">Details</button> -->
+                                        </div>
+
+
+                                        <div style="display: flex;justify-content: center; padding-top: 10px;"
+                                            class="property-btn d-flex">
+                                            <!-- <span> <b> Developed By : &nbsp;</b>Patil contraction</span> -->
+                                            <button style="width: 200px;" type="button"
+                                                onclick="document.location='single-property-1.html'"
                                                 class="btn btn-dashed btn-pill color-2">Details</button>
                                         </div>
                                     </div>
@@ -1257,7 +1156,7 @@
 
                                             </a>
                                         </div>
-                                       
+
                                         <div class="seen-data">
                                             <i data-feather="camera"></i>
                                             <span>25</span>
@@ -1296,9 +1195,11 @@
 
 
                                         <ul>
-                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
-                                                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
-                                              </svg>&nbsp; Aug 4, 2022</li>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
+                                                </svg>&nbsp; Aug 4, 2022</li>
                                             <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     fill="currentColor" class="bi bi-p-circle" viewBox="0 0 16 16">
                                                     <path
@@ -1311,8 +1212,17 @@
 
 
                                         <div class="property-btn d-flex">
-                                            <span>January 6, 2022</span>
-                                            <button type="button" onclick="document.location='single-property-1.html'"
+                                            <span> <b> Developed By : &nbsp;</b>Patil Contraction</span>
+                                            <!-- <button type="button" onclick="document.location='single-property-1.html'"
+                                                class="btn btn-dashed btn-pill color-2">Details</button> -->
+                                        </div>
+
+
+                                        <div style="display: flex;justify-content: center; padding-top: 10px;"
+                                            class="property-btn d-flex">
+                                            <!-- <span> <b> Developed By : &nbsp;</b>Patil contraction</span> -->
+                                            <button style="width: 200px;" type="button"
+                                                onclick="document.location='single-property-1.html'"
                                                 class="btn btn-dashed btn-pill color-2">Details</button>
                                         </div>
                                     </div>
@@ -1385,9 +1295,11 @@
 
 
                                         <ul>
-                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
-                                                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
-                                              </svg>&nbsp; Aug 4, 2022</li>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
+                                                </svg>&nbsp; Aug 4, 2022</li>
                                             <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     fill="currentColor" class="bi bi-p-circle" viewBox="0 0 16 16">
                                                     <path
@@ -1398,8 +1310,17 @@
 
 
                                         <div class="property-btn d-flex">
-                                            <span>May 14, 2022</span>
-                                            <button type="button" onclick="document.location='single-property-1.html'"
+                                            <span> <b> Developed By : &nbsp;</b>Patil Contraction</span>
+                                            <!-- <button type="button" onclick="document.location='single-property-1.html'"
+                                                class="btn btn-dashed btn-pill color-2">Details</button> -->
+                                        </div>
+
+
+                                        <div style="display: flex;justify-content: center; padding-top: 10px;"
+                                            class="property-btn d-flex">
+                                            <!-- <span> <b> Developed By : &nbsp;</b>Patil contraction</span> -->
+                                            <button style="width: 200px;" type="button"
+                                                onclick="document.location='single-property-1.html'"
                                                 class="btn btn-dashed btn-pill color-2">Details</button>
                                         </div>
                                     </div>
@@ -1470,10 +1391,12 @@
                                         </ul>
 
 
-                                       <ul>
-                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
-                                                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
-                                              </svg>&nbsp; Aug 4, 2022</li>
+                                        <ul>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
+                                                </svg>&nbsp; Aug 4, 2022</li>
                                             <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     fill="currentColor" class="bi bi-p-circle" viewBox="0 0 16 16">
                                                     <path
@@ -1482,10 +1405,18 @@
                                             </li>
                                         </ul>
 
-
                                         <div class="property-btn d-flex">
-                                            <span>May 14, 2022</span>
-                                            <button type="button" onclick="document.location='single-property-1.html'"
+                                            <span> <b> Developed By : &nbsp;</b>Patil Contraction</span>
+                                            <!-- <button type="button" onclick="document.location='single-property-1.html'"
+                                                class="btn btn-dashed btn-pill color-2">Details</button> -->
+                                        </div>
+
+
+                                        <div style="display: flex;justify-content: center; padding-top: 10px;"
+                                            class="property-btn d-flex">
+                                            <!-- <span> <b> Developed By : &nbsp;</b>Patil contraction</span> -->
+                                            <button style="width: 200px;" type="button"
+                                                onclick="document.location='single-property-1.html'"
                                                 class="btn btn-dashed btn-pill color-2">Details</button>
                                         </div>
                                     </div>
@@ -1493,7 +1424,7 @@
                             </div>
 
 
-                             <div class="col-md-4 wow fadeInUp">
+                            <div class="col-md-4 wow fadeInUp">
                                 <div class="property-box">
                                     <div class="property-image">
                                         <div class="property-slider">
@@ -1557,9 +1488,11 @@
 
 
                                         <ul>
-                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
-                                                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/>
-                                              </svg>&nbsp; Aug 4, 2022</li>
+                                            <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
+                                                </svg>&nbsp; Aug 4, 2022</li>
                                             <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     fill="currentColor" class="bi bi-p-circle" viewBox="0 0 16 16">
                                                     <path
@@ -1570,8 +1503,17 @@
 
 
                                         <div class="property-btn d-flex">
-                                            <span>May 14, 2022</span>
-                                            <button type="button" onclick="document.location='single-property-1.html'"
+                                            <span> <b> Developed By : &nbsp;</b>Patil Contraction</span>
+                                            <!-- <button type="button" onclick="document.location='single-property-1.html'"
+                                                class="btn btn-dashed btn-pill color-2">Details</button> -->
+                                        </div>
+
+
+                                        <div style="display: flex;justify-content: center; padding-top: 10px;"
+                                            class="property-btn d-flex">
+                                            <!-- <span> <b> Developed By : &nbsp;</b>Patil contraction</span> -->
+                                            <button style="width: 200px;" type="button"
+                                                onclick="document.location='single-property-1.html'"
                                                 class="btn btn-dashed btn-pill color-2">Details</button>
                                         </div>
                                     </div>
@@ -1605,6 +1547,517 @@
         </div>
     </section>
 
+
+    <section id="section2" style="display: none;" class="property-section section-sm">
+        <div class="container-fluid">
+            <div class="row ratio_70 property-grid-2 property-map">
+                <div class="col-xl-8  map-section map-leftside">
+                    <div class="map" id="mapleaf"></div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="property-2 row column-sm zoom-gallery property-label property-grid"
+                        style="margin-bottom: 0px; padding-bottom: 0px; padding-top: 10px; height: 485px;">
+                        <div class="col-md-6" style="visibility: visible; animation: none; display: block;">
+                            <div class="property-box">
+                                <div class="property-image">
+                                    <a href="single-property-8.html">
+                                        <img src="../assets/images/property/10.jpg" class="bg-img" alt="">
+                                    </a>
+                                    <div class="labels-left">
+                                        <div>
+                                            <span class="label label-shadow">sale</span>
+                                        </div>
+                                    </div>
+                                    <div class="seen-data">
+                                        <i data-feather="camera"></i>
+                                        <span>42</span>
+                                    </div>
+                                    <!-- <div class="overlay-property-box">
+                                        <a href="compare.html" class="effect-round" data-bs-toggle="tooltip"
+                                            data-bs-placement="left" title="Compare">
+                                            <i data-feather="shuffle"></i>
+                                        </a>
+                                        <a href="user-favourites.html" class="effect-round like"
+                                            data-bs-toggle="tooltip" data-bs-placement="left" title="wishlist">
+                                            <i data-feather="heart"></i>
+                                        </a>
+                                    </div> -->
+                                </div>
+
+                                <div class="property-details" style="padding: 15px;">
+                                    <span class="font-roboto">Sangli</span>
+                                    <a href="single-property-8.html">
+                                        <h6>Little Acorn Farm</h6>
+                                    </a>
+                                    <h6>₹85.00 Lac</h6>
+                                    <ul class="property-features">
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-house" viewBox="0 0 16 16" style="margin-right: 5px;">
+                                                <path
+                                                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                                            </svg>
+                                            2 BHK
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16" style="margin-right: 5px;">
+                                                <path
+                                                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
+                                            </svg> 
+                                            Aug 4, 2024
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/square-ruler-tool.svg"
+                                            class="img-fluid ruler-tool" alt="">500 Sq Ft</li>
+                                        
+                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-p-circle" viewBox="0 0 16 16" style="margin-right: 5px;">
+                                                <path
+                                                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.5 4.002h2.962C10.045 4.002 11 5.104 11 6.586c0 1.494-.967 2.578-2.55 2.578H6.784V12H5.5zm2.77 4.072c.893 0 1.419-.545 1.419-1.488s-.526-1.482-1.42-1.482H6.778v2.97z" />
+                                            </svg>
+                                            Bike
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6" style="visibility: visible; animation: none; display: block;">
+                            <div class="property-box">
+                                <div class="property-image">
+                                    <a href="single-property-8.html">
+                                        <img src="../assets/images/property/16.jpg" class="bg-img" alt="">
+
+                                    </a>
+                                    <div class="labels-left">
+                                        <div>
+                                            <span class="label label-success">rent</span>
+                                        </div>
+                                    </div>
+                                    <div class="seen-data">
+                                        <i data-feather="camera"></i>
+                                        <span>42</span>
+                                    </div>
+                                    <div class="overlay-property-box">
+                                        <a href="compare.html" class="effect-round" data-bs-toggle="tooltip"
+                                            data-bs-placement="left" title="Compare">
+                                            <i data-feather="shuffle"></i>
+                                        </a>
+                                        <a href="user-favourites.html" class="effect-round like"
+                                            data-bs-toggle="tooltip" data-bs-placement="left" title="wishlist">
+                                            <i data-feather="heart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="property-details" style="padding: 15px;">
+                                    <span class="font-roboto">Sangli</span>
+                                    <a href="single-property-8.html">
+                                        <h6>Magnolia Ranch</h6>
+                                    </a>
+                                    <h6>₹95.00 Lac</h6>
+
+
+                                    <ul class="property-features">
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-house" viewBox="0 0 16 16" style="margin-right: 5px;">
+                                                <path
+                                                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                                            </svg>
+                                            3 BHK
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16" style="margin-right: 5px;">
+                                                <path
+                                                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
+                                            </svg> 
+                                            Jan 8, 2025
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/square-ruler-tool.svg"
+                                            class="img-fluid ruler-tool" alt="">500 Sq Ft</li>
+                                        
+                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-p-circle" viewBox="0 0 16 16" style="margin-right: 5px;">
+                                                <path
+                                                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.5 4.002h2.962C10.045 4.002 11 5.104 11 6.586c0 1.494-.967 2.578-2.55 2.578H6.784V12H5.5zm2.77 4.072c.893 0 1.419-.545 1.419-1.488s-.526-1.482-1.42-1.482H6.778v2.97z" />
+                                            </svg>
+                                            Car
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6" style="visibility: visible; animation: none; display: block;">
+                            <div class="property-box">
+                                <div class="property-image">
+                                    <a href="single-property-8.html">
+                                        <img src="../assets/images/property/16.jpg" class="bg-img" alt="">
+
+                                    </a>
+                                    <div class="labels-left">
+                                        <div>
+                                            <span class="label label-success">rent</span>
+                                        </div>
+
+                                    </div>
+                                    <div class="seen-data">
+                                        <i data-feather="camera"></i>
+                                        <span>42</span>
+                                    </div>
+                                    <div class="overlay-property-box">
+                                        <a href="compare.html" class="effect-round" data-bs-toggle="tooltip"
+                                            data-bs-placement="left" title="Compare">
+                                            <i data-feather="shuffle"></i>
+                                        </a>
+                                        <a href="user-favourites.html" class="effect-round like"
+                                            data-bs-toggle="tooltip" data-bs-placement="left" title="wishlist">
+                                            <i data-feather="heart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="property-details" style="padding: 15px;">
+                                    <span class="font-roboto">Sangli</span>
+                                    <a href="single-property-8.html">
+                                        <h6>Magnolia Ranch</h6>
+                                    </a>
+                                    <h6>₹95.00 Lac</h6>
+
+                                    <ul class="property-features">
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-house" viewBox="0 0 16 16" style="margin-right: 5px;">
+                                                <path
+                                                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                                            </svg>
+                                            2 BHK
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16" style="margin-right: 5px;">
+                                                <path
+                                                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
+                                            </svg> 
+                                            Aug 20, 2026
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/square-ruler-tool.svg"
+                                            class="img-fluid ruler-tool" alt="">500 Sq Ft</li>
+                                        
+                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-p-circle" viewBox="0 0 16 16" style="margin-right: 5px;">
+                                                <path
+                                                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.5 4.002h2.962C10.045 4.002 11 5.104 11 6.586c0 1.494-.967 2.578-2.55 2.578H6.784V12H5.5zm2.77 4.072c.893 0 1.419-.545 1.419-1.488s-.526-1.482-1.42-1.482H6.778v2.97z" />
+                                            </svg>
+                                            Bike
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6" style="visibility: visible; animation: none; display: block;">
+                            <div class="property-box">
+                                <div class="property-image">
+                                    <a href="single-property-8.html">
+                                        <img src="../assets/images/property/14.jpg" class="bg-img" alt="">
+
+                                    </a>
+                                    <div class="labels-left">
+                                        <div>
+                                            <span class="label label-success">rent</span>
+                                        </div>
+                                    </div>
+                                    <div class="seen-data">
+                                        <i data-feather="camera"></i>
+                                        <span>42</span>
+                                    </div>
+                                    <div class="overlay-property-box">
+                                        <a href="compare.html" class="effect-round" data-bs-toggle="tooltip"
+                                            data-bs-placement="left" title="Compare">
+                                            <i data-feather="shuffle"></i>
+                                        </a>
+                                        <a href="user-favourites.html" class="effect-round like"
+                                            data-bs-toggle="tooltip" data-bs-placement="left" title="wishlist">
+                                            <i data-feather="heart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="property-details" style="padding: 15px;">
+                                    <span class="font-roboto">Sangli</span>
+                                    <a href="single-property-8.html">
+                                        <h6>Hidden Hideway</h6>
+                                    </a>
+                                    <h6>₹95.00 Lac</h6>
+
+                                    <ul class="property-features">
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-house" viewBox="0 0 16 16" style="margin-right: 5px;">
+                                                <path
+                                                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                                            </svg>
+                                            2 BHK
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16" style="margin-right: 5px;">
+                                                <path
+                                                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
+                                            </svg> 
+                                            Aug 4, 2024
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/square-ruler-tool.svg"
+                                            class="img-fluid ruler-tool" alt="">500 Sq Ft</li>
+                                        
+                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-p-circle" viewBox="0 0 16 16" style="margin-right: 5px;">
+                                                <path
+                                                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.5 4.002h2.962C10.045 4.002 11 5.104 11 6.586c0 1.494-.967 2.578-2.55 2.578H6.784V12H5.5zm2.77 4.072c.893 0 1.419-.545 1.419-1.488s-.526-1.482-1.42-1.482H6.778v2.97z" />
+                                            </svg>
+                                            Bike
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6" style="visibility: visible; animation: none; display: block;">
+                            <div class="property-box">
+                                <div class="property-image">
+                                    <a href="single-property-8.html">
+                                        <img src="../assets/images/property/16.jpg" class="bg-img" alt="">
+
+                                    </a>
+                                    <div class="labels-left">
+                                        <div>
+                                            <span class="label label-success">rent</span>
+                                        </div>
+                                    </div>
+                                    <div class="seen-data">
+                                        <i data-feather="camera"></i>
+                                        <span>42</span>
+                                    </div>
+                                    <div class="overlay-property-box">
+                                        <a href="compare.html" class="effect-round" data-bs-toggle="tooltip"
+                                            data-bs-placement="left" title="Compare">
+                                            <i data-feather="shuffle"></i>
+                                        </a>
+                                        <a href="user-favourites.html" class="effect-round like"
+                                            data-bs-toggle="tooltip" data-bs-placement="left" title="wishlist">
+                                            <i data-feather="heart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="property-details" style="padding: 15px;">
+                                    <span class="font-roboto">Sangli</span>
+                                    <a href="single-property-8.html">
+                                        <h6>Magnolia Ranch</h3>
+                                    </a>
+                                    <h6>₹95.00 Lac</h6>
+
+
+                                    <ul class="property-features">
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-house" viewBox="0 0 16 16" style="margin-right: 5px;">
+                                                <path
+                                                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                                            </svg>
+                                            4 BHK
+                                        </li>
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16" style="margin-right: 5px;">
+                                                <path
+                                                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
+                                            </svg> 
+                                            Nov 10, 2024
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/square-ruler-tool.svg"
+                                            class="img-fluid ruler-tool" alt="">500 Sq Ft</li>
+                                        
+                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-p-circle" viewBox="0 0 16 16" style="margin-right: 5px;">
+                                                <path
+                                                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.5 4.002h2.962C10.045 4.002 11 5.104 11 6.586c0 1.494-.967 2.578-2.55 2.578H6.784V12H5.5zm2.77 4.072c.893 0 1.419-.545 1.419-1.488s-.526-1.482-1.42-1.482H6.778v2.97z" />
+                                            </svg>
+                                            Car
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="height: 620px;" class="feature-section feature-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="title-1 text-white">
+                        <!-- <span class="label label-gradient color-1">Our</span> -->
+                        <h2>Trending projects</h2>
+                        <hr>
+                    </div>
+                    <div class="feature-1 arrow-light">
+                        <div>
+                            <div class="feature-wrapper">
+                                <div class="row">
+                                    <div class="col-xl-4 col-lg-3">
+                                        <div class="feature-left">
+                                            <div class="property-details">
+                                                <span class="font-roboto">Sangli</span>
+                                                <a href="single-property-8.html" class="mb-3">
+                                                    <h3 class="d-flex">Little Acorn Farm <span><span
+                                                                class="label label-dark label-pill">Open
+                                                                house</span></span></h3>
+                                                </a>
+                                                <h6 class="color-1">₹95.00 Lac</h6>
+                                                <!-- <p class="font-roboto">Residences can be classified by and how they are connected to neighbouring residences and land. 
+                                                    Different types of housing tenure can be used for the same physical type.</p> -->
+
+                                                <p style="font-weight: 500;"><b>Address &nbsp;: &nbsp;</b>Flat No. 12B,
+                                                    Shree
+                                                    Apartments, 3rd Cross Road, Sangli 416416</p>
+
+
+
+
+                                                <ul>
+                                                    <li> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                            fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                                                        </svg>3 BHK</li>
+
+                                                    <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/double-bed.svg"
+                                                            class="img-fluid" alt="">Furnished</li>
+                                                    <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/bathroom.svg"
+                                                            class="img-fluid" alt="">Baths : 3</li>
+                                                    <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/square-ruler-tool.svg"
+                                                            class="img-fluid ruler-tool" alt="">Sq Ft : 500 to 1000</li>
+
+
+                                                </ul>
+                                                <a href="user-favourites.html">
+                                                    <span class="round-half">
+                                                        <i data-feather="heart"></i>
+                                                    </span>
+                                                </a>
+                                                <div class="property-btn">
+                                                    <button style="width: 200px;" type="button"
+                                                    onclick="document.location='single-property-1.html'"
+                                                    class="btn btn-dashed btn-pill color-2">Details</button>
+                                                    
+                                                    <!-- <a href="single-property-1.html">
+                                                        <a class="btn btn-dashed btn-pill color-1" tabindex="0">Details</a>
+                                                    </a> -->
+                                                 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-8 col-lg-9 order-md">
+                                        <div style="height: 400px;" class="feature-image">
+                                            <img src="../assets/images/property/4.jpg" class="bg-img" alt="">
+                                            <h4>Rosewood Ramble</h4>
+                                            <span class="box-color"></span>
+                                            <span class="signature">
+                                                <img src="../assets/images/signature/1.png" alt="">
+                                            </span>
+                                            <!-- <span class="label label-white label-lg color-1">Featured</span> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="feature-wrapper">
+                                <div class="row">
+                                    <div class="col-xl-4 col-lg-3">
+                                        <div class="feature-left ">
+                                            <div class="property-details">
+                                                <span class="font-roboto">Sangli</span>
+                                                <a href="single-property-8.html" class="mb-3">
+                                                    <h3 class="d-flex">Sunny Meadows<span><span
+                                                                class="label label-dark label-pill">Open
+                                                                house</span></span></h3>
+                                                </a>
+                                                <h6 class="color-1">₹95.00 Lac</h6>
+                                                <!-- <p class="font-roboto">Residences can be classified by and how they are connected to neighbouring residences and land. 
+                                                    Different types of housing tenure can be used for the same physical type.</p> -->
+
+                                                <p style="font-weight: 500;"><b>Address &nbsp;: &nbsp;</b>Flat No. 12B,
+                                                    shrddha
+                                                    Apartments, 3rd Cross Road, Miraj 410410</p>
+
+
+
+
+                                                <ul>
+                                                    <li> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                            fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                                                        </svg>3 BHK</li>
+
+                                                    <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/double-bed.svg"
+                                                            class="img-fluid" alt="">Furnished</li>
+                                                    <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/bathroom.svg"
+                                                            class="img-fluid" alt="">Baths : 3</li>
+                                                    <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/square-ruler-tool.svg"
+                                                            class="img-fluid ruler-tool" alt="">Sq Ft : 500 to 1000</li>
+
+
+                                                </ul>
+                                                <a href="user-favourites.html">
+                                                    <span class="round-half">
+                                                        <i data-feather="heart"></i>
+                                                    </span>
+                                                </a>
+                                                <div class="property-btn">
+                                                    <button style="width: 200px;" type="button"
+                                                    onclick="document.location='single-property-1.html'"
+                                                    class="btn btn-dashed btn-pill color-2">Details</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-8 col-lg-9 order-md">
+                                        <div style="height: 400px;" class="feature-image">
+                                            <img src="../assets/images/property/5.jpg" class="bg-img" alt="">
+                                            <h4>FAMILY HOME</h4>
+                                            <span class="box-color"></span>
+                                            <span class="signature">
+                                                <img src="../assets/images/signature/1.png" alt="">
+                                            </span>
+                                            <!-- <span class="label label-white label-lg color-1">Featured</span> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <!-- Section 1 end -->
     <!-- footer start -->
     <footer>
@@ -1624,8 +2077,8 @@
                                 <li><a href="contact-3.html"><i class="fas fa-map-marker-alt"></i></a></li>
                                 <li><a href="contact-3.html"><i class="fas fa-phone-alt"></i></a></li>
                                 <li><a href="signup.html"><i class="fas fa-envelope"></i></a></li>
-                                <li><a href="contact-3.html"><i class="fas fa-globe"></i></a></li>
-                                <li><a href="contact-3.html"><i class="fas fa-wifi"></i></a></li>
+                                <!-- <li><a href="contact-3.html"><i class="fas fa-globe"></i></a></li>
+                                <li><a href="contact-3.html"><i class="fas fa-wifi"></i></a></li> -->
                             </ul>
                         </div>
                     </div>
@@ -1665,11 +2118,11 @@
                                             <a href="services.html">Services</a>
                                         </li>
                                         <!-- <li>
-                                            <a href="agency-list.html">Agency</a>
-                                        </li>
-                                        <li>
-                                            <a href="agent-grid.html">Agents</a>
-                                        </li> -->
+                                        <a href="agency-list.html">Agency</a>
+                                    </li>
+                                    <li>
+                                        <a href="agent-grid.html">Agents</a>
+                                    </li> -->
                                         <li>
                                             <a href="pricing.html">Pricing</a>
                                         </li>
@@ -1694,7 +2147,9 @@
                                         <li>
                                             <a href="https://twitter.com/">Twitter</a>
                                         </li>
-
+                                        <!-- <li>
+                                        <a href="https://login.mailchimp.com/">Mail chimp</a>
+                                    </li> -->
                                         <li>
                                             <a href="https://accounts.google.com/">Gmail</a>
                                         </li>
@@ -1726,69 +2181,69 @@
                             </div>
                         </div>
                         <!-- <div class="bottom-blog">
-                            <div class="slick-between">
-                                <div class="footer-slider">
-                                    <div>
-                                        <div class="media">
-                                            <a href="blog-detail-left-sidebar.html">
-                                                <div class="img-overlay">
-                                                    <img src="../assets/images/footer/1.jpg" alt="">
-                                                </div>
-                                            </a>
-                                            <div class="media-body">
-                                                <h6><a href="blog-detail-left-sidebar.html">Real Estate Industry</a>
-                                                </h6>
-                                                <p class="font-roboto"><a href="blog-detail-right-sidebar.html">An
-                                                        Electronic version of the real estate industry.</a></p>
+                        <div class="slick-between">
+                            <div class="footer-slider">
+                                <div>
+                                    <div class="media">
+                                        <a href="blog-detail-left-sidebar.html">
+                                            <div class="img-overlay">
+                                                <img src="../assets/images/footer/1.jpg" alt="">
                                             </div>
+                                        </a>
+                                        <div class="media-body">
+                                            <h6><a href="blog-detail-left-sidebar.html">Real Estate Industry</a>
+                                            </h6>
+                                            <p class="font-roboto"><a href="blog-detail-right-sidebar.html">An
+                                                    Electronic version of the real estate industry.</a></p>
                                         </div>
                                     </div>
-                                    <div>
-                                        <div class="media">
-                                            <a href="blog-detail-left-sidebar.html">
-                                                <div class="img-overlay">
-                                                    <img src="../assets/images/footer/2.jpg" alt="">
-                                                </div>
-                                            </a>
-                                            <div class="media-body">
-                                                <h6><a href="blog-detail-left-sidebar.html">Entertaining Spaces</a></h6>
-                                                <p class="font-roboto"><a href="blog-detail-right-sidebar.html">This
-                                                        home provides
-                                                        wonderful entertaining spaces.</a></p>
+                                </div>
+                                <div>
+                                    <div class="media">
+                                        <a href="blog-detail-left-sidebar.html">
+                                            <div class="img-overlay">
+                                                <img src="../assets/images/footer/2.jpg" alt="">
                                             </div>
+                                        </a>
+                                        <div class="media-body">
+                                            <h6><a href="blog-detail-left-sidebar.html">Entertaining Spaces</a></h6>
+                                            <p class="font-roboto"><a href="blog-detail-right-sidebar.html">This
+                                                    home provides
+                                                    wonderful entertaining spaces.</a></p>
                                         </div>
                                     </div>
-                                    <div>
-                                        <div class="media">
-                                            <a href="blog-detail-left-sidebar.html">
-                                                <div class="img-overlay">
-                                                    <img src="../assets/images/footer/3.jpg" alt="">
-                                                </div>
-                                            </a>
-                                            <div class="media-body">
-                                                <h6><a href="blog-detail-left-sidebar.html">Estate Agents Work</a></h6>
-                                                <p class="font-roboto"><a href="blog-detail-right-sidebar.html">The
-                                                        market of buying and selling real estate.</a></p>
+                                </div>
+                                <div>
+                                    <div class="media">
+                                        <a href="blog-detail-left-sidebar.html">
+                                            <div class="img-overlay">
+                                                <img src="../assets/images/footer/3.jpg" alt="">
                                             </div>
+                                        </a>
+                                        <div class="media-body">
+                                            <h6><a href="blog-detail-left-sidebar.html">Estate Agents Work</a></h6>
+                                            <p class="font-roboto"><a href="blog-detail-right-sidebar.html">The
+                                                    market of buying and selling real estate.</a></p>
                                         </div>
                                     </div>
-                                    <div>
-                                        <div class="media">
-                                            <a href="blog-detail-left-sidebar.html">
-                                                <div class="img-overlay">
-                                                    <img src="../assets/images/footer/4.jpg" alt="">
-                                                </div>
-                                            </a>
-                                            <div class="media-body">
-                                                <h6><a href="blog-detail-left-sidebar.html">Increase in Demand</a></h6>
-                                                <p class="font-roboto"><a href="blog-detail-right-sidebar.html">The
-                                                        effects of an increase demand in short run.</a></p>
+                                </div>
+                                <div>
+                                    <div class="media">
+                                        <a href="blog-detail-left-sidebar.html">
+                                            <div class="img-overlay">
+                                                <img src="../assets/images/footer/4.jpg" alt="">
                                             </div>
+                                        </a>
+                                        <div class="media-body">
+                                            <h6><a href="blog-detail-left-sidebar.html">Increase in Demand</a></h6>
+                                            <p class="font-roboto"><a href="blog-detail-right-sidebar.html">The
+                                                    effects of an increase demand in short run.</a></p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div> -->
+                        </div>
+                    </div> -->
                     </div>
                 </div>
             </div>
@@ -2205,7 +2660,7 @@
     <!-- tap to top end -->
 
     <!-- latest jquery-->
- 
+
     <!-- latest jquery-->
     <script src="../assets/js/jquery-3.6.0.min.js"></script>
 
@@ -2570,6 +3025,92 @@
         }
     </style>
 
+
+
+    <script>
+        (function ($) {
+            "use strict";
+            // colorpicker js
+            var color_picker3 = document.getElementById("ColorPicker3").value;
+            document.getElementById("ColorPicker3").onchange = function () {
+                color_picker3 = this.value;
+                document.documentElement.style.setProperty('--theme-default3', color_picker3);
+            };
+
+            var color_picker4 = document.getElementById("ColorPicker4").value;
+            document.getElementById("ColorPicker4").onchange = function () {
+                color_picker4 = this.value;
+                document.documentElement.style.setProperty('--theme-default4', color_picker4);
+            };
+
+            $(".view-map").on("click", function () {
+                map.invalidateSize();
+            });
+        })(jQuery);
+    </script>
+
+
+    <script>
+        (function ($) {
+            "use strict";
+
+            // Handle "Map" click event
+            $(".view-map").on("click", function () {
+                // Hide Section 1
+                $("#section1").hide();
+                // Show Section 2
+                $("#section2").show();
+
+                // Invalidate the map size to ensure it displays correctly
+                if (typeof map !== "undefined") {
+                    map.invalidateSize();
+                }
+
+                // Show the modal at the right side of the map
+                $("#mapModal").show();
+            });
+
+            // Handle "List" click event
+            $(".listdata").on("click", function () {
+                // Show Section 1
+                $("#section1").show();
+                // Hide Section 2
+                $("#section2").hide();
+
+                // Hide the modal if it was shown
+                $("#mapModal").hide();
+            });
+
+            // Close the modal when the close button is clicked
+            $(".modal .close").on("click", function () {
+                $("#mapModal").hide();
+            });
+        })(jQuery);
+    </script>
+
+
+    <style>
+        #mapleaf {
+            height: 500px;
+            width: 100%;
+            position: relative;
+        }
+
+        .modal-content {
+            z-index: 1050;
+        }
+
+        .modal .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+        #mapModal {
+            display: block;
+        }
+    </style>
 
 </body>
 

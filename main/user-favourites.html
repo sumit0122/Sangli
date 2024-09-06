@@ -45,6 +45,7 @@
     <!-- Loader end -->
 
     <!-- header start -->
+
     <header class="inner-page">
         <div class="container">
             <div class="row">
@@ -52,14 +53,16 @@
                     <div class="menu">
                         <div class="brand-logo">
                             <a href="layout-10.html">
-                                <img src="../assets/images/sangli-properties.png" alt="" class="img-fluid for-light">
-                                <img src="../assets/images/logo/9.png" alt="" class="img-fluid for-dark">
+                                <img src="../assets/images/sangli-properties.png" alt="" class="img-fluid for-light" style="border-radius: 15px;">
+                                <img src="../assets/images/sangli-properties.png" alt="" class="img-fluid for-dark" style="border-radius: 15px;">
                             </a>
                         </div>
                         <nav>
                             <div class="main-navbar">
                                 <div id="mainnav">
-                                    <div class="toggle-nav"><i class="fa fa-bars sidebar-bar"></i></div>
+                                    <div class="toggle-nav">
+                                        <i class="fa fa-bars sidebar-bar"></i>
+                                    </div>
                                     <ul class="nav-menu">
                                         <li class="back-btn">
                                             <div class="mobile-back text-end">
@@ -68,7 +71,7 @@
                                             </div>
                                         </li>
                                         <li>
-                                            <a class="menu-title" href="layout-10.html">Home</a>
+                                            <a class="menu-title"  href="layout-10.html">Home</a>
                                         </li>
                                         <li>
                                             <a class="menu-title" href="about-us-2.html">About</a>
@@ -76,23 +79,40 @@
                                         <li>
                                             <a class="menu-title" href="tab-layout.html">Property Listing</a>
                                         </li>
+
                                         <li>
                                             <a class="menu-title" href="tablayout-left-sidebar.html">Project Listing</a>
                                         </li>
                                         <li>
-                                            <a class="menu-title" href="services.html">Services</a>
+                                            <a class="menu-title" href="contact-3.html">Contact Us</a>
                                         </li>
                                         <li>
-                                            <a class="menu-title" href="contact-3.html">Contact Us</a>
+                                            <button style="border-radius: 8px;" type="button"
+                                                onclick="document.location='submit-property.html'"
+                                                class="btn btn-solid color-3 btn-flat">submit property</button>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                         </nav>
                         <ul class="header-right">
-                            <li>
+                            <li style="margin-right: 10px;">
+                                <a href="SubscriptionPlan.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" fill="currentColor" class="bi bi-currency-rupee" viewBox="0 0 16 16">
+                                        <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4z"/>
+                                      </svg>
+                                </a>
+                            </li>
+                            <li style="margin-right: 10px;">
+                                <a href="submit-property.html"><i data-feather="bell"></i></a>
+                            </li>
+
+                            <li style="margin-right: 10px;">
                                 <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#login-modal"><i
                                         data-feather="user"></i></a>
+                            </li>
+                            <li>
+                                <a href="user-profile.html"><i data-feather="menu"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -103,7 +123,7 @@
     <!--  header end -->
 
     <!-- breadcrumb start -->
-    <section class="breadcrumb-section p-0">
+    <!-- <section class="breadcrumb-section p-0">
         <img src="../assets/images/inner-background.jpg" class="bg-img img-fluid" alt="">
         <div class="container">
             <div class="breadcrumb-content">
@@ -118,12 +138,12 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- breadcrumb end -->
 
     <!-- user dashboard section start -->
     <section class="user-dashboard small-section">
-        <div class="container">
+        <div style="padding-top: 80px;" class="container">
             <div class="row">
                 <div class="col-lg-3">
                     <div class="sidebar-user sticky-cls">
@@ -143,7 +163,7 @@
                                 </div>
                             </div>
                             <div class="connected-social">
-                                <h6>Connect with</h6>
+                                <!-- <h6>Connect with</h6>
                                 <ul class="agent-social">
                                     <li><a href="https://www.facebook.com/" class="facebook"><i
                                                 class="fab fa-facebook-f"></i></a></li>
@@ -153,22 +173,26 @@
                                                 class="fab fa-google"></i></a></li>
                                     <li><a href="https://www.linkedin.com/" class="linkedin"><i
                                                 class="fab fa-linkedin-in"></i></a></li>
-                                </ul>
+                                </ul> -->
                             </div>
                         </div>
                         <div class="dashboard-list">
                             <ul class="nav nav-tabs right-line-tab">
+                                <li class="nav-item"><a class="nav-link " href="user-profile.html">My profile</a></li>
                                 <li class="nav-item"><a class="nav-link" href="user-listing.html">My Listing</a></li>
-                                <li class="nav-item"><a class="nav-link" href="user-create.html">create property</a>
-                                </li>
-                                <li class="nav-item"><a class="nav-link" href="user-profile.html">My profile</a>
-                                </li>
-                                <li class="nav-item"><a class="nav-link active"
-                                        href="user-favourites.html">favourites</a></li>
+                                <li class="nav-item"><a class="nav-link" href="user-create.html">Create Property</a></li>
+                                <li class="nav-item"><a class="nav-link" href="properties.html">Interested in Your Properties</a></li>
+                                <li class="nav-item"><a class="nav-link" href="Owners.html">Owners you Contacted</a></li>
+
+                                <li class="nav-item"><a class="nav-link" href="RentedProperties.html">My Rental Properties</a></li>
+
+                                <li class="nav-item"><a class="nav-link" href="Subscription.html">Subscription</a></li>
+                                <!-- <li class="nav-item"><a class="nav-link" href="Payments.html">Your Payments</a></li> -->
+                                <li class="nav-item"><a class="nav-link active" href="user-favourites.html">Favourites</a></li>
                                 <li class="nav-item"><a class="nav-link" href="user-privacy.html">Privacy</a></li>
-                                <li class="nav-item"><a href="javascript:void(0)" data-bs-toggle="modal"
-                                        data-bs-target="#logout" class="nav-link">Log out</a></li>
+                                <li class="nav-item"><a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#logout" class="nav-link">Log out</a></li>
                             </ul>
+                            
                         </div>
                     </div>
                 </div>
@@ -180,11 +204,11 @@
                                     <div class="filter-panel">
                                         <div class="top-panel">
                                             <div>
-                                                <h2>Favourites</h2>
-                                                <span class="show-result">Showing <span>1-15 of 69</span>
-                                                    Listings</span>
+                                                <h2 style="color: #ff5c41;font-weight: 600;">Favourites</h2>
+                                                <!-- <span class="show-result">Showing <span>1-15 of 69</span>
+                                                    Listings</span> -->
                                             </div>
-                                            <ul class="grid-list-filter">
+                                            <!-- <ul class="grid-list-filter">
                                                 <li>
                                                     <div class="dropdown">
                                                         <span class="dropdown-toggle font-rubik"
@@ -211,7 +235,7 @@
                                                         </h6>
                                                     </div>
                                                 </li>
-                                            </ul>
+                                            </ul> -->
                                         </div>
                                     </div>
                                     <div class="left-sidebar filter-bottom-content">
@@ -313,30 +337,31 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div
-                                        class="property-2 row column-sm zoom-gallery property-label property-grid list-view">
-                                        <div class="col-md-12">
-                                            <div class="property-box liked-img">
+                                   <!--  -->
+
+
+                                   <div class="property-wrapper-grid">
+                                    <div class="property-2 row column-sm zoom-gallery property-label property-grid">
+        
+        
+                                        <div class="col-md-4 wow fadeInUp">
+                                            <div class="property-box">
                                                 <div class="property-image">
                                                     <div class="property-slider">
                                                         <a href="javascript:void(0)">
-                                                            <img src="../assets/images/property/10.jpg" class="bg-img"
-                                                                alt="">
+                                                            <img src="../assets/images/property/10.jpg" class="bg-img" alt="">
                                                         </a>
                                                         <a href="javascript:void(0)">
-                                                            <img src="../assets/images/property/5.jpg" class="bg-img"
-                                                                alt="">
-
+                                                            <img src="../assets/images/property/5.jpg" class="bg-img" alt="">
+        
                                                         </a>
                                                         <a href="javascript:void(0)">
-                                                            <img src="../assets/images/property/3.jpg" class="bg-img"
-                                                                alt="">
-
+                                                            <img src="../assets/images/property/3.jpg" class="bg-img" alt="">
+        
                                                         </a>
                                                         <a href="javascript:void(0)">
-                                                            <img src="../assets/images/property/4.jpg" class="bg-img"
-                                                                alt="">
-
+                                                            <img src="../assets/images/property/4.jpg" class="bg-img" alt="">
+        
                                                         </a>
                                                     </div>
                                                     <div class="labels-left">
@@ -346,72 +371,462 @@
                                                     </div>
                                                     <div class="seen-data">
                                                         <i data-feather="camera"></i>
-                                                        <span>25</span>
+                                                        <span>42</span>
                                                     </div>
                                                     <div class="overlay-property-box">
-                                                        <a href="compare.html" class="effect-round"
-                                                            data-bs-toggle="tooltip" data-bs-placement="left"
-                                                            title="Compare">
+                                                        <a href="compare.html" class="effect-round" data-bs-toggle="tooltip"
+                                                            data-bs-placement="left" title="Compare">
                                                             <i data-feather="shuffle"></i>
                                                         </a>
-                                                        <a href="user-favourites.html" class="effect-round like"
-                                                            data-bs-toggle="tooltip" data-bs-placement="left"
-                                                            title="wishlist">
+                                                        <!-- <a href="user-favourites.html" class="effect-round like"
+                                                            data-bs-toggle="tooltip" data-bs-placement="left" title="wishlist">
                                                             <i data-feather="heart"></i>
-                                                        </a>
+                                                        </a> -->
                                                     </div>
                                                 </div>
-
+        
                                                 <div class="property-details">
                                                     <span class="font-roboto">Sangli</span>
-                                                    <div class="my-listing font-roboto">Added 20 min ago</div>
                                                     <a href="single-property-8.html">
-                                                        <h3>Merrick in Spring Way</h3>
+                                                        <h3>Little Acorn Farm</h3>
                                                     </a>
                                                     <h6>₹85.00 Lac</h6>
-                                                    <p class="font-roboto">Real estate is divided into several
-                                                        categories, including residential property, commercial property
-                                                        and industrial property.</p>
-                                                    <ul>
-                                                        <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/double-bed.svg"
-                                                                class="img-fluid" alt="">Bed : 4</li>
-                                                        <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/bathroom.svg"
-                                                                class="img-fluid" alt="">Baths : 4</li>
-                                                        <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/square-ruler-tool.svg"
-                                                                class="img-fluid ruler-tool" alt="">Sq Ft : 5000</li>
+        
+        
+        
+                                                    <ul class="property-features">
+                                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-house"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                                                            </svg> 3 BHK</li>
+                                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-key"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8m4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5" />
+                                                                <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                                                            </svg>Ready to move</li>
                                                     </ul>
-                                                    <div class="property-btn d-flex">
-                                                        <span>July 18, 2022</span>
-                                                        <button type="button"
-                                                            onclick="document.location='single-property-8.html'"
-                                                            class="btn btn-dashed btn-pill color-2">Details</button>
+                                                    <ul class="property-features">
+                                                        <li style="gap: 5px;"><img
+                                                                src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/double-bed.svg"
+                                                                class="img-fluid" alt="" style="margin-right: 0px;"> Furnished
+                                                        </li>
+                                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-p-circle"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.5 4.002h2.962C10.045 4.002 11 5.104 11 6.586c0 1.494-.967 2.578-2.55 2.578H6.784V12H5.5zm2.77 4.072c.893 0 1.419-.545 1.419-1.488s-.526-1.482-1.42-1.482H6.778v2.97z" />
+                                                            </svg> Bike And Car</li>
+                                                    </ul>
+        
+        
+        
+                                                    <ul class="property-features">
+                                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-compass"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016m6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0" />
+                                                                <path
+                                                                    d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
+                                                            </svg> North- East</li>
+                                                        <li style="gap: 5px;">
+        
+                                                            <span>Dec 4, 2012</span>
+                                                    </ul>
+        
+        
+        
+        
+                                                    <div style="padding-top: 10px; display: flex; justify-content: center;"
+                                                        class="property-btn d-flex">
+        
+        
+        
+                                                        <button id="toggleButton" onclick="toggleContactOptions()" type="button"
+                                                            class="btn btn-dashed btn-pill color-2">Contact Info</button>
+        
+        
+                                                        <div style="padding-top: 10px;" class="row align-items-center">
+        
+                                                            <div class="d-flex col-12 col-sm-4 col-lg-7 mb-3 mb-lg-0">
+        
+        
+        
+        
+                                                                <a class="btn btn-gradient btn-pill color-2" id="chatOption"
+                                                                    onclick="initiateChat()" style="display: none;">
+                                                                    <i data-feather="message-square"
+                                                                        style="width: 16px;height: 17px;margin-top: 3px;margin-right: 5px;"></i>
+                                                                    Chat
+                                                                </a> &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        
+        
+                                                                <button type="button" id="callOption" onclick="initiateCall()"
+                                                                    class="btn btn-dashed btn-pill color-2"
+                                                                    style="display: none;">
+                                                                    <i data-feather="phone"
+                                                                        style="width: 16px;height: 17px;margin-top: 3px;margin-right: 5px;"></i>
+                                                                    Call
+                                                                </button>
+        
+                                                            </div>
+        
+                                                        </div>
+                                                    </div>
+        
+        
+        
+        
+        
+        
+                                                </div>
+                                            </div>
+                                        </div>
+        
+        
+                                        <div class="col-md-4 wow fadeInUp">
+                                            <div class="property-box">
+                                                <div class="property-image">
+                                                    <div class="property-slider">
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/16.jpg" class="bg-img" alt="">
+        
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/5.jpg" class="bg-img" alt="">
+        
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/4.jpg" class="bg-img" alt="">
+        
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/3.jpg" class="bg-img" alt="">
+        
+                                                        </a>
+                                                    </div>
+                                                    <div class="labels-left">
+                                                        <div>
+                                                            <span class="label label-success">rent</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="seen-data">
+                                                        <i data-feather="camera"></i>
+                                                        <span>42</span>
+                                                    </div>
+                                                    <div class="overlay-property-box">
+                                                        <a href="compare.html" class="effect-round" data-bs-toggle="tooltip"
+                                                            data-bs-placement="left" title="Compare">
+                                                            <i data-feather="shuffle"></i>
+                                                        </a>
+                                                        <!-- <a href="user-favourites.html" class="effect-round like"
+                                                            data-bs-toggle="tooltip" data-bs-placement="left" title="wishlist">
+                                                            <i data-feather="heart"></i>
+                                                        </a> -->
+                                                    </div>
+                                                </div>
+                                                <div class="property-details">
+                                                    <span class="font-roboto">Sangli</span>
+                                                    <a href="Default.html">
+                                                        <h3>Magnolia Ranch</h3>
+                                                    </a>
+                                                    <h6>₹4.00 Lac</h6>
+        
+        
+                                                    <ul class="property-features">
+                                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-house"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                                                            </svg> 2 BHK</li>
+                                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-key"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8m4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5" />
+                                                                <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                                                            </svg>Ready to move</li>
+                                                    </ul>
+                                                    <ul class="property-features">
+                                                        <li style="gap: 5px;"><img
+                                                                src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/double-bed.svg"
+                                                                class="img-fluid" alt="" style="margin-right: 0px;"> Furnished
+                                                        </li>
+                                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-p-circle"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.5 4.002h2.962C10.045 4.002 11 5.104 11 6.586c0 1.494-.967 2.578-2.55 2.578H6.784V12H5.5zm2.77 4.072c.893 0 1.419-.545 1.419-1.488s-.526-1.482-1.42-1.482H6.778v2.97z" />
+                                                            </svg> Bike And Car</li>
+                                                    </ul>
+        
+        
+        
+                                                    <ul class="property-features">
+                                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-compass"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016m6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0" />
+                                                                <path
+                                                                    d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
+                                                            </svg> North- East</li>
+                                                        <li style="gap: 5px;">
+        
+                                                            <span>Feb 4, 2021</span>
+                                                    </ul>
+        
+        
+        
+                                                    <div style="padding-top: 10px; display: flex; justify-content: center;"
+                                                        class="property-btn d-flex">
+                                                        <button type="button" data-bs-toggle="modal"
+                                                            data-bs-target="#login-modal"
+                                                            class="btn btn-dashed btn-pill color-2">Contact Info</button>
+                                                        <div style="padding-top: 10px;" class="row align-items-center"></div>
+                                                    </div>
+        
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="col-md-4 wow fadeInUp">
+                                            <div class="property-box">
+                                                <div class="property-image">
+                                                    <div class="property-slider">
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/16.jpg" class="bg-img" alt="">
+        
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/5.jpg" class="bg-img" alt="">
+        
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/4.jpg" class="bg-img" alt="">
+        
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/3.jpg" class="bg-img" alt="">
+        
+                                                        </a>
+                                                    </div>
+                                                    <div class="labels-left">
+                                                        <div>
+                                                            <span class="label label-success">rent</span>
+                                                        </div>
+        
+                                                    </div>
+                                                    <div class="seen-data">
+                                                        <i data-feather="camera"></i>
+                                                        <span>42</span>
+                                                    </div>
+                                                    <div class="overlay-property-box">
+                                                        <a href="compare.html" class="effect-round" data-bs-toggle="tooltip"
+                                                            data-bs-placement="left" title="Compare">
+                                                            <i data-feather="shuffle"></i>
+                                                        </a>
+                                                        <!-- <a href="user-favourites.html" class="effect-round like"
+                                                            data-bs-toggle="tooltip" data-bs-placement="left" title="wishlist">
+                                                            <i data-feather="heart"></i>
+                                                        </a> -->
+                                                    </div>
+                                                </div>
+                                                <div class="property-details">
+                                                    <span class="font-roboto">Sangli</span>
+                                                    <a href="single-property-8.html">
+                                                        <h3>Magnolia Ranch</h3>
+                                                    </a>
+                                                    <h6>₹5.00 Lac</h6>
+        
+                                                    <ul class="property-features">
+                                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-house"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                                                            </svg> 2 BHK</li>
+                                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-key"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8m4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5" />
+                                                                <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                                                            </svg> Ready to move</li>
+                                                    </ul>
+                                                    <ul class="property-features">
+                                                        <li style="gap: 5px;"><img
+                                                                src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/double-bed.svg"
+                                                                class="img-fluid" alt="" style="margin-right: 0px;"> Furnished
+                                                        </li>
+                                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-p-circle"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.5 4.002h2.962C10.045 4.002 11 5.104 11 6.586c0 1.494-.967 2.578-2.55 2.578H6.784V12H5.5zm2.77 4.072c.893 0 1.419-.545 1.419-1.488s-.526-1.482-1.42-1.482H6.778v2.97z" />
+                                                            </svg> Bike And Car</li>
+                                                    </ul>
+        
+        
+        
+                                                    <ul class="property-features">
+                                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-compass"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016m6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0" />
+                                                                <path
+                                                                    d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
+                                                            </svg> North- East</li>
+                                                        <li style="gap: 5px;">
+        
+                                                            <span>Dec 8, 2022</span>
+                                                    </ul>
+        
+        
+        
+                                                    <div style="padding-top: 10px; display: flex; justify-content: center;"
+                                                        class="property-btn d-flex">
+                                                        <button type="button" class="btn btn-dashed btn-pill color-2">Contact
+                                                            Info</button>
+                                                        <div style="padding-top: 10px;" class="row align-items-center"></div>
+                                                    </div>
+        
+        
+                                                </div>
+                                            </div>
+                                        </div>
+        
+        
+                                        <div class="col-md-4 wow fadeInUp">
+                                            <div class="property-box">
+                                                <div class="property-image">
+                                                    <div class="property-slider">
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/14.jpg" class="bg-img" alt="">
+        
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/6.jpg" class="bg-img" alt="">
+        
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/10.jpg" class="bg-img" alt="">
+        
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/9.jpg" class="bg-img" alt="">
+        
+                                                        </a>
+                                                    </div>
+                                                    <div class="labels-left">
+                                                        <div>
+                                                            <span class="label label-success">rent</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="seen-data">
+                                                        <i data-feather="camera"></i>
+                                                        <span>42</span>
+                                                    </div>
+                                                    <div class="overlay-property-box">
+                                                        <a href="compare.html" class="effect-round" data-bs-toggle="tooltip"
+                                                            data-bs-placement="left" title="Compare">
+                                                            <i data-feather="shuffle"></i>
+                                                        </a>
+                                                        <!-- <a href="user-favourites.html" class="effect-round like"
+                                                            data-bs-toggle="tooltip" data-bs-placement="left" title="wishlist">
+                                                            <i data-feather="heart"></i>
+                                                        </a> -->
+                                                    </div>
+                                                </div>
+                                                <div class="property-details">
+                                                    <span class="font-roboto">Sangli</span>
+                                                    <a href="single-property-8.html">
+                                                        <h3>Hidden Hideway</h3>
+                                                    </a>
+                                                    <h6>₹7.00 Lac</h6>
+        
+                                                    <ul class="property-features">
+                                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-house"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                                                            </svg> 2 BHK</li>
+                                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-key"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8m4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5" />
+                                                                <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                                                            </svg> Ready to move</li>
+                                                    </ul>
+                                                    <ul class="property-features">
+                                                        <li style="gap: 5px;"><img
+                                                                src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/double-bed.svg"
+                                                                class="img-fluid" alt="" style="margin-right: 0px;">
+                                                            Semi-Furnished
+                                                        </li>
+                                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-p-circle"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.5 4.002h2.962C10.045 4.002 11 5.104 11 6.586c0 1.494-.967 2.578-2.55 2.578H6.784V12H5.5zm2.77 4.072c.893 0 1.419-.545 1.419-1.488s-.526-1.482-1.42-1.482H6.778v2.97z" />
+                                                            </svg> Bike And Car</li>
+                                                    </ul>
+        
+                                                    <ul class="property-features">
+                                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-compass"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016m6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0" />
+                                                                <path
+                                                                    d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
+                                                            </svg> North- East</li>
+                                                        <li style="gap: 5px;">
+        
+                                                            <span>August 9, 2012</span>
+                                                    </ul>
+        
+        
+        
+                                                    <div style="padding-top: 10px; display: flex; justify-content: center;"
+                                                        class="property-btn d-flex">
+                                                        <button type="button" class="btn btn-dashed btn-pill color-2">Contact
+                                                            Info</button>
+                                                        <div style="padding-top: 10px;" class="row align-items-center"></div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-12">
-                                            <div class="property-box liked-img">
+        
+        
+                                        <div class="col-md-4 wow fadeInUp">
+                                            <div class="property-box">
                                                 <div class="property-image">
                                                     <div class="property-slider">
                                                         <a href="javascript:void(0)">
-                                                            <img src="../assets/images/property/11.jpg" class="bg-img"
-                                                                alt="">
-
+                                                            <img src="../assets/images/property/15.jpg" class="bg-img" alt="">
+        
                                                         </a>
                                                         <a href="javascript:void(0)">
-                                                            <img src="../assets/images/property/4.jpg" class="bg-img"
-                                                                alt="">
-
+                                                            <img src="../assets/images/property/4.jpg" class="bg-img" alt="">
+        
                                                         </a>
                                                         <a href="javascript:void(0)">
-                                                            <img src="../assets/images/property/6.jpg" class="bg-img"
-                                                                alt="">
-
+                                                            <img src="../assets/images/property/6.jpg" class="bg-img" alt="">
+        
                                                         </a>
                                                         <a href="javascript:void(0)">
-                                                            <img src="../assets/images/property/2.jpg" class="bg-img"
-                                                                alt="">
-
+                                                            <img src="../assets/images/property/9.jpg" class="bg-img" alt="">
+        
                                                         </a>
                                                     </div>
                                                     <div class="labels-left">
@@ -424,47 +839,501 @@
                                                         <span>10</span>
                                                     </div>
                                                     <div class="overlay-property-box">
-                                                        <a href="compare.html" class="effect-round"
-                                                            data-bs-toggle="tooltip" data-bs-placement="left"
-                                                            title="Compare">
+                                                        <a href="compare.html" class="effect-round" data-bs-toggle="tooltip"
+                                                            data-bs-placement="left" title="Compare">
                                                             <i data-feather="shuffle"></i>
                                                         </a>
-                                                        <a href="user-favourites.html" class="effect-round like"
-                                                            data-bs-toggle="tooltip" data-bs-placement="left"
-                                                            title="wishlist">
+                                                        <!-- <a href="user-favourites.html" class="effect-round like"
+                                                            data-bs-toggle="tooltip" data-bs-placement="left" title="wishlist">
                                                             <i data-feather="heart"></i>
-                                                        </a>
+                                                        </a> -->
                                                     </div>
                                                 </div>
                                                 <div class="property-details">
                                                     <span class="font-roboto">Sangli</span>
-                                                    <div class="my-listing font-roboto">Added 45 min ago</div>
                                                     <a href="single-property-8.html">
-                                                        <h3>Home in Merrick Way</h3>
+                                                        <h3>Merrick in Spring Way</h3>
                                                     </a>
-                                                    <h6>₹95.00 Lac</h6>
-                                                    <p class="font-roboto">Elegant retreat in a quiet Coral Gables
-                                                        setting. This home provides wonderful entertaining spaces with a
-                                                        chef
-                                                        kitchen opening…</p>
-                                                    <ul>
-                                                        <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/double-bed.svg"
-                                                                class="img-fluid" alt="">Bed : 4</li>
-                                                        <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/bathroom.svg"
-                                                                class="img-fluid" alt="">Baths : 4</li>
-                                                        <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/square-ruler-tool.svg"
-                                                                class="img-fluid ruler-tool" alt="">Sq Ft : 5000</li>
+                                                    <h6>₹75.00 Lac</h6>
+        
+                                                    <ul class="property-features">
+                                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-house"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                                                            </svg> 2 : BHK</li>
+                                                        <li style="gap: 5px;"><img
+                                                                src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/square-ruler-tool.svg"
+                                                                class="img-fluid ruler-tool" alt=""
+                                                                style="margin-right: 0px;">5000:
+                                                            Sq Ft</li>
                                                     </ul>
-                                                    <div class="property-btn d-flex">
-                                                        <span>June 20, 2022</span>
-                                                        <button type="button"
-                                                            onclick="document.location='single-property-8.html'"
-                                                            class="btn btn-dashed btn-pill color-2">Details</button>
+                                                    <ul class="property-features">
+                                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-compass"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016m6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0" />
+                                                                <path
+                                                                    d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
+                                                            </svg> North- East</li>
+                                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-p-circle"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.5 4.002h2.962C10.045 4.002 11 5.104 11 6.586c0 1.494-.967 2.578-2.55 2.578H6.784V12H5.5zm2.77 4.072c.893 0 1.419-.545 1.419-1.488s-.526-1.482-1.42-1.482H6.778v2.97z" />
+                                                            </svg> Bike And Car</li>
+                                                    </ul>
+        
+                                                    <ul class="property-features">
+                                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-compass"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016m6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0" />
+                                                                <path
+                                                                    d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
+                                                            </svg> North- East</li>
+                                                        <li style="gap: 5px;">
+        
+                                                            <span>May 4, 2023</span>
+                                                    </ul>
+        
+        
+        
+                                                    <div style="padding-top: 10px; display: flex; justify-content: center;"
+                                                        class="property-btn d-flex">
+                                                        <button type="button" class="btn btn-dashed btn-pill color-2">Contact
+                                                            Info</button>
+                                                        <div style="padding-top: 10px;" class="row align-items-center"></div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+        
+                                        <!-- SAGA -->
+                                        <div class="col-md-4 wow fadeInUp">
+                                            <div class="property-box">
+                                                <div class="property-image">
+                                                    <div class="property-slider">
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/12.jpg" class="bg-img" alt="">
+        
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/10.jpg" class="bg-img" alt="">
+        
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/6.jpg" class="bg-img" alt="">
+        
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/9.jpg" class="bg-img" alt="">
+        
+                                                        </a>
+                                                    </div>
+                                                    <div class="labels-left">
+                                                        <div>
+                                                            <span class="label label-shadow">sale</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="seen-data">
+                                                        <i data-feather="camera"></i>
+                                                        <span>25</span>
+                                                    </div>
+                                                    <div class="overlay-property-box">
+                                                        <a href="compare.html" class="effect-round" data-bs-toggle="tooltip"
+                                                            data-bs-placement="left" title="Compare">
+                                                            <i data-feather="shuffle"></i>
+                                                        </a>
+                                                        <!-- <a href="user-favourites.html" class="effect-round like"
+                                                            data-bs-toggle="tooltip" data-bs-placement="left" title="wishlist">
+                                                            <i data-feather="heart"></i>
+                                                        </a> -->
+                                                    </div>
+                                                </div>
+                                                <div class="property-details">
+                                                    <span class="font-roboto">Sangli</span>
+                                                    <a href="single-property-8.html">
+                                                        <h3>Home in Merrick Way</h3>
+                                                    </a>
+                                                    <h6>₹75.00 Lac</h6>
+        
+        
+                                                    <ul class="property-features">
+                                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-house"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                                                            </svg> 2 : BHK</li>
+                                                        <li style="gap: 5px;"><img
+                                                                src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/square-ruler-tool.svg"
+                                                                class="img-fluid ruler-tool" alt=""
+                                                                style="margin-right: 0px;">5000:
+                                                            Sq Ft</li>
+                                                    </ul>
+                                                    <ul class="property-features">
+                                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-compass"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016m6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0" />
+                                                                <path
+                                                                    d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
+                                                            </svg> North- East</li>
+                                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-p-circle"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.5 4.002h2.962C10.045 4.002 11 5.104 11 6.586c0 1.494-.967 2.578-2.55 2.578H6.784V12H5.5zm2.77 4.072c.893 0 1.419-.545 1.419-1.488s-.526-1.482-1.42-1.482H6.778v2.97z" />
+                                                            </svg> Bike And Car</li>
+                                                    </ul>
+        
+                                                    <ul class="property-features">
+                                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-compass"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016m6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0" />
+                                                                <path
+                                                                    d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
+                                                            </svg> North- East</li>
+                                                        <li style="gap: 5px;">
+        
+                                                            <span>Feb 4, 2021</span>
+                                                    </ul>
+        
+        
+        
+                                                    <div style="padding-top: 10px; display: flex; justify-content: center;"
+                                                        class="property-btn d-flex">
+                                                        <button type="button" class="btn btn-dashed btn-pill color-2">Contact
+                                                            Info</button>
+                                                        <div style="padding-top: 10px;" class="row align-items-center"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+        
+                                        <div class="col-md-4 wow fadeInUp">
+                                            <div class="property-box">
+                                                <div class="property-image">
+                                                    <div class="property-slider">
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/16.jpg" class="bg-img" alt="">
+        
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/5.jpg" class="bg-img" alt="">
+        
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/4.jpg" class="bg-img" alt="">
+        
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/3.jpg" class="bg-img" alt="">
+        
+                                                        </a>
+                                                    </div>
+                                                    <div class="labels-left">
+                                                        <div>
+                                                            <span class="label label-success">rent</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="seen-data">
+                                                        <i data-feather="camera"></i>
+                                                        <span>42</span>
+                                                    </div>
+                                                    <div class="overlay-property-box">
+                                                        <a href="compare.html" class="effect-round" data-bs-toggle="tooltip"
+                                                            data-bs-placement="left" title="Compare">
+                                                            <i data-feather="shuffle"></i>
+                                                        </a>
+                                                        <!-- <a href="user-favourites.html" class="effect-round like"
+                                                            data-bs-toggle="tooltip" data-bs-placement="left" title="wishlist">
+                                                            <i data-feather="heart"></i>
+                                                        </a> -->
+                                                    </div>
+                                                </div>
+                                                <div class="property-details">
+                                                    <span class="font-roboto">Sangli</span>
+                                                    <a href="single-property-8.html">
+                                                        <h3>Magnolia Ranch</h3>
+                                                    </a>
+                                                    <h6>₹3.00 Lac</h6>
+        
+        
+                                                    <ul class="property-features">
+                                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-house"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                                                            </svg> 2 BHK</li>
+                                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-key"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8m4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5" />
+                                                                <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                                                            </svg> Ready to move</li>
+                                                    </ul>
+                                                    <ul class="property-features">
+                                                        <li style="gap: 5px;"><img
+                                                                src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/double-bed.svg"
+                                                                class="img-fluid" alt="" style="margin-right: 0px;"> Unfurnished
+                                                        </li>
+                                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-p-circle"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.5 4.002h2.962C10.045 4.002 11 5.104 11 6.586c0 1.494-.967 2.578-2.55 2.578H6.784V12H5.5zm2.77 4.072c.893 0 1.419-.545 1.419-1.488s-.526-1.482-1.42-1.482H6.778v2.97z" />
+                                                            </svg> Bike And Car</li>
+                                                    </ul>
+        
+                                                    <ul class="property-features">
+                                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-compass"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016m6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0" />
+                                                                <path
+                                                                    d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
+                                                            </svg> North- East</li>
+                                                        <li style="gap: 5px;">
+        
+                                                            <span>August 4, 2021</span>
+                                                    </ul>
+        
+        
+        
+                                                    <div style="padding-top: 10px; display: flex; justify-content: center;"
+                                                        class="property-btn d-flex">
+                                                        <button type="button" class="btn btn-dashed btn-pill color-2">Contact
+                                                            Info</button>
+                                                        <div style="padding-top: 10px;" class="row align-items-center"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="col-md-4 wow fadeInUp">
+                                            <div class="property-box">
+                                                <div class="property-image">
+                                                    <div class="property-slider">
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/16.jpg" class="bg-img" alt="">
+        
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/5.jpg" class="bg-img" alt="">
+        
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/4.jpg" class="bg-img" alt="">
+        
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/3.jpg" class="bg-img" alt="">
+        
+                                                        </a>
+                                                    </div>
+                                                    <div class="labels-left">
+                                                        <div>
+                                                            <span class="label label-success">rent</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="seen-data">
+                                                        <i data-feather="camera"></i>
+                                                        <span>42</span>
+                                                    </div>
+                                                    <div class="overlay-property-box">
+                                                        <a href="compare.html" class="effect-round" data-bs-toggle="tooltip"
+                                                            data-bs-placement="left" title="Compare">
+                                                            <i data-feather="shuffle"></i>
+                                                        </a>
+                                                        <!-- <a href="user-favourites.html" class="effect-round like"
+                                                            data-bs-toggle="tooltip" data-bs-placement="left" title="wishlist">
+                                                            <i data-feather="heart"></i>
+                                                        </a> -->
+                                                    </div>
+                                                </div>
+                                                <div class="property-details">
+                                                    <span class="font-roboto">Sangli</span>
+                                                    <a href="single-property-8.html">
+                                                        <h3>Magnolia Ranch</h3>
+                                                    </a>
+                                                    <h6>₹5.00 Lac</h6>
+        
+        
+                                                    <ul class="property-features">
+                                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-house"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                                                            </svg> 2 BHK</li>
+                                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-key"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8m4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5" />
+                                                                <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                                                            </svg> Ready to move</li>
+                                                    </ul>
+                                                    <ul class="property-features">
+                                                        <li style="gap: 5px;"><img
+                                                                src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/double-bed.svg"
+                                                                class="img-fluid" alt="" style="margin-right: 0px;"> Furnished
+                                                        </li>
+                                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-p-circle"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.5 4.002h2.962C10.045 4.002 11 5.104 11 6.586c0 1.494-.967 2.578-2.55 2.578H6.784V12H5.5zm2.77 4.072c.893 0 1.419-.545 1.419-1.488s-.526-1.482-1.42-1.482H6.778v2.97z" />
+                                                            </svg> Bike And Car</li>
+                                                    </ul>
+        
+                                                    <ul class="property-features">
+                                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-compass"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016m6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0" />
+                                                                <path
+                                                                    d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
+                                                            </svg> North- East</li>
+                                                        <li style="gap: 5px;">
+        
+                                                            <span>August 1, 2022</span>
+                                                    </ul>
+        
+        
+        
+                                                    <div style="padding-top: 10px; display: flex; justify-content: center;"
+                                                        class="property-btn d-flex">
+                                                        <button type="button" class="btn btn-dashed btn-pill color-2">Contact
+                                                            Info</button>
+                                                        <div style="padding-top: 10px;" class="row align-items-center"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+        
+                                        <div class="col-md-4 wow fadeInUp">
+                                            <div class="property-box">
+                                                <div class="property-image">
+                                                    <div class="property-slider">
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/16.jpg" class="bg-img" alt="">
+        
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/5.jpg" class="bg-img" alt="">
+        
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/4.jpg" class="bg-img" alt="">
+        
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/3.jpg" class="bg-img" alt="">
+        
+                                                        </a>
+                                                    </div>
+                                                    <div class="labels-left">
+                                                        <div>
+                                                            <span class="label label-success">rent</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="seen-data">
+                                                        <i data-feather="camera"></i>
+                                                        <span>42</span>
+                                                    </div>
+                                                    <div class="overlay-property-box">
+                                                        <a href="compare.html" class="effect-round" data-bs-toggle="tooltip"
+                                                            data-bs-placement="left" title="Compare">
+                                                            <i data-feather="shuffle"></i>
+                                                        </a>
+                                                        <!-- <a href="user-favourites.html" class="effect-round like"
+                                                            data-bs-toggle="tooltip" data-bs-placement="left" title="wishlist">
+                                                            <i data-feather="heart"></i>
+                                                        </a> -->
+                                                    </div>
+                                                </div>
+                                                <div class="property-details">
+                                                    <span class="font-roboto">Sangli</span>
+                                                    <a href="single-property-8.html">
+                                                        <h3>Magnolia Ranch</h3>
+                                                    </a>
+                                                    <h6>₹2.00 Lac</h6>
+        
+        
+                                                    <ul class="property-features">
+                                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-house"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                                                            </svg> 2 BHK</li>
+                                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-key"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8m4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5" />
+                                                                <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                                                            </svg> Ready to move</li>
+                                                    </ul>
+                                                    <ul class="property-features">
+                                                        <li style="gap: 5px;"><img
+                                                                src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/double-bed.svg"
+                                                                class="img-fluid" alt="" style="margin-right: 0px;"> Furnished
+                                                        </li>
+                                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-p-circle"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.5 4.002h2.962C10.045 4.002 11 5.104 11 6.586c0 1.494-.967 2.578-2.55 2.578H6.784V12H5.5zm2.77 4.072c.893 0 1.419-.545 1.419-1.488s-.526-1.482-1.42-1.482H6.778v2.97z" />
+                                                            </svg> Bike And Car</li>
+                                                    </ul>
+        
+                                                    <ul class="property-features">
+                                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                height="16" fill="currentColor" class="bi bi-compass"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016m6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0" />
+                                                                <path
+                                                                    d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
+                                                            </svg> North- East</li>
+                                                        <li style="gap: 5px;">
+        
+                                                            <span>Jan 9, 2022</span>
+                                                    </ul>
+        
+        
+        
+                                                    <div style="padding-top: 10px; display: flex; justify-content: center;"
+                                                        class="property-btn d-flex">
+                                                        <button type="button" class="btn btn-dashed btn-pill color-2">Contact
+                                                            Info</button>
+                                                        <div style="padding-top: 10px;" class="row align-items-center"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+        
                                     </div>
+                                </div>
+
+
+                                   <!--  -->
                                     <nav class="theme-pagination">
                                         <ul class="pagination">
                                             <li class="page-item">
@@ -515,8 +1384,8 @@
                                 <li><a href="contact-3.html"><i class="fas fa-map-marker-alt"></i></a></li>
                                 <li><a href="contact-3.html"><i class="fas fa-phone-alt"></i></a></li>
                                 <li><a href="signup.html"><i class="fas fa-envelope"></i></a></li>
-                                <li><a href="contact-3.html"><i class="fas fa-globe"></i></a></li>
-                                <li><a href="contact-3.html"><i class="fas fa-wifi"></i></a></li>
+                                <!-- <li><a href="contact-3.html"><i class="fas fa-globe"></i></a></li>
+                                <li><a href="contact-3.html"><i class="fas fa-wifi"></i></a></li> -->
                             </ul>
                         </div>
                     </div>
@@ -555,6 +1424,12 @@
                                         <li>
                                             <a href="services.html">Services</a>
                                         </li>
+                                        <!-- <li>
+                                        <a href="agency-list.html">Agency</a>
+                                    </li>
+                                    <li>
+                                        <a href="agent-grid.html">Agents</a>
+                                    </li> -->
                                         <li>
                                             <a href="pricing.html">Pricing</a>
                                         </li>
@@ -579,7 +1454,9 @@
                                         <li>
                                             <a href="https://twitter.com/">Twitter</a>
                                         </li>
-
+                                        <!-- <li>
+                                        <a href="https://login.mailchimp.com/">Mail chimp</a>
+                                    </li> -->
                                         <li>
                                             <a href="https://accounts.google.com/">Gmail</a>
                                         </li>
@@ -610,6 +1487,70 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- <div class="bottom-blog">
+                        <div class="slick-between">
+                            <div class="footer-slider">
+                                <div>
+                                    <div class="media">
+                                        <a href="blog-detail-left-sidebar.html">
+                                            <div class="img-overlay">
+                                                <img src="../assets/images/footer/1.jpg" alt="">
+                                            </div>
+                                        </a>
+                                        <div class="media-body">
+                                            <h6><a href="blog-detail-left-sidebar.html">Real Estate Industry</a>
+                                            </h6>
+                                            <p class="font-roboto"><a href="blog-detail-right-sidebar.html">An
+                                                    Electronic version of the real estate industry.</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="media">
+                                        <a href="blog-detail-left-sidebar.html">
+                                            <div class="img-overlay">
+                                                <img src="../assets/images/footer/2.jpg" alt="">
+                                            </div>
+                                        </a>
+                                        <div class="media-body">
+                                            <h6><a href="blog-detail-left-sidebar.html">Entertaining Spaces</a></h6>
+                                            <p class="font-roboto"><a href="blog-detail-right-sidebar.html">This
+                                                    home provides
+                                                    wonderful entertaining spaces.</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="media">
+                                        <a href="blog-detail-left-sidebar.html">
+                                            <div class="img-overlay">
+                                                <img src="../assets/images/footer/3.jpg" alt="">
+                                            </div>
+                                        </a>
+                                        <div class="media-body">
+                                            <h6><a href="blog-detail-left-sidebar.html">Estate Agents Work</a></h6>
+                                            <p class="font-roboto"><a href="blog-detail-right-sidebar.html">The
+                                                    market of buying and selling real estate.</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="media">
+                                        <a href="blog-detail-left-sidebar.html">
+                                            <div class="img-overlay">
+                                                <img src="../assets/images/footer/4.jpg" alt="">
+                                            </div>
+                                        </a>
+                                        <div class="media-body">
+                                            <h6><a href="blog-detail-left-sidebar.html">Increase in Demand</a></h6>
+                                            <p class="font-roboto"><a href="blog-detail-right-sidebar.html">The
+                                                    effects of an increase demand in short run.</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
                     </div>
                 </div>
             </div>
@@ -1076,6 +2017,8 @@
     <!-- Color-picker js-->
     <script src="../assets/js/color/template-color.js"></script>
 
+    
+
     <script>
         // Listen for the modal close event
         $('#login-modal').on('hide.bs.modal', function () {
@@ -1288,6 +2231,30 @@
             OTPInput();
         });
     </script>
+
+
+
+<script>
+    function toggleContactOptions() {
+        document.getElementById('toggleButton').style.display = 'none';
+        document.getElementById('callOption').style.display = 'flex';
+        document.getElementById('chatOption').style.display = 'flex';
+        // Reinitialize Feather icons
+        feather.replace();
+    }
+
+    function initiateCall() {
+        // Add logic for making a call or redirecting to a call link
+        alert('Initiating call...');
+    }
+
+    function initiateChat() {
+        // Add logic for starting a chat or redirecting to a chat link
+        alert('Starting chat...');
+    }
+</script>
+
+
 
 </body>
 
