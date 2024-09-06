@@ -2,17 +2,17 @@
 <html lang="en">
 
 
-<!-- Mirrored from themes.pixelstrap.com/sheltos/main/pricing.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 20 Aug 2024 05:36:17 GMT -->
+<!-- Mirrored from themes.pixelstrap.com/sheltos/main/user-listing.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 20 Aug 2024 05:36:13 GMT -->
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sheltos - Pricing page">
+    <meta name="description" content="Sangli Properties">
     <meta name="keywords" content="sheltos">
     <meta name="author" content="sheltos">
     <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon" />
-    <title>Sheltos - Pricing page</title>
+    <title>Sangli Properties</title>
 
     <!--Google font-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i"
@@ -20,6 +20,9 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i&amp;display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i" rel="stylesheet">
+
+    <!-- magnific css -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/magnific-popup.css">
 
     <!-- animate css -->
     <link rel="stylesheet" type="text/css" href="../assets/css/animate.css">
@@ -29,32 +32,281 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/color1.css">
 
 
-    <style>
-        #demo:hover {
-            background-color: #ec7063;
-        }
-    </style>
-
 
     <style>
-        .hidden {
-            display: none;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
         }
+
+        .plan-billing-container {
+            max-width: 100%;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .plan-billing-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .plan-billing-header h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .plan-billing-header button {
+            background-color: transparent;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .plan-details-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .plan-details-wrapper {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .plan-detail-box {
+            border: 1px solid #e0e0e0;
+            padding: 10px 20px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            width: 400px;
+        }
+
+        .plan-status-badge {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: #e9f7ef;
+            color: #28a745;
+            border-radius: 10px;
+            font-size: 12px;
+        }
+
+        .plan-details-button {
+            background-color: transparent;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .usage-section {
+            margin-top: 30px;
+        }
+
+        .usage-section h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .usage-cards-wrapper {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .usage-card {
+            flex: 1;
+            min-width: 220px;
+            text-align: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+        }
+
+        .usage-card h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .usage-card p {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #6c757d;
+        }
+
+        .progress-bar {
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            height: 8px;
+            position: relative;
+            width: 100%;
+        }
+
+        .progress {
+            background-color: #28a745;
+            height: 100%;
+            border-radius: 5px;
+        }
+
+        .plan-active-text {
+            color: #28a745;
+        }
+
+        /* Media Queries for Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .plan-details-section {
+                flex-direction: column;
+            }
+
+            .plan-details-wrapper {
+                flex-direction: column;
+            }
+
+            .usage-cards-wrapper {
+                flex-direction: column;
+            }
+        }
+
+
+
+        @media (max-width: 768px) {
+    .plan-detail-box {
+        border: 1px solid #e0e0e0;
+        padding: 10px 20px;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        width: 100%; /* Ensures it takes full width on small screens */
+        max-width: 400px; /* Ensures it doesn't exceed 400px */
+        min-width: 280px; /* Ensures it doesn't shrink below 280px */
+    }
+}
+
+
+
+        
+        @media (max-width: 480px) {
+            .plan-billing-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .plan-billing-header h2 {
+                margin-bottom: 20px;
+            }
+
+            .plan-billing-header button {
+                margin-top: 10px;
+                width: 100%;
+            }
+
+            .plan-details-wrapper {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .usage-cards-wrapper {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+
+        /*  */
+
+
+        .purchase-offer-wrapper {
+            margin-top: 25px;
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+            /* height: 100vh; */
+            text-align: center;
+            background-color: #ffffff;
+            /* padding: 40px; */
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+            margin: 0 auto; /* Ensures the div is centered horizontally */
+        }
+
+        .purchase-offer-header {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .purchase-offer-description {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .cta-buy-now-btn {
+            background-color: #ff5722;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 10px rgba(255, 87, 34, 0.3);
+        }
+
+        .cta-buy-now-btn:hover {
+            background-color: #e64a19;
+            box-shadow: 0 8px 16px rgba(255, 87, 34, 0.4);
+        }
+
+        .cta-buy-now-btn:active {
+            transform: translateY(2px);
+        }
+
+        /* Responsive for mobile */
+        @media (max-width: 480px) {
+            .purchase-offer-wrapper {
+                padding: 20px;
+            }
+
+            .purchase-offer-header {
+                font-size: 24px;
+            }
+
+            .purchase-offer-description {
+                font-size: 14px;
+            }
+
+            .cta-buy-now-btn {
+                font-size: 16px;
+                padding: 12px 25px;
+            }
+        }
+
+
+
+        
     </style>
-
-
-    <script>
-        function showContent(sectionId) {
-            // Hide both sections
-            document.getElementById('section1').classList.add('hidden');
-            document.getElementById('section2').classList.add('hidden');
-
-            // Show the selected section
-            document.getElementById(sectionId).classList.remove('hidden');
-        }
-    </script>
-
-
+    
 
 </head>
 
@@ -71,6 +323,7 @@
     <!-- Loader end -->
 
     <!-- header start -->
+
     <header class="inner-page">
         <div class="container">
             <div class="row">
@@ -78,10 +331,8 @@
                     <div class="menu">
                         <div class="brand-logo">
                             <a href="layout-10.html">
-                                <img src="../assets/images/sangli-properties.png" alt="" class="img-fluid for-light"
-                                    style="border-radius: 15px;">
-                                <img src="../assets/images/sangli-properties.png" alt="" class="img-fluid for-dark"
-                                    style="border-radius: 15px;">
+                                <img src="../assets/images/sangli-properties.png" alt="" class="img-fluid for-light" style="border-radius: 15px;">
+                                <img src="../assets/images/sangli-properties.png" alt="" class="img-fluid for-dark" style="border-radius: 15px;">
                             </a>
                         </div>
                         <nav>
@@ -98,7 +349,7 @@
                                             </div>
                                         </li>
                                         <li>
-                                            <a class="menu-title" href="layout-10.html">Home</a>
+                                            <a class="menu-title"  href="layout-10.html">Home</a>
                                         </li>
                                         <li>
                                             <a class="menu-title" href="about-us-2.html">About</a>
@@ -125,11 +376,9 @@
                         <ul class="header-right">
                             <li style="margin-right: 10px;">
                                 <a href="SubscriptionPlan.html">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" fill="currentColor"
-                                        class="bi bi-currency-rupee" viewBox="0 0 16 16">
-                                        <path
-                                            d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4z" />
-                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" fill="currentColor" class="bi bi-currency-rupee" viewBox="0 0 16 16">
+                                        <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4z"/>
+                                      </svg>
                                 </a>
                             </li>
                             <li style="margin-right: 10px;">
@@ -152,407 +401,138 @@
     <!--  header end -->
 
 
+  
 
-    <section class="single-property mt-0 pt-0 pricing-section slick-between slick-shadow pricing-inner">
-        <div style="padding-top: 130px;" class="container">
-            <div class="row ratio_55">
-                <div class="col-xl-12 col-lg-12">
-                    <div class="title-2">
-                        <svg class="title-svg">
-                            <use xlink:href="https://themes.pixelstrap.com/sheltos/assets/svg/icons.svg#title-line">
-                            </use>
-                        </svg>
-                        <h2>Subscription Plan</h2>
-                    </div>
-                    <div class="description-section tab-description">
-                        <div class="description-details">
-
-                            <div class="desc-box">
-                                <ul class="nav nav-tabs line-tab" id="top-tab" role="tablist">
-                                    <li class="nav-item"><a data-bs-toggle="tab" class="nav-link active" href="#tenant">Plan For Tenant </a></li>
-                                    <li class="nav-item"><a data-bs-toggle="tab" class="nav-link" href="#owner">Plan For Owner</a></li>
-                                    <li class="nav-item"><a data-bs-toggle="tab" class="nav-link" href="#buyer">Plan For Buyer</a></li>
-                                    <li class="nav-item"><a data-bs-toggle="tab" class="nav-link" href="#seller">Plan For Seller plan</a></li>
-                                </ul>
-
-
-                                <div class=" tab-content" id="top-tabContent">
-                                    <div class="tab-pane fade show active about page-section" id="tenant">
-                                        <div class="property-2 row column-sm zoom-gallery property-label property-grid">
-                                            <div class="row">
-                                                <div class="col-md-4 col-sm-6 mb-4">
-                                                    <div class="pricing-box">
-                                                        <div class="pricing-details">
-                                                            <h3 style="color: #0b0bbda6;">Freedom Plan</h3>
-                                                            <p class="font-roboto">Get genuine house owner contacts matching your requirements. Complete Relocation Assistance on Call.</p>
-                                                        </div>
-                                                        <div class="price">
-                                                            <h6 style="display: block; text-align: center;text-decoration: line-through;"> ₹1,999</h6>
-                                                            <h4 style="display: block; text-align: center;"> ₹ 1,499 + 18% GST</h4>
-                                                            <span class="light-text" style="margin-right: 5px;">Per</span> <span class="label label-light label-flat color-2">Month</span>
-                                                        </div>
-                                                        <ul>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Free Customized Packer and Mover Quote.</span></li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Free Rental Agreement consultation with expert.</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">On-Demand Support</span></li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Premium Filters</span></li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Number of Contacts <span style="color:#07a707c2; font-weight: bold;">(upto 25)</span> </span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Instant Property Alerts on SMS</span> </li>
-                                                            <li style="text-decoration: line-through;"><span style=" color: red; font-weight: bold;margin-right: 3px;">✘</span><span style="color: #ff0000d6;">Locality Experts</span> </li>
-                                                            <li style="text-decoration: line-through;"><span style=" color: red; font-weight: bold;margin-right: 3px;">✘</span><span style="color: #ff0000d6;">Rent Negotiation</span> </li>
-                                                        </ul> 
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4 col-sm-6 mb-4">
-                                                    <div class="pricing-box">
-                                                        <div class="pricing-details">
-                                                            <h3 style="color: #f73b66eb;">Relax Plan</h3>
-                                                            <p class="font-roboto">Get Relationship Manager to help you save time and money. Relationship Manager.</p>
-                                                        </div>
-                                                        <div class="price">
-                                                            <h6 style="display: block; text-align: center;text-decoration: line-through;">₹ 4,499 </h6>
-                                                            <h4 style="display: block; text-align: center;"> ₹ 3,499 + 18% GST</h4>
-                                                            <span class="light-text" style="margin-right: 5px;">Per</span><span class="label label-light label-flat color-2">Month</span>
-                                                        </div>
-                                                        <ul>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Contacts owners and fixes meetings.</span></li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Negotiates rent on your behalf</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Provides locality level expertise</span></li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Premium Filters</span></li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Number of Contacts </span><span style="color:#07a707c2; font-weight: bold;">(upto 50)</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Instant Property Alerts on SMS</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Locality Experts</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Rent Negotiation</span> </li>
-                                                        </ul> 
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4 col-sm-6 mb-4">
-                                                    <div class="pricing-box">
-                                                        <div class="pricing-details">
-                                                            <h3 style="color: #008000ad;">MoneyBack Plan</h3>
-                                                            <p class="font-roboto">Get Guaranteed home or 100% Refund. Relationship Manager.</p>
-                                                        </div>
-                                                        <div class="price">
-                                                            <h6 style="display: block; text-align: center;text-decoration: line-through;">₹7,499</h6>
-                                                            <h4 style="display: block; text-align: center;">₹ 5,999 + 18% GST</h4>
-                                                            <span class="light-text" style="margin-right: 5px;">Per</span><span class="label label-light label-flat color-2">Month</span>
-                                                        </div>
-                                                        <ul>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Contacts owners and fixes meetings</span></li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Negotiates rent on your behalf</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Provides locality level expertise</span></li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Premium Filters</span></li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Number of Contacts (upto 25)</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Instant Property Alerts on SMS</span> </li>
-                                                            <li style="text-decoration: line-through;"><span style=" color: red; font-weight: bold;margin-right: 3px;">✘</span><span style="color: #ff0000d6;">Locality Experts</span> </li>
-                                                            <li style="text-decoration: line-through;"><span style=" color: red; font-weight: bold;margin-right: 3px;">✘</span><span style="color: #ff0000d6;">Rent Negotiation</span> </li>
-                                                        </ul> 
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+    <!-- user dashboard section start -->
+    <section class="user-dashboard small-section">
+        <div style="padding-top: 80px;" class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="sidebar-user sticky-cls">
+                        <div class="user-profile">
+                            <div class="media">
+                                <div class="change-pic">
+                                    <img src="../assets/images/avatar/3.jpg" class="img-fluid update_img" alt="">
+                                    <div class="change-hover">
+                                        <button type="button" class="btn"><i data-feather="camera"></i></button>
+                                        <input class="updateimg" type="file" name="img" onchange="readURL(this,0)">
                                     </div>
-                                    <div class="tab-pane fade page-section" id="owner">
-                                        <div class="property-2 row column-sm zoom-gallery property-label property-grid">
-                                            <div class="row">
-                                                <div class="col-md-4 col-sm-6 mb-4">
-                                                    <div class="pricing-box">
-                                                        <div class="pricing-details">
-                                                            <h3 style="color: #0b0bbda6;">Relax</h3>
-                                                            <p class="font-roboto">On Call Assistance</p>
-                                                        </div>
-                                                        <div class="price">
-                                                            <!-- <h6 style="display: block; text-align: center;text-decoration: line-through;"> ₹1,999</h6> -->
-                                                            <h4 style="display: block; text-align: center;">₹2,999</h4>
-                                                            <span class="light-text" style="margin-right: 5px;">Validity</span>
-                                                             <span class="label label-light label-flat color-2">45 Days</span>
-                                                        </div>
-                                                        <ul>
-                                                            <li style="text-decoration: line-through;"><span style=" color: red; font-weight: bold;margin-right: 3px;">✘</span><span style="color: #ff0000d6;">Guaranteed tenants or 100% Moneyback</span> </li>
-                                                            <li style="text-decoration: line-through;"><span style=" color: red; font-weight: bold;margin-right: 3px;">✘</span><span style="color: #ff0000d6;">Personal Field Assistant</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Top Slot Listing for 5x more visibility</span></li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Property promotion on website</span> </li>
-                                                            <li style="text-decoration: line-through;"><span style=" color: red; font-weight: bold;margin-right: 3px;">✘</span><span style="color: #ff0000d6;">Showing property on your behalf</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Relationship Manager (RM)- Super fast closure</span></li>
-                                                            <li style="text-decoration: line-through;"><span style=" color: red; font-weight: bold;margin-right: 3px;">✘</span><span style="color: #ff0000d6;">Photoshoot of your property</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Facebook Marketing of Your property</span></li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Rental agreement home delivered</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Privacy of your phone number</span> </li>
-                                                        </ul> 
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4 col-sm-6 mb-4">
-                                                    <div class="pricing-box">
-                                                        <div class="pricing-details">
-                                                            <h3 style="color: #f73b66eb;">Super Relax</h3>
-                                                            <p class="font-roboto">House Visit Assistance</p>
-                                                        </div>
-                                                        <div class="price">
-                                                            <h4 style="display: block; text-align: center;">₹5,499</h4>
-                                                            <span class="light-text" style="margin-right: 5px;">Validity</span>
-                                                             <span class="label label-light label-flat color-2">45 Days</span>
-                                                        </div>
-                                                        <ul>
-                                                            <li style="text-decoration: line-through;"><span style=" color: red; font-weight: bold;margin-right: 3px;">✘</span><span style="color: #ff0000d6;">Guaranteed tenants or 100% Moneyback</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Personal Field Assistant</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Top Slot Listing for 5x more visibility</span></li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Property promotion on website</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Showing property on your behalf</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Relationship Manager (RM)- Super fast closure</span></li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Photoshoot of your property</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Facebook Marketing of Your property</span></li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Rental agreement home delivered</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Privacy of your phone number</span> </li>
-                                                        </ul>  
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4 col-sm-6 mb-4">
-                                                    <div class="pricing-box">
-                                                        <div class="pricing-details">
-                                                            <h3 style="color: #008000ad;">MoneyBack Plan</h3>
-                                                            <p class="font-roboto">100% Guarantee</p>
-                                                        </div>
-                                                        <div class="price">
-                                                            <h4 style="display: block; text-align: center;">₹6,499</h4>
-                                                            <span class="light-text" style="margin-right: 5px;">Validity</span>
-                                                             <span class="label label-light label-flat color-2">45 Days</span>
-                                                        </div>
-                                                        <ul>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Guaranteed tenants or 100% Moneyback</span> </li>
-                                                            <li style="text-decoration: line-through;"><span style=" color: red; font-weight: bold;margin-right: 3px;">✘</span><span style="color: #ff0000d6;">Personal Field Assistant</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Top Slot Listing for 5x more visibility</span></li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Property promotion on website</span> </li>
-                                                            <li style="text-decoration: line-through;"><span style=" color: red; font-weight: bold;margin-right: 3px;">✘</span><span style="color: #ff0000d6;">Showing property on your behalf</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Relationship Manager (RM)- Super fast closure</span></li>
-                                                            <li style="text-decoration: line-through;"><span style=" color: red; font-weight: bold;margin-right: 3px;">✘</span><span style="color: #ff0000d6;">Photoshoot of your property</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Facebook Marketing of Your property</span></li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Rental agreement home delivered</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Privacy of your phone number</span> </li>
-                                                        </ul> 
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4 col-sm-6 mb-4"></div>
-                                                <div class="col-md-4 col-sm-6 mb-4">
-                                                    <div class="pricing-box">
-                                                        <div class="pricing-details">
-                                                            <h3 style="color: #ff5c41;">Super MoneyBack</h3>
-                                                            <p class="font-roboto">Personal Field Assistant</p>
-                                                        </div>
-                                                        <div class="price">
-                                                            <h4 style="display: block; text-align: center;">₹6,499</h4>
-                                                            <span class="light-text" style="margin-right: 5px;">Validity</span>
-                                                             <span class="label label-light label-flat color-2">45 Days</span>
-                                                        </div>
-                                                        <ul>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Guaranteed tenants or 100% Moneyback</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Personal Field Assistant</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Top Slot Listing for 5x more visibility</span></li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Property promotion on website</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Showing property on your behalf</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Relationship Manager (RM)- Super fast closure</span></li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Photoshoot of your property</span></li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Facebook Marketing of Your property</span></li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Rental agreement home delivered</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Privacy of your phone number</span> </li>
-                                                        </ul> 
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade page-section ratio_40" id="buyer">
-                                        <div class="property-2 row column-sm zoom-gallery property-label property-grid">
-                                            <div class="row">
-                                                <div class="col-md-4 col-sm-6 mb-4">
-                                                    <div class="pricing-box">
-                                                        <div class="pricing-details">
-                                                            <h3 style="color: #0b0bbda6;">Power Plan</h3>
-                                                            <p class="font-roboto">Choose your dream home from lots of options!</p>
-                                                        </div>
-                                                        <div class="price">
-                                                            <!-- <h6 style="display: block; text-align: center;text-decoration: line-through;"> ₹1,999</h6> -->
-                                                            <h4 style="display: block; text-align: center;">₹ 1,899 + 18% GST</h4>
-                                                            <span class="light-text" style="margin-right: 5px;">Per</span> <span class="label label-light label-flat color-2">Month</span>
-                                                        </div>
-                                                        <ul>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Number of Contacts <span style="color:#07a707c2; font-weight: bold;">(upto 25)</span> </span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Legal Assistance</span></li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Loan Assistance</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">On Demand Support</span></li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Premium Filters</span></li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Instant Property Alerts on SMS</span> </li>
-                                                            <li style="text-decoration: line-through;"><span style=" color: red; font-weight: bold;margin-right: 3px;">✘</span><span style="color: #ff0000d6;">Locality Experts</span> </li>
-                                                            <li style="text-decoration: line-through;"><span style=" color: red; font-weight: bold;margin-right: 3px;">✘</span><span style="color: #ff0000d6;">Rent Negotiation</span> </li>
-                                                        </ul> 
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4 col-sm-6 mb-4">
-                                                    <div class="pricing-box">
-                                                        <div class="pricing-details">
-                                                            <h3 style="color: #f73b66eb;">Property Expert Plan</h3>
-                                                            <p class="font-roboto">Get FREE Loan Assistance + 100% Cashback on plan amount* + Property Expert.</p>
-                                                        </div>
-                                                        <div class="price">
-                                                            <!-- <h6 style="display: block; text-align: center;text-decoration: line-through;">₹ 4,499 </h6> -->
-                                                            <h4 style="display: block; text-align: center;">₹ 1,999 + 18% GST</h4>
-                                                            <span class="light-text" style="margin-right: 5px;">Per</span><span class="label label-light label-flat color-2">Month</span>
-                                                        </div>
-                                                        <ul>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Number of Contacts </span><span style="color:#07a707c2; font-weight: bold;">(upto 50)</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Legal Assistance</span></li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Free Loan Assistance</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Free Interior Design Consultation</span></li>
-                                                        </ul> 
-                                                        <h5>Dedicated Property Expert</h5>
-                                                        <ul>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Negotiates to get you the BEST PRICE for the property.</span></li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Free Loan Assistance</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Finds you the BEST PROPERTY and schedule property visits</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Free Interior Consultation and Design Inspection after you finalise your property</span> </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4 col-sm-6 mb-4">
-                                                    <div class="pricing-box">
-                                                        <div class="pricing-details">
-                                                            <h3 style="color: #008000ad;">MoneyBack Plan</h3>
-                                                            <p class="font-roboto">Get Guaranteed property or 100% Refund</p>
-                                                        </div>
-                                                        <div class="price">
-                                                            <!-- <h6 style="display: block; text-align: center;text-decoration: line-through;">₹7,499</h6> -->
-                                                            <h4 style="display: block; text-align: center;">₹ 4999 + 18% GST</h4>
-                                                            <span class="light-text" style="margin-right: 5px;">Per</span><span class="label label-light label-flat color-2">Month</span>
-                                                        </div>
-                                                        <ul>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Number of Contacts </span><span style="color:#07a707c2; font-weight: bold;">(upto 50)</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Legal Assistance</span></li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Free Loan Assistance</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Free Interior Design Consultation</span></li>
-                                                        </ul> 
-                                                        <h5>Dedicated Property Expert</h5>
-                                                        <ul>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Negotiates to get you the BEST PRICE for the property.</span></li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Free Loan Assistance</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Finds you the BEST PROPERTY and schedule property visits</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Free Interior Consultation and Design Inspection after you finalise your property</span> </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade page-section" id="seller">
-                                        <div class="property-2 row column-sm zoom-gallery property-label property-grid">
-                                            <div class="row">
-                                                <div class="col-md-4 col-sm-6 mb-4">
-                                                    <div class="pricing-box">
-                                                        <div class="pricing-details">
-                                                            <h3 style="color: #0b0bbda6;">Relax</h3>
-                                                            <p class="font-roboto">Get Buyers Quickly. Save Lakhs on Brokerage.</p>
-                                                        </div>
-                                                        <div class="price">
-                                                            <!-- <h6 style="display: block; text-align: center;text-decoration: line-through;"> ₹1,999</h6> -->
-                                                            <h4 style="display: block; text-align: center;">₹7,499</h4>
-                                                            <span class="light-text" style="margin-right: 5px;">Validity</span>
-                                                             <span class="label label-light label-flat color-2">3 Month</span>
-                                                        </div>
-                                                        <ul>
-                                                            <li style="text-decoration: line-through;"><span style=" color: red; font-weight: bold;margin-right: 3px;">✘</span><span style="color: #ff0000d6;">Guaranteed buyers or Moneyback</span> </li>
-                                                            <li style="text-decoration: line-through;"><span style=" color: red; font-weight: bold;margin-right: 3px;">✘</span><span style="color: #ff0000d6;">Personal Field Assistant</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Property promotion on site</span></li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Relationship Manager (RM)</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Facebook Marketing Of Property</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Privacy of your phone number</span> </li>
-                                                            <li style="text-decoration: line-through;"><span style=" color: red; font-weight: bold;margin-right: 3px;">✘</span><span style="color: #ff0000d6;">Showing property on your behalf</span> </li>
-                                                            <li style="text-decoration: line-through;"><span style=" color: red; font-weight: bold;margin-right: 3px;">✘</span><span style="color: #ff0000d6;">Photoshoot of your property</span> </li>
-                                                        </ul> 
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4 col-sm-6 mb-4">
-                                                    <div class="pricing-box">
-                                                        <div class="pricing-details">
-                                                            <h3 style="color: #f73b66eb;">Super Relax</h3>
-                                                            <p class="font-roboto">Leave your house keys and worries to us. Get buyer super-fast.</p>
-                                                        </div>
-                                                        <div class="price">
-                                                            <!-- <h6 style="display: block; text-align: center;text-decoration: line-through;"> ₹1,999</h6> -->
-                                                            <h4 style="display: block; text-align: center;">₹13,499</h4>
-                                                            <span class="light-text" style="margin-right: 5px;">Validity</span>
-                                                             <span class="label label-light label-flat color-2">3 Month</span>
-                                                        </div>
-                                                        <ul>
-                                                            <li style="text-decoration: line-through;"><span style=" color: red; font-weight: bold;margin-right: 3px;">✘</span><span style="color: #ff0000d6;">Guaranteed buyers or Moneyback</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Personal Field assistant</span></li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Property promotion on site</span></li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Relationship Manager (RM)</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Facebook Marketing Of Property</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Privacy of your phone number</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Showing property on your behalf</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Photoshoot of your property</span> </li>
-                                                        </ul> 
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4 col-sm-6 mb-4">
-                                                    <div class="pricing-box">
-                                                        <div class="pricing-details">
-                                                            <h3 style="color: #008000ad;">MoneyBack</h3>
-                                                            <p class="font-roboto">Guaranteed buyers or Moneyback. Relationship Manager for Super-fast closure.</p>
-                                                        </div>
-                                                        <div class="price">
-                                                            <!-- <h6 style="display: block; text-align: center;text-decoration: line-through;"> ₹1,999</h6> -->
-                                                            <h4 style="display: block; text-align: center;">₹16,499</h4>
-                                                            <span class="light-text" style="margin-right: 5px;">Validity</span>
-                                                             <span class="label label-light label-flat color-2">6 Month</span>
-                                                        </div>
-                                                        <ul>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Guaranteed buyers or Moneyback</span></li>
-                                                            <li style="text-decoration: line-through;"><span style=" color: red; font-weight: bold;margin-right: 3px;">✘</span><span style="color: #ff0000d6;">Personal Field assistant</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Property promotion on site</span></li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Relationship Manager (RM)</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Facebook Marketing Of Property</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Privacy of your phone number</span> </li>
-                                                            <li style="text-decoration: line-through;"><span style=" color: red; font-weight: bold;margin-right: 3px;">✘</span><span style="color: #ff0000d6;">Showing property on your behalf</span> </li>
-                                                            <li style="text-decoration: line-through;"><span style=" color: red; font-weight: bold;margin-right: 3px;">✘</span><span style="color: #ff0000d6;">Photoshoot of your property</span> </li>
-                                                        </ul> 
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4 col-sm-6 mb-4"></div>
-                                                <div class="col-md-4 col-sm-6 mb-4">
-                                                    <div class="pricing-box">
-                                                        <div class="pricing-details">
-                                                            <h3 style="color: #ff5c41;">Super MoneyBack</h3>
-                                                            <p class="font-roboto">Guaranteed buyers or Moneyback. Hire Field Assistant for showing your house.</p>
-                                                        </div>
-                                                        <div class="price">
-                                                            <!-- <h6 style="display: block; text-align: center;text-decoration: line-through;"> ₹1,999</h6> -->
-                                                            <h4 style="display: block; text-align: center;">₹20,999</h4>
-                                                            <span class="light-text" style="margin-right: 5px;">Validity</span>
-                                                             <span class="label label-light label-flat color-2">6 Month</span>
-                                                        </div>
-                                                        <ul>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Guaranteed buyers or Moneyback</span></li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Personal Field assistant</span></li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Property promotion on site</span></li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Relationship Manager (RM)</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Facebook Marketing Of Property</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Privacy of your phone number</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Showing property on your behalf</span> </li>
-                                                            <li><span style=" color: green; font-weight: bold;margin-right: 3px;">✔</span><span style="color: #07a707c2;">Photoshoot of your property</span> </li>
-                                                        </ul> 
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
                                 </div>
+                                <div class="media-body">
+                                    <h5>Priti Patil</h5>
+                                    <h6 class="font-roboto">priti@gmail.com</h6>
+                                    <h6 class="font-roboto mb-0">+91 846 - 547 - 210</h6>
+                                </div>
+                            </div>
+                            <div class="connected-social">
+                                <!-- <h6>Connect with</h6>
+                                <ul class="agent-social">
+                                    <li><a href="https://www.facebook.com/" class="facebook"><i
+                                                class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="https://twitter.com/" class="twitter"><i
+                                                class="fab fa-twitter"></i></a></li>
+                                    <li><a href="https://account.google.com/" class="google"><i
+                                                class="fab fa-google"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/" class="linkedin"><i
+                                                class="fab fa-linkedin-in"></i></a></li>
+                                </ul> -->
+                            </div>
+                        </div>
+                        <div class="dashboard-list">
+                            <ul class="nav nav-tabs right-line-tab">
+                                <li class="nav-item"><a class="nav-link " href="user-profile.html">My profile</a></li>
+                                <li class="nav-item"><a class="nav-link " href="user-listing.html">My Listing</a></li>
+                                <li class="nav-item"><a class="nav-link" href="user-create.html">Create Property</a></li>
+                                <li class="nav-item"><a class="nav-link" href="properties.html">Interested in Your Properties</a></li>
+                                <li class="nav-item"><a class="nav-link" href="Owners.html">Owners you Contacted</a></li>
+
+                                <li class="nav-item"><a class="nav-link" href="RentedProperties.html">My Rental Properties</a></li>
+
+                                <li class="nav-item"><a class="nav-link active" href="Subscription.html">Subscription</a></li>
+                                <!-- <li class="nav-item"><a class="nav-link" href="Payments.html">Your Payments</a></li> -->
+                                <li class="nav-item"><a class="nav-link" href="user-favourites.html">Favourites</a></li>
+                                <li class="nav-item"><a class="nav-link" href="user-privacy.html">Privacy</a></li>
+                                <li class="nav-item"><a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#logout" class="nav-link">Log out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-lg-9">
+                    
+                    
+                    <div class="plan-billing-container">
+                        <div class="plan-billing-header">
+                            <h2 style="color:#ff5722"> Active Plan</h2>
+                            <div>
+                                <button class="plan-billing-button">Cancel subscription</button>
+                                <!-- <button class="plan-billing-button">Manage payments</button> -->
+                            </div>
+                        </div>
+                
+                        <div class="plan-details-section">
+                            <div class="plan-details-wrapper">
+                                <div class="plan-detail-box">
+                                    <p>MoneyBack Plan</p>
+                                    <h3>₹ 5,999 / monthly</h3>
+                                </div>
+                                <!-- <div class="plan-detail-box">
+                                    <p>Status</p>
+                                    <h3><span class="plan-status-badge">Hobby</span> <span class="plan-active-text">Active</span></h3>
+                                </div> -->
+                                <div class="plan-detail-box">
+                                    <p>Renew at</p>
+                                    <h3>Oct 26, 2024</h3>
+                                </div>
+                            </div>
+                            <button class="plan-details-button">Change plan</button>
+                        </div>
+                
+                        <div class="usage-section">
+                            <h3>Usage</h3>
+                            <p>Your usage is renewed every month.</p>
+                            <div class="usage-cards-wrapper">
+                                <div class="usage-card">
+                                    <h3>contact Reveal</h3>
+                                    <p>50 of 100</p>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 5%;"></div>
+                                    </div>
+                                </div>
+                                <div class="usage-card">
+                                    <h3> Property Listed </h3>
+                                    <p>1 of 3</p>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 33%;"></div>
+                                    </div>
+                                </div>
+                                <!-- <div class="usage-card">
+                                    <h3>Documents pages</h3>
+                                    <p>15 of 100</p>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 1.5%;"></div>
+                                    </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
+
+
+                    <div style="margin-top: 45px;" class="purchase-offer-wrapper">
+                        <h2 style="color:#ff5722;font-size: 25px;" class="purchase-offer-header">Special Offer Just for You!</h2>
+                        <p class="purchase-offer-description">Don't miss this chance to grab the best deal of the season. Click the button below to get started and enjoy exclusive discounts. Limited time only!</p>
+                        <button class="cta-buy-now-btn">Buy Now</button>
+                    </div>
+
+
+
                 </div>
             </div>
         </div>
     </section>
+    <!-- user dashboard section end -->
 
     <!-- footer start -->
     <footer>
@@ -773,59 +753,443 @@
     </div>
     <!-- tap to top end -->
 
-    <!-- customizer start -->
-    <div class="customizer-wrap">
-        <div class="customizer-links">
-            <i data-feather="settings"></i>
+    <!-- Contacted modal -->
+    <div class="modal fade edit-profile-modal" id="contacted-modal">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">4 Tenants Contacted</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row gx-3">
+                            <div class="form-group col-md-6">
+                                <h4 style="font-weight: 500;">Shubham Patil</h4>
+                                <label for="first">Aug 25, 2024 at 06:30pm</label>
+                                <h6><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                    <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
+                                  </svg>
+                                  shubham@gmail.com
+                                </h6>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dashed color-2 btn-pill"
+                        data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-gradient color-2 btn-pill" data-bs-dismiss="modal">Save
+                        changes</button>
+                </div>
+            </div>
         </div>
-        <div class="customizer-contain custom-scrollbar">
-            <div class="setting-back">
-                <i data-feather="x"></i>
-            </div>
-            <div class="layouts-settings">
-                <div class="customizer-title">
-                    <h6 class="color-2">Layout type</h6>
+    </div>
+    <!-- end contacted modal -->
+
+    <!-- log out modal start -->
+    <div class="modal fade edit-profile-modal logout-modal" id="logout">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Logging out</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-                <div class="option-setting">
-                    <span>Light</span>
-                    <label class="switch">
-                        <input type="checkbox" name="chk1" value="option" class="setting-check"><span
-                            class="switch-state"></span>
-                    </label>
-                    <span>Dark</span>
+                <div class="modal-body">
+                    <h6>Are you sure ? you want to log out.</h6>
+                    <p>Once you will be logged out and will be unable to log in back.</p>
                 </div>
-            </div>
-            <div class="layouts-settings">
-                <div class="customizer-title">
-                    <h6 class="color-2">Layout Direction</h6>
-                </div>
-                <div class="option-setting">
-                    <span>LTR</span>
-                    <label class="switch">
-                        <input type="checkbox" name="chk2" value="option" class="setting-check1"><span
-                            class="switch-state"></span>
-                    </label>
-                    <span>RTL</span>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dashed color-2 btn-pill" data-bs-dismiss="modal">no</button>
+                    <button type="button" onclick="document.location='layout-2.html'"
+                        class="btn btn-gradient color-2 btn-pill">yes</button>
                 </div>
             </div>
-            <div class="layouts-settings">
-                <div class="customizer-title">
-                    <h6 class="color-2">Unlimited Color</h6>
-                </div>
-                <div class="option-setting unlimited-color-layout">
-                    <div class="form-group">
-                        <label for="ColorPicker3">color 3</label>
-                        <input id="ColorPicker3" type="color" value="#ff5c41" name="Default">
-                    </div>
-                    <div class="form-group">
-                        <label for="ColorPicker4">color 4</label>
-                        <input id="ColorPicker4" type="color" value="#ff8c41" name="Default">
+        </div>
+    </div>
+    <!-- log out modal end -->
+
+    <!-- login with otp -->
+    <div class="modal fade signup-modal" id="login-modal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body ratio_asos">
+                    <div class="row log-in">
+                        <div class="col-lg-12">
+                            <div class="theme-card">
+                                <div class="title-3 text-start">
+                                    <h2>Log in</h2>
+                                </div>
+                                <form id="loginForm">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <i data-feather="phone"></i>
+                                                </div>
+                                            </div>
+                                            <input type="number" maxlength="10" placeholder="Enter Mobile Number"
+                                                id="mobileno" name="mobilenumber" class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button type="submit"
+                                            class="btn btn-gradient btn-pill color-2 me-sm-3 me-2">Send OTP</button>
+                                    </div>
+                                    <div class="divider">
+                                        <h6>or</h6>
+                                    </div>
+                                    <div>
+                                        <label class="d-block mb-0" for="withpassword">
+                                            <input class="checkbox_animated color-2" id="withpassword" type="checkbox">
+                                            <span>Login with password</span>
+                                        </label>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- customizer end -->
+    <!-- login with otp -->
+
+    <!-- Log in OTP Verification Modal -->
+    <div class="modal fade signup-modal" id="login-otp-verification">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body ratio_asos">
+                    <div class="row log-in sign-up">
+                        <div class="col-lg-12">
+                            <div class="theme-card">
+                                <div class="title-3 text-start">
+                                    <h2>OTP Verification</h2>
+                                </div>
+                                <div id="error" style="display:none; color: red; margin-bottom: 10px;">
+                                    Please enter a valid OTP.
+                                </div>
+                                <form style="text-align: center;" onsubmit="verifyOTP(event)">
+                                    <div id="otp" class="inputs d-flex flex-row justify-content-center mt-2">
+                                        <input class="m-2 form-control rounded size" name="input1" type="text"
+                                            id="first" maxlength="1" oninput="moveToNext(this, 'second')" required
+                                            style="text-align: center;" />
+                                        <input class="m-2 form-control rounded size" name="input2" type="text"
+                                            id="second" maxlength="1" oninput="moveToNext(this, 'third')" required
+                                            style="text-align: center;" />
+                                        <input class="m-2 form-control rounded size" name="input3" type="text"
+                                            id="third" maxlength="1" oninput="moveToNext(this, 'fourth')" required
+                                            style="text-align: center;" />
+                                        <input class="m-2 form-control rounded size" name="input4" type="text"
+                                            id="fourth" maxlength="1" oninput="moveToNext(this, 'fifth')" required
+                                            style="text-align: center;" />
+                                        <input class="m-2 form-control rounded size" name="input5" type="text"
+                                            id="fifth" maxlength="1" oninput="moveToNext(this, 'sixth')" required
+                                            style="text-align: center;" />
+                                        <input class="m-2 form-control rounded size" name="input6" type="text"
+                                            id="sixth" maxlength="1" required style="text-align: center;" />
+                                    </div>
+                                    <div>
+                                        <button type="submit"
+                                            class="btn btn-gradient btn-pill color-2 me-sm-3 me-2">Verify OTP</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Log in Otp Verfication -->
+
+    <!-- login with password -->
+    <div class="modal fade signup-modal" id="login-password">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body ratio_asos">
+                    <div class="row log-in">
+                        <div class="col-lg-12">
+                            <div class="theme-card">
+                                <div class="title-3 text-start">
+                                    <h2>Log in</h2>
+                                </div>
+                                <form onsubmit="redirectToUserListing(event)">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <i data-feather="phone"></i>
+                                                </div>
+                                            </div>
+                                            <input type="number" maxlength="10" minlength="10" class="form-control"
+                                                placeholder="Enter Mobile Number" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <i data-feather="lock"></i>
+                                                </div>
+                                            </div>
+                                            <input type="password" id="pwd-input" class="form-control"
+                                                placeholder="Password" maxlength="8" required>
+                                            <div class="input-group-apend">
+                                                <div class="input-group-text">
+                                                    <i id="pwd-icon" class="far fa-eye-slash"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="important-note">
+                                            password should be a minimum of 8 characters and should contains letters and
+                                            numbers
+                                        </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <label class="d-block mb-0" for="chk-ani">
+                                            <!-- <input class="checkbox_animated color-2" id="chk-ani" type="checkbox"> <span>Remember me</span> -->
+                                        </label>
+                                        <a id="forgot" class="font-rubik text-color-2">Forgot password?</a>
+                                    </div>
+                                    <div>
+                                        <button type="submit"
+                                            class="btn btn-gradient btn-pill color-2 me-sm-3 me-2">Login</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- login with password -->
+
+    <!-- register -->
+    <div class="modal fade signup-modal" id="register-model">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body ratio_asos">
+                    <div class="row log-in sign-up">
+                        <div class="col-lg-12">
+                            <div class="theme-card">
+                                <div class="title-3 text-start">
+                                    <h2>Sign up</h2>
+                                </div>
+                                <form onsubmit="redirectToUserListing(event)">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <i data-feather="user"></i>
+                                                </div>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Enter your name"
+                                                required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <i data-feather="mail"></i>
+                                                </div>
+                                            </div>
+                                            <input type="email" class="form-control" placeholder="Enter email address"
+                                                required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <i data-feather="lock"></i>
+                                                </div>
+                                            </div>
+                                            <input type="password" id="pwd-input" class="form-control"
+                                                placeholder="Password" maxlength="8" required>
+                                            <div class="input-group-apend">
+                                                <div class="input-group-text">
+                                                    <i id="pwd-icon" class="far fa-eye-slash"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="important-note">
+                                            password should be a minimum of 8 characters and should contains letters and
+                                            numbers
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button type="submit"
+                                            class="btn btn-gradient btn-pill color-2 me-sm-3 me-2">Create
+                                            Account</button>
+                                        <a id="login" class="btn btn-dashed btn-pill color-2">Log in</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- register -->
+
+    <!-- Forgot Modal -->
+    <div class="modal fade signup-modal" id="forgot-model">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body ratio_asos">
+                    <div class="row log-in sign-up">
+                        <div class="col-lg-12">
+                            <div class="theme-card">
+                                <div class="title-3 text-start">
+                                    <h2>Forgot your password</h2>
+                                </div>
+                                <form>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <i data-feather="phone"></i>
+                                                </div>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Enter Mobile Number"
+                                                required>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button type="submit" class="btn btn-gradient btn-pill color-2 me-sm-3 me-2"
+                                            id="forgot-otp">Send request</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Forgot Modal -->
+
+    <!-- Forgot OTP Verification Modal -->
+    <div class="modal fade signup-modal" id="forgot-otp-verification">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body ratio_asos">
+                    <div class="row log-in sign-up">
+                        <div class="col-lg-12">
+                            <div class="theme-card">
+                                <div class="title-3 text-start">
+                                    <h2>OTP Verification</h2>
+                                </div>
+
+                                <!-- Error Message -->
+                                <div id="error-message" style="display:none; color: red; margin-bottom: 10px;">
+                                    Please enter a valid OTP.
+                                </div>
+
+                                <form style="text-align: center;" onsubmit="forgotVerifyOTP(event)">
+                                    <div id="otp" class="inputs d-flex flex-row justify-content-center mt-2">
+                                        <input class="m-2 form-control rounded size" name="input11" type="text"
+                                            id="first1" maxlength="1" oninput="forgotmoveToNext(this, 'second1')"
+                                            required style="text-align: center;" />
+                                        <input class="m-2 form-control rounded size" name="input22" type="text"
+                                            id="second1" maxlength="1" oninput="forgotmoveToNext(this, 'third1')"
+                                            required style="text-align: center;" />
+                                        <input class="m-2 form-control rounded size" name="input33" type="text"
+                                            id="third1" maxlength="1" oninput="forgotmoveToNext(this, 'fourth1')"
+                                            required style="text-align: center;" />
+                                        <input class="m-2 form-control rounded size" name="input44" type="text"
+                                            id="fourth1" maxlength="1" oninput="forgotmoveToNext(this, 'fifth1')"
+                                            required style="text-align: center;" />
+                                        <input class="m-2 form-control rounded size" name="input55" type="text"
+                                            id="fifth1" maxlength="1" oninput="forgotmoveToNext(this, 'sixth1')"
+                                            required style="text-align: center;" />
+                                        <input class="m-2 form-control rounded size" name="input66" type="text"
+                                            id="sixth1" maxlength="1" required style="text-align: center;" />
+                                    </div>
+                                    <div>
+                                        <button type="submit"
+                                            class="btn btn-gradient btn-pill color-2 me-sm-3 me-2">Verify OTP</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Forgot Otp Verfication -->
+
+    <!-- newpassword -->
+    <div class="modal fade signup-modal" id="newpassword-model">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body ratio_asos">
+                    <div class="row log-in sign-up">
+                        <div class="col-lg-12">
+                            <div class="theme-card">
+                                <div class="title-3 text-start">
+                                    <h2>Create New Password</h2>
+                                </div>
+                                <form onsubmit="redirectToUserListing(event)">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <i data-feather="lock"></i>
+                                                </div>
+                                            </div>
+                                            <input type="password" id="pwd-input" class="form-control"
+                                                placeholder="Enter New Password" maxlength="8" required>
+                                            <div class="input-group-apend">
+                                                <div class="input-group-text">
+                                                    <i id="pwd-icon" class="far fa-eye-slash"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <i data-feather="lock"></i>
+                                                </div>
+                                            </div>
+                                            <input type="password" id="pwd-input" class="form-control"
+                                                placeholder="Confirm New Password" maxlength="8" required>
+                                            <div class="input-group-apend">
+                                                <div class="input-group-text">
+                                                    <i id="pwd-icon" class="far fa-eye-slash"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="important-note">
+                                            Note: Password should be a minimum of 8 characters and should contains
+                                            letters and
+                                            numbers
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button type="submit"
+                                            class="btn btn-gradient btn-pill color-2 me-sm-3 me-2">Create</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- newpassword -->
 
     <!-- latest jquery-->
     <script src="../assets/js/jquery-3.6.0.min.js"></script>
@@ -833,17 +1197,21 @@
     <!-- popper js-->
     <script src="../assets/js/popper.min.js"></script>
 
-    <!-- Bootstrap js-->
-    <script src="../assets/js/bootstrap.bundle.min.js"></script>
-
     <!-- feather icon js-->
     <script src="../assets/js/feather-icon/feather.min.js"></script>
     <script src="../assets/js/feather-icon/feather-icon.js"></script>
+
+    <!-- magnific js -->
+    <script src="../assets/js/jquery.magnific-popup.js"></script>
+    <script src="../assets/js/zoom-gallery.js"></script>
 
     <!-- slick js -->
     <script src="../assets/js/slick.js"></script>
     <script src="../assets/js/slick-animation.min.js"></script>
     <script src="../assets/js/custom-slick.js"></script>
+
+    <!-- Bootstrap js-->
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
 
     <!-- Template js-->
     <script src="../assets/js/script.js"></script>
@@ -858,39 +1226,227 @@
     <script src="../assets/js/color/template-color.js"></script>
 
 
-<style>
-    .pricing-box {
-    background-color: #f8f9fa;
-    border: 1px solid #dee2e6;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
+    <style>
+        .image-mylisting {
+            height: 221px !important;
+        }
+    </style>
+    <script>
+        // Listen for the modal close event
+        $('#login-modal').on('hide.bs.modal', function () {
+            // Clear the mobile number input field
+            $('#mobileno').val('');
+        });
+    </script>
 
-.pricing-box:hover {
-    transform: scale(1.05);
-}
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent form submission
 
-.pricing-icon {
-    margin-bottom: 15px;
-}
+            var mobileNo = document.getElementById("mobileno").value;
 
-.price {
-    margin-top: 20px;
-}
+            if (mobileNo.length == 10) {
+                // If the mobile number field is filled correctly
+                var otpModal = new bootstrap.Modal(document.getElementById('login-otp-verification'));
+                otpModal.show(); // Show the modal
+                document.getElementById('mobileno').value = '';
+            } else {
+                alert("Please enter a valid 10-digit mobile number.");
+            }
+        });
+    </script>
 
-@media (max-width: 767px) {
-    .pricing-box {
-        margin-bottom: 30px;
-    }
-}
+    <script>
+        function redirectToUserListing(event) {
+            event.preventDefault(); // Prevents the default form submission
+            window.location.href = 'layout-10.html';
+        }
+    </script>
 
-</style>
+    <script>
+        document.getElementById('login').addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent the form from submitting
+            var otpModal = new bootstrap.Modal(document.getElementById('login-modal'));
+            otpModal.show(); // Show the modal
+        });
+    </script>
+
+    <script>
+        document.getElementById('withpassword').addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent the form from submitting
+            var otpModal = new bootstrap.Modal(document.getElementById('login-password'));
+            otpModal.show(); // Show the modal
+        });
+    </script>
+
+    <script>
+        document.getElementById('register').addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent the form from submitting
+            var otpModal = new bootstrap.Modal(document.getElementById('register-model'));
+            otpModal.show(); // Show the modal
+        });
+    </script>
+
+    <script>
+        document.getElementById('forgot').addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent the form from submitting
+            var otpModal = new bootstrap.Modal(document.getElementById('forgot-model'));
+            otpModal.show(); // Show the modal
+        });
+    </script>
+
+    <script>
+        document.getElementById('forgot-otp').addEventListener('click', function (e) {
+            e.preventDefault(); // Prevent the form from submitting
+            var otpModal = new bootstrap.Modal(document.getElementById('forgot-otp-verification'));
+            otpModal.show(); // Show the modal
+        });
+    </script>
+
+    <script>
+        $('.modal').on('show.bs.modal', function () {
+            $('.modal').not($(this)).each(function () {
+                $(this).modal('hide');
+            });
+        });
+    </script>
+
+
+    <!-- Script for Log-in OTP Verification -->
+    <script>
+        // Default OTP for validation
+        const defaultOTP = "123456";
+        const defaultmobile = "9876543210"
+
+        function moveToNext(currentInput, nextInputId) {
+            if (currentInput.value.length === 1) {
+                document.getElementById(nextInputId).focus();
+            }
+        }
+
+        function clearOTPFields() {
+            document.getElementById('first').value = '';
+            document.getElementById('second').value = '';
+            document.getElementById('third').value = '';
+            document.getElementById('fourth').value = '';
+            document.getElementById('fifth').value = '';
+            document.getElementById('sixth').value = '';
+            document.getElementById('first').focus(); // Set focus back to the first input
+        }
+
+        function verifyOTP(event) {
+            event.preventDefault(); // Prevent form from submitting
+
+            // Get the input values
+            const otp = [
+                document.getElementById('first').value,
+                document.getElementById('second').value,
+                document.getElementById('third').value,
+                document.getElementById('fourth').value,
+                document.getElementById('fifth').value,
+                document.getElementById('sixth').value,
+            ].join('');
+
+            const mobile = [document.getElementById('mobileno').value]
+
+            clearOTPFields()
+
+            if (otp != defaultOTP) {
+                // Show Error
+                document.getElementById('error').style.display = 'block';
+            }
+            else if (otp == defaultOTP && defaultmobile == mobile) {
+                // Redirect to home page
+                window.location.href = 'layout-10.html';
+            } else {
+                // Redirect to register modal
+                $('.model').modal('hide'); // Hide current modal
+                $('#register-model').modal('show');   // Show register modal
+            }
+        }
+
+    </script>
+    <!-- End Script for Log-in OTP Verification -->
+
+    <!-- Script for Forgot OTP Verification -->
+    <script>
+        // Default OTP for validation
+        const forgotdefaultOTP = "654321";
+
+        function forgotmoveToNext(currentInput, nextInputId) {
+            if (currentInput.value.length === 1) {
+                document.getElementById(nextInputId).focus();
+            }
+        }
+
+        function forgotclearOTPFields() {
+            document.getElementById('first1').value = '';
+            document.getElementById('second1').value = '';
+            document.getElementById('third1').value = '';
+            document.getElementById('fourth1').value = '';
+            document.getElementById('fifth1').value = '';
+            document.getElementById('sixth1').value = '';
+        }
+
+        function forgotVerifyOTP(event) {
+            event.preventDefault(); // Prevent form from submitting
+
+            // Get the input values
+            const otp1 = [
+                document.getElementById('first1').value,
+                document.getElementById('second1').value,
+                document.getElementById('third1').value,
+                document.getElementById('fourth1').value,
+                document.getElementById('fifth1').value,
+                document.getElementById('sixth1').value,
+                document.getElementById('first1').focus(),
+            ].join('');
+
+            if (otp1 == forgotdefaultOTP) {
+                forgotclearOTPFields()
+                // Hide all open modals
+                $('.modal').modal('hide');
+
+                // Show the next modal after OTP verification
+                $('#newpassword-model').modal('show');
+            } else {
+                // Show Error
+                document.getElementById('error-message').style.display = 'block';
+            }
+        }
+
+    </script>
+
+    <script>
+        function OTPInput() {
+            const inputs = document.querySelectorAll('#otp > *[id]');
+            for (let i = 0; i < inputs.length; i++) {
+                inputs[i].addEventListener('input', function (event) {
+                    const target = event.target;
+                    const value = target.value;
+                    if (value === '') {
+                        if (i !== 0) inputs[i - 1].focus();
+                    } else {
+                        if (i === inputs.length - 1 && value !== '') {
+                            return true;
+                        } else if (/^[0-9]$/.test(value)) {
+                            if (i !== inputs.length - 1) inputs[i + 1].focus();
+                        } else {
+                            target.value = '';
+                        }
+                    }
+                });
+            }
+        }
+
+        // Call the OTPInput function when the document is loaded
+        document.addEventListener('DOMContentLoaded', function () {
+            OTPInput();
+        });
+    </script>
 
 </body>
 
-
-<!-- Mirrored from themes.pixelstrap.com/sheltos/main/pricing.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 20 Aug 2024 05:36:17 GMT -->
+<!-- Mirrored from themes.pixelstrap.com/sheltos/main/user-listing.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 20 Aug 2024 05:36:13 GMT -->
 
 </html>
