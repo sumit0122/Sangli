@@ -74,7 +74,83 @@
             margin-left: 15px;
             margin-top: 5px;
         }
+
+
+        /*  */
+
+
+        /* Card Mobile View And Tab View Css */
+
+
+        .property-details {
+            padding: 20px;
+        }
+
+        .property-features {
+            display: flex;
+            flex-wrap: wrap;
+            list-style-type: none;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .property-features li {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 16px;
+        }
+
+        /* Desktop */
+        @media (min-width: 769px) {
+            .property-features li {
+                font-size: 16px;
+            }
+
+            .property-features svg,
+            .property-features img {
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+        .filter-height{
+            height:990px;
+        }
+
+@media screen and (max-width: 990px) {
+    .filter-height{
+        height:0px;
+    }
+}
+        /* End Card View And Tab View css */
     </style>
+
+<style>
+    /* General styling for the nav menu */
+.nav-menu {
+   list-style-type: none;
+   padding: 0;
+}
+
+/* Styling for the menu-title links */
+.nav-menu .menu-title {
+   text-decoration: none;
+   color: #000; /* Default color */
+   padding: 10px 15px;
+   display: block;
+}
+
+/* Hover effect: change color to orange when hovered */
+.nav-menu .menu-title:hover {
+   color: #f35d43;
+}
+
+/* Active state: the current page's link will be orange */
+.nav-menu .menu-title.active {
+   color: #f35d43;
+}
+</style>
 
 </head>
 
@@ -99,8 +175,10 @@
                     <div class="menu">
                         <div class="brand-logo">
                             <a href="layout-10.html">
-                                <img src="../assets/images/sangli-properties.png" alt="" class="img-fluid for-light" style="border-radius: 15px;">
-                                <img src="../assets/images/sangli-properties.png" alt="" class="img-fluid for-dark" style="border-radius: 15px;">
+                                <img src="../assets/images/sangli-properties.png" alt="" class="img-fluid for-light"
+                                    style="border-radius: 15px;">
+                                <img src="../assets/images/sangli-properties.png" alt="" class="img-fluid for-dark"
+                                    style="border-radius: 15px;">
                             </a>
                         </div>
                         <nav>
@@ -117,13 +195,13 @@
                                             </div>
                                         </li>
                                         <li>
-                                            <a class="menu-title"  href="layout-10.html">Home</a>
+                                            <a class="menu-title" href="layout-10.html">Home</a>
                                         </li>
                                         <li>
                                             <a class="menu-title" href="about-us-2.html">About</a>
                                         </li>
                                         <li>
-                                            <a class="menu-title" href="tab-layout.html">Property Listing</a>
+                                            <a class="menu-title nav-link active" href="tab-layout.html">Property Listing</a>
                                         </li>
 
                                         <li>
@@ -144,9 +222,11 @@
                         <ul class="header-right">
                             <li style="margin-right: 10px;">
                                 <a href="SubscriptionPlan.html">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" fill="currentColor" class="bi bi-currency-rupee" viewBox="0 0 16 16">
-                                        <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4z"/>
-                                      </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" fill="currentColor"
+                                        class="bi bi-currency-rupee" viewBox="0 0 16 16">
+                                        <path
+                                            d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4z" />
+                                    </svg>
                                 </a>
                             </li>
                             <li style="margin-right: 10px;">
@@ -193,8 +273,9 @@
     <!-- Section 1  start-->
 
     <!-- Search bar -->
-    <section style="padding-top: 140px; padding-bottom: 0px;" class="property-section">
-        <div class="container">
+    <section style="padding-bottom: 0px;" class="property-section">
+        <div class="container" style="padding-left: 30px;
+    padding-right: 30px;">
             <div class="col-12">
                 <div class="row align-items-center">
                     <div class="filter-panel" style=" padding: 0px;
@@ -210,9 +291,9 @@
                                     Search
                                 </button>
                             </div>
-                            <ul class="grid-list-filter d-flex">
+                            <ul class="grid-list-filter">
                                 <li>
-                                    <a href="single-property-8.html" class="listdata">
+                                    <a href="tab-layout.html" class="listdata">
                                         List View
                                     </a>
                                 </li>
@@ -233,7 +314,7 @@
 
     <!-- List view -->
     <section id="section1" class="property-section">
-        <div class="container">
+        <div class="container" >
             <div class="col-12">
                 <div class="row ratio_63">
 
@@ -241,10 +322,11 @@
                     <div class="col-xl-3 col-lg-4">
 
                         <!-- filter -->
-                        <div style="overflow-y: auto; height: 1020px;">
+                        <div style="overflow-y: auto;  box-shadow: 3.346px 3.716px 22.5px rgba(0, 0, 0, 0.07);" class="filter-height">
                             <div class="left-sidebar">
                                 <div class="filter-cards">
                                     <div class="advance-card">
+
                                         <div class="back-btn d-lg-none d-block">
                                             Back
                                         </div>
@@ -273,6 +355,9 @@
 
                                                     <!-- BHK Type Dropdown -->
                                                     <div class="col-12">
+
+                                                        <p class="pt-3 " style="color: black;"><b>BHK Type</b>
+
                                                         <div class="dropdown">
                                                             <span class="dropdown-toggle font-rubik"
                                                                 data-bs-toggle="dropdown">
@@ -297,19 +382,21 @@
 
                                                     <!-- Rent Range -->
                                                     <div class="col-12">
-                                                        <p class="pt-3 " style="color: black;"><b>Price Range: ₹ 0 to ₹ 5 Lacs</b>
+                                                        <p class="pt-3 " style="color: black;"><b>Price Range: ₹ 0 to ₹
+                                                                5 Lacs</b>
                                                         </p>
                                                         <div id="slider-range" class="theme-range-2"></div>
                                                     </div>
 
                                                     <!-- Visit Properties -->
                                                     <div class="col-12">
-                                                        <p class="pt-3" style="color: black;"><b>Visit properties within next 2
+                                                        <p class="pt-3" style="color: black;"><b>Visit properties within
+                                                                next 2
                                                                 days</b>
                                                         </p>
                                                         <div style="display: flex; align-items: center;">
                                                             <input
-                                                                style="height: 20px;width: 20px; margin-right: 8px; cursor: pointer;"
+                                                                style="height: 30px;width: 30px; margin-right: 8px; cursor: pointer;"
                                                                 type="checkbox" name="check">
                                                             <p style="margin: 0;">Show properties where owner is hosting
                                                                 a
@@ -323,50 +410,61 @@
                                                         <p class="pt-3" style="color: black;"><b>Availability</b></p>
                                                         <div class="d-flex flex-column gap-3">
                                                             <div class="d-flex flex-wrap">
-                                                                <div class="d-flex align-items-center w-50">
+                                                                <div class="d-flex align-items-center w-100">
                                                                     <input
-                                                                        style="height: 20px;width: 20px; margin-right: 8px;"
+                                                                        style="height: 15px; width: 15px; margin-right: 8px;"
                                                                         type="radio" name="availability">
                                                                     <p style="margin: 0;">Immediate</p>
                                                                 </div>
-                                                                <div class="d-flex align-items-center w-50">
+                                                            </div>
+
+                                                            <div class="d-flex flex-wrap">
+                                                                <div class="d-flex align-items-center w-100">
                                                                     <input
-                                                                        style="height: 20px;width: 20px; margin-right: 8px;"
+                                                                        style="height: 15px; width: 15px; margin-right: 8px;"
                                                                         type="radio" name="availability">
                                                                     <p style="margin: 0;">Within 15 Days</p>
                                                                 </div>
                                                             </div>
+
+
                                                             <div class="d-flex flex-wrap">
-                                                                <div class="d-flex align-items-center w-50">
+                                                                <div class="d-flex align-items-center w-100">
                                                                     <input
-                                                                        style="height: 20px;width: 20px; margin-right: 8px;"
+                                                                        style="height: 15px; width: 15px; margin-right: 8px;"
                                                                         type="radio" name="availability">
                                                                     <p style="margin: 0;">Within 30 Days</p>
                                                                 </div>
-                                                                <div class="d-flex align-items-center w-50">
+                                                            </div>
+
+
+                                                            <div class="d-flex flex-wrap">
+                                                                <div class="d-flex align-items-center w-100">
                                                                     <input
-                                                                        style="height: 20px;width: 20px; margin-right: 8px;"
+                                                                        style="height: 15px; width: 15px; margin-right: 8px;"
                                                                         type="radio" name="availability">
                                                                     <p style="margin: 0;">After 30 Days</p>
                                                                 </div>
                                                             </div>
+
                                                         </div>
                                                     </div>
 
                                                     <!-- Preferred Tenants -->
                                                     <div class="col-12">
-                                                        <p class="pt-3" style="color: black;"><b>Preferred Tenants</b></p>
+                                                        <p class="pt-3" style="color: black;"><b>Preferred Tenants</b>
+                                                        </p>
                                                         <div class="d-flex flex-column gap-3">
                                                             <div class="d-flex flex-wrap">
                                                                 <div class="d-flex align-items-center w-50">
                                                                     <input
-                                                                        style="height: 20px;width: 20px; margin-right: 8px;"
+                                                                        style="height: 15px; width: 15px; margin-right: 8px;"
                                                                         type="checkbox" name="tenant-type">
                                                                     <p style="margin: 0;">Family</p>
                                                                 </div>
                                                                 <div class="d-flex align-items-center w-50">
                                                                     <input
-                                                                        style="height: 20px;width: 20px; margin-right: 8px;"
+                                                                        style="height: 15px; width: 15px; margin-right: 8px;"
                                                                         type="checkbox" name="tenant-type">
                                                                     <p style="margin: 0;">Company</p>
                                                                 </div>
@@ -374,15 +472,16 @@
                                                             <div class="d-flex flex-wrap">
                                                                 <div class="d-flex align-items-center w-50">
                                                                     <input
-                                                                        style="height: 20px;width: 20px; margin-right: 8px;"
+                                                                        style="height: 15px; width: 15px; margin-right: 8px;"
                                                                         type="checkbox" name="tenant-type">
-                                                                    <p style="margin: 0;">Bachelor Male</p>
+                                                                    <!-- <p style="margin: 0;">Bachelor Male</p> -->
+                                                                    <p style="margin: 0;">Male</p>
                                                                 </div>
                                                                 <div class="d-flex align-items-center w-50">
                                                                     <input
-                                                                        style="height: 20px;width: 20px; margin-right: 8px;"
+                                                                        style="height: 15px; width: 15px; margin-right: 8px;"
                                                                         type="checkbox" name="tenant-type">
-                                                                    <p style="margin: 0;">Bachelor Female</p>
+                                                                    <p style="margin: 0;"> Female</p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -394,19 +493,19 @@
                                                         <div class="d-flex flex-column gap-3">
                                                             <div class="d-flex flex-wrap align-items-center pb-2">
                                                                 <input
-                                                                    style="height: 20px;width: 20px; margin-right: 8px;"
+                                                                    style="height: 15px; width: 15px; margin-right: 8px;"
                                                                     type="checkbox" name="property-type">
                                                                 <p style="margin: 0;">Apartment</p>
                                                             </div>
                                                             <div class="d-flex flex-wrap align-items-center pb-2">
                                                                 <input
-                                                                    style="height: 20px;width: 20px; margin-right: 8px;"
+                                                                    style="height: 15px; width: 15px; margin-right: 8px;"
                                                                     type="checkbox" name="property-type">
                                                                 <p style="margin: 0;">Independent House/Villa</p>
                                                             </div>
                                                             <div class="d-flex flex-wrap align-items-center pb-2">
                                                                 <input
-                                                                    style="height: 20px;width: 20px; margin-right: 8px;"
+                                                                    style="height: 15px; width: 15px; margin-right: 8px;"
                                                                     type="checkbox" name="property-type">
                                                                 <p style="margin: 0;">Gated Community Villa</p>
                                                             </div>
@@ -420,19 +519,19 @@
                                                             <div class="d-flex flex-wrap">
                                                                 <div class="d-flex align-items-center">
                                                                     <input
-                                                                        style="height: 20px;width: 20px; margin-right: 8px;"
+                                                                        style="height: 15px; width: 15px; margin-right: 8px;"
                                                                         type="checkbox" name="furnishing">
                                                                     <p style="margin: 0;">Full</p>
                                                                 </div> &nbsp;
                                                                 <div class="d-flex align-items-center">
                                                                     <input
-                                                                        style="height: 20px;width: 20px; margin-right: 8px;"
+                                                                        style="height: 15px; width: 15px; margin-right: 8px;"
                                                                         type="checkbox" name="furnishing">
                                                                     <p style="margin: 0;">Semi</p>
                                                                 </div> &nbsp;
                                                                 <div class="d-flex align-items-center">
                                                                     <input
-                                                                        style="height: 20px;width: 20px; margin-right: 8px;"
+                                                                        style="height: 15px; width: 15px; margin-right: 8px;"
                                                                         type="checkbox" name="furnishing">
                                                                     <p style="margin: 0;">None</p>
                                                                 </div>
@@ -447,13 +546,13 @@
                                                             <div class="d-flex flex-wrap">
                                                                 <div class="d-flex align-items-center">
                                                                     <input
-                                                                        style="height: 20px;width: 20px; margin-right: 8px;"
+                                                                        style="height: 15px; width: 15px; margin-right: 8px;"
                                                                         type="checkbox" name="parking">
                                                                     <p style="margin: 0;">2 Wheeler</p>
                                                                 </div> &nbsp;
                                                                 <div class="d-flex align-items-center">
                                                                     <input
-                                                                        style="height: 20px;width: 20px; margin-right: 8px;"
+                                                                        style="height: 15px; width: 15px; margin-right: 8px;"
                                                                         type="checkbox" name="parking">
                                                                     <p style="margin: 0;">4 Wheeler</p>
                                                                 </div>
@@ -461,7 +560,7 @@
                                                             <div class="d-flex flex-wrap">
                                                                 <div class="d-flex align-items-center">
                                                                     <input
-                                                                        style="height: 20px;width: 20px; margin-right: 8px;"
+                                                                        style="height: 15px; width: 15px; margin-right: 8px;"
                                                                         type="checkbox" name="lease">
                                                                     <p style="margin: 0;">Show Only Lease Properties</p>
                                                                 </div>
@@ -471,21 +570,25 @@
 
                                                     <!-- Auction Property -->
                                                     <div class="col-12">
-                                                        <h6 class="pt-3 " style="color: black;"><b>Auction Property</b></h6>
+                                                        <h6 class="pt-3 " style="color: black;"><b>Auction Property</b>
+                                                        </h6>
                                                         <div class="d-flex align-items-center">
-                                                            <input style="height: 20px;width: 20px; margin-right: 8px;"
+                                                            <input style="height: 15px; width: 15px; margin-right: 8px;"
                                                                 type="checkbox" name="auction">
                                                             <p style="margin: 0;">AddressShow Only Auction Property</p>
                                                         </div>
                                                     </div>
 
+                                                    <div
+                                                        style="padding-top: 10px; padding-bottom: 20px; text-align: center;">
+                                                        <hr>
 
 
-                                                    <div style="padding-top: 10px; padding-bottom: 20px;">
-                                                        <h6 style="padding-top: 12px; color: black;"><b>Auction
+                                                        <h6 style="padding-top: 12px; color: black;"><b
+                                                                style="color: #ff5c41;">Auction
                                                                 Property</b>
                                                         </h6>
-                                                        <div class="recent-property">
+                                                        <div style="padding: top 12px;" class="recent-property">
                                                             <ul>
                                                                 <li>
                                                                     <a href="single-property-8.html">
@@ -493,14 +596,15 @@
                                                                             <img src="../assets/images/property/9.jpg"
                                                                                 class="img-fluid" alt="">
                                                                             <div class="media-body">
-                                                                                <h5>Sea Breezes</h5>
+                                                                                <h5 style="text-align: start;">Sea
+                                                                                    Breezes</h5>
                                                                                 <p
-                                                                                    style="font-size: 10px; color: black;  font-weight: 500;">
+                                                                                    style="font-size: 10px; color: black;  font-weight: 500; text-align: start;">
                                                                                     <b>Address:</b> Independent House,
                                                                                     hinjawadi
                                                                                     pune.. <br> <span>₹85.00 Lac</span>
                                                                                 </p>
-                                                                                
+
                                                                             </div>
                                                                         </div>
                                                                     </a>
@@ -513,14 +617,15 @@
                                                                             <img src="../assets/images/property/10.jpg"
                                                                                 class="img-fluid" alt="">
                                                                             <div class="media-body">
-                                                                                <h5>Orchard House</h5>
+                                                                                <h5 style="text-align: start;">Orchard
+                                                                                    House</h5>
                                                                                 <p
-                                                                                    style="font-size: 10px; color: black;  font-weight: 500;">
+                                                                                    style="font-size: 10px; color: black;  font-weight: 500; text-align: start;">
                                                                                     <b>Address:</b> Independent House,
                                                                                     hinjawadi
-                                                                                    pune.. <br>  <span>₹55.00 Lac</span>
+                                                                                    pune.. <br> <span>₹55.00 Lac</span>
                                                                                 </p>
-                                                                               
+
                                                                             </div>
                                                                         </div>
                                                                     </a>
@@ -533,14 +638,15 @@
                                                                             <img src="../assets/images/property/11.jpg"
                                                                                 class="img-fluid" alt="">
                                                                             <div class="media-body">
-                                                                                <h5>Neverland</h5>
+                                                                                <h5 style="text-align: start;">Neverland
+                                                                                </h5>
                                                                                 <p
-                                                                                    style="font-size: 10px; color: black;  font-weight: 500;">
+                                                                                    style="font-size: 10px; color: black;  font-weight: 500;text-align: start;">
                                                                                     <b>Address:</b> Independent House,
                                                                                     hinjawadi
                                                                                     pune.. <br><span>₹45.00 Lac</span>
                                                                                 </p>
-                                                                                
+
                                                                             </div>
                                                                         </div>
                                                                     </a>
@@ -548,8 +654,6 @@
                                                             </ul>
                                                         </div>
                                                     </div>
-
-
 
                                                     <div style="display: flex; justify-content: center;">
                                                         <a href="PropertyBuyers.html">
@@ -559,10 +663,8 @@
                                                         </a>
                                                     </div>
 
-                                                  
-
-
                                                     <div>
+                                                        <hr>
                                                         <h6 style="padding-top: 20px; color: black;"><b>Mortgage</b>
                                                         </h6>
                                                         <div class="category-property">
@@ -593,10 +695,10 @@
 
                                                                 <div style="display: flex; justify-content: center;">
 
-                                                                    
+
                                                                     <button type="submit"
-                                                                    class="btn btn-gradient color-2 btn-block btn-pill">Calculate</button>
-                                                                    
+                                                                        class="btn btn-gradient color-2 btn-block btn-pill">Calculate</button>
+
                                                                 </div>
                                                             </form>
                                                         </div>
@@ -614,7 +716,8 @@
                                                 <div class="row gx-2">
 
                                                     <div class="col-12">
-                                                        <p style=" padding-top: 12px; color: black;"><b>Built Up Area(sq.
+                                                        <p style=" padding-top: 12px; color: black;"><b>Built Up
+                                                                Area(sq.
                                                                 ft.)</b></p>
                                                         <div id="slider-range" class="theme-range-2"></div>
                                                     </div>
@@ -657,7 +760,7 @@
                                                                 <div
                                                                     style="display: flex; align-items: center; width: 50%;">
                                                                     <input
-                                                                        style="height: 20px;width: 20px; margin-right: 8px;cursor: pointer;"
+                                                                        style="height: 15px; width: 15px; margin-right: 8px;cursor: pointer;"
                                                                         type="checkbox" name="check">
                                                                     <p style="margin: 0;">
                                                                         < 1 year </p>
@@ -665,7 +768,7 @@
                                                                 <div
                                                                     style="display: flex; align-items: center; width: 50%;">
                                                                     <input
-                                                                        style="height: 20px;width: 20px; margin-right: 8px;cursor: pointer;"
+                                                                        style="height: 15px; width: 15px; margin-right: 8px;cursor: pointer;"
                                                                         type="checkbox" name="check">
                                                                     <p style="margin: 0;">
                                                                         < 3 years</p>
@@ -679,7 +782,7 @@
                                                                 <div
                                                                     style="display: flex; align-items: center;width: 50%;">
                                                                     <input
-                                                                        style="height: 20px;width: 20px; margin-right: 8px;cursor: pointer;"
+                                                                        style="height: 15px; width: 15px; margin-right: 8px;cursor: pointer;"
                                                                         type="checkbox" name="check">
                                                                     <p style="margin: 0;">
                                                                         < 5 years </p>
@@ -689,7 +792,7 @@
                                                                 <div
                                                                     style="display: flex; align-items: center;width: 50%;">
                                                                     <input
-                                                                        style="height: 20px;width: 20px; margin-right: 8px;cursor: pointer;"
+                                                                        style="height: 15px; width: 15px; margin-right: 8px;cursor: pointer;"
                                                                         type="checkbox" name="check">
                                                                     <p style="margin: 0;">
                                                                         < 10 years </p>
@@ -712,13 +815,13 @@
                                                                 <div
                                                                     style="display: flex; align-items: center; width: 50%;">
                                                                     <div
-                                                                        style="background-color:#e5e7e9; height: 30px;width: 180px;text-align: center;padding-top: 5px;">
+                                                                        style="background-color:#e5e7e9; height: auto;width: 180px;text-align: center;padding-top: 5px;">
                                                                         Gated Societies</div>
                                                                 </div>
                                                                 <div
                                                                     style="display: flex; align-items: center; width: 50%;">
                                                                     <div
-                                                                        style="background-color:#e5e7e9; height: 30px;width: 180px;text-align: center;padding-top: 5px;">
+                                                                        style="background-color:#e5e7e9; height: auto;width: 180px;text-align: center;padding-top: 5px;">
                                                                         Non Veg Allowed</div>
                                                                 </div>
 
@@ -730,7 +833,7 @@
                                                                 <div
                                                                     style="display: flex; align-items: center;width: 50%;">
                                                                     <div
-                                                                        style="background-color:#e5e7e9; height: 30px;width: 180px;text-align: center;padding-top: 5px;">
+                                                                        style="background-color:#e5e7e9; height: auto;width: 180px;text-align: center;padding-top: 5px;">
                                                                         With Photos</div>
                                                                 </div>
 
@@ -738,7 +841,7 @@
                                                                 <div
                                                                     style="display: flex; align-items: center;width: 50%;">
                                                                     <div
-                                                                        style="background-color:#e5e7e9; height: 30px;width: 180px;text-align: center;padding-top: 5px;">
+                                                                        style="background-color:#e5e7e9; height: auto;width: 180px;text-align: center;padding-top: 5px;">
                                                                         Gym</div>
                                                                 </div>
                                                             </div>
@@ -748,7 +851,7 @@
                                                                     style="display: flex; align-items: center; padding-bottom: 10px;">
 
                                                                     <input
-                                                                        style="height: 20px;width: 20px; margin-right: 8px;cursor: pointer;"
+                                                                        style="height: 15px; width: 15px; margin-right: 8px;cursor: pointer;"
                                                                         type="checkbox" name="check">
 
                                                                     <p style="margin: 0;">Remove Seen Properties</p>
@@ -772,14 +875,14 @@
                                                                 <div
                                                                     style="display: flex; align-items: center; width: 50%;">
                                                                     <input
-                                                                        style="height: 20px;width: 20px; margin-right: 8px; cursor: pointer;"
+                                                                        style="height: 15px; width: 15px; margin-right: 8px; cursor: pointer;"
                                                                         type="radio" name="check">
                                                                     <p style="margin: 0;">1 or more
                                                                 </div>
                                                                 <div
                                                                     style="display: flex; align-items: center; width: 50%;">
                                                                     <input
-                                                                        style="height: 20px;width: 20px; margin-right: 8px; cursor: pointer;"
+                                                                        style="height: 15px; width: 15px; margin-right: 8px; cursor: pointer;"
                                                                         type="radio" name="check">
                                                                     <p style="margin: 0;">2 or more</p>
                                                                 </div>
@@ -792,7 +895,7 @@
                                                                 <div
                                                                     style="display: flex; align-items: center;width: 50%;">
                                                                     <input
-                                                                        style="height: 20px;width: 20px; margin-right: 8px; cursor: pointer;"
+                                                                        style="height: 15px; width: 15px; margin-right: 8px; cursor: pointer;"
                                                                         type="radio" name="check">
                                                                     <p style="margin: 0;">3 or more</p>
                                                                 </div>
@@ -821,13 +924,13 @@
                                                                 <div
                                                                     style="display: flex; align-items: center; width: 50%;">
                                                                     <div
-                                                                        style="background-color:#e5e7e9; height: 30px;width: 110px;text-align: center;padding-top: 5px;">
+                                                                        style="background-color:#e5e7e9; height: auto;width: 110px;text-align: center;padding-top: 5px;">
                                                                         Ground</div>
                                                                 </div>
                                                                 <div
                                                                     style="display: flex; align-items: center; width: 50%;">
                                                                     <div
-                                                                        style="background-color:#e5e7e9; height: 30px;width: 110px;text-align: center;padding-top: 5px;">
+                                                                        style="background-color:#e5e7e9; height: auto;width: 110px;text-align: center;padding-top: 5px;">
                                                                         1 to 3</div>
                                                                 </div>
 
@@ -839,7 +942,7 @@
                                                                 <div
                                                                     style="display: flex; align-items: center;width: 50%;">
                                                                     <div
-                                                                        style="background-color:#e5e7e9; height: 30px;width: 110px;text-align: center;padding-top: 5px;">
+                                                                        style="background-color:#e5e7e9; height: auto;width: 110px;text-align: center;padding-top: 5px;">
                                                                         4 to 6</div>
                                                                 </div>
 
@@ -847,7 +950,7 @@
                                                                 <div
                                                                     style="display: flex; align-items: center;width: 50%;">
                                                                     <div
-                                                                        style="background-color:#e5e7e9; height: 30px;width: 110px;text-align: center;padding-top: 5px;">
+                                                                        style="background-color:#e5e7e9; height: auto;width: 110px;text-align: center;padding-top: 5px;">
                                                                         7 to 9</div>
                                                                 </div>
                                                             </div>
@@ -858,7 +961,7 @@
                                                                 <div
                                                                     style="display: flex; align-items: center;width: 50%;">
                                                                     <div
-                                                                        style="background-color:#e5e7e9; height: 30px;width: 110px;text-align: center;padding-top: 5px;">
+                                                                        style="background-color:#e5e7e9; height: auto;width: 110px;text-align: center;padding-top: 5px;">
                                                                         10 & above</div>
                                                                 </div>
 
@@ -866,7 +969,7 @@
                                                                 <div
                                                                     style="display: flex; align-items: center;width: 50%;">
                                                                     <div
-                                                                        style="background-color:#e5e7e9; height: 30px;width: 110px;text-align: center;padding-top: 5px;">
+                                                                        style="background-color:#e5e7e9; height: auto;width: 110px;text-align: center;padding-top: 5px;">
                                                                         Custom</div>
                                                                 </div>
                                                             </div>
@@ -876,80 +979,85 @@
 
 
 
-                                                    <div style="padding-top: 10px; padding-bottom: 20px;">
-                                                        <h6 style="padding-top: 12px; color: black;"><b>Auction
+                                                    <div
+                                                        style="padding-top: 10px; padding-bottom: 20px; text-align: center;">
+
+
+                                                        <hr>
+
+
+                                                        <h6 style="padding-top: 12px; color: black;"><b
+                                                                style="color: #ff5c41;">Auction
                                                                 Property</b>
                                                         </h6>
-                                                        <div class="recent-property">
+                                                        <div style="padding: top 12px;" class="recent-property">
                                                             <ul>
-
-
-                                                                <a href="single-property-8.html">
-                                                                    <li>
+                                                                <li>
+                                                                    <a href="single-property-8.html">
                                                                         <div class="media">
                                                                             <img src="../assets/images/property/9.jpg"
                                                                                 class="img-fluid" alt="">
                                                                             <div class="media-body">
-                                                                                <h5>Sea Breezes</h5>
-                                                                                <p style="font-size: 10px; color: black;  font-weight: 500;">
+                                                                                <h5 style="text-align: start;">Sea
+                                                                                    Breezes</h5>
+                                                                                <p
+                                                                                    style="font-size: 10px; color: black;  font-weight: 500; text-align: start;">
                                                                                     <b>Address:</b> Independent House,
                                                                                     hinjawadi
-                                                                                    pune..
-                                                                                    ... <br>  <span>₹15.00 Lac</span>
+                                                                                    pune.. <br> <span>₹85.00 Lac</span>
                                                                                 </p>
-                                                                                
+
                                                                             </div>
                                                                         </div>
-                                                                    </li>
-                                                                </a>
-                                                               
-                                                                
+                                                                    </a>
 
-                                                                <a href="single-property-8.html">
+                                                                </li>
+                                                                <li>
 
-                                                                    <li>
+                                                                    <a href="single-property-8.html">
                                                                         <div class="media">
                                                                             <img src="../assets/images/property/10.jpg"
                                                                                 class="img-fluid" alt="">
                                                                             <div class="media-body">
-                                                                                <h5>Orchard House</h5>
-                                                                                <p style="font-size: 10px; color: black;  font-weight: 500;">
+                                                                                <h5 style="text-align: start;">Orchard
+                                                                                    House</h5>
+                                                                                <p
+                                                                                    style="font-size: 10px; color: black;  font-weight: 500; text-align: start;">
                                                                                     <b>Address:</b> Independent House,
                                                                                     hinjawadi
-                                                                                    pune.. <br> <span>₹17.00 Lac</span>
+                                                                                    pune.. <br> <span>₹55.00 Lac</span>
                                                                                 </p>
-                                                                                
+
                                                                             </div>
                                                                         </div>
-                                                                    </li>
+                                                                    </a>
 
-                                                                </a>
+                                                                </li>
+                                                                <li>
 
-
-                                                              
-
-
-                                                                <a href="single-property-8.html">
-                                                                    <li>
+                                                                    <a href="single-property-8.html">
                                                                         <div class="media">
                                                                             <img src="../assets/images/property/11.jpg"
                                                                                 class="img-fluid" alt="">
                                                                             <div class="media-body">
-                                                                                <h5>Neverland</h5>
-                                                                                <p style="font-size: 10px; color: black; font-weight: 500;  font-weight: 500;">
+                                                                                <h5 style="text-align: start;">Neverland
+                                                                                </h5>
+                                                                                <p
+                                                                                    style="font-size: 10px; color: black;  font-weight: 500;text-align: start;">
                                                                                     <b>Address:</b> Independent House,
                                                                                     hinjawadi
-                                                                                    pune.. <br> <span>₹11.00 Lac</span>
+                                                                                    pune.. <br><span>₹45.00 Lac</span>
                                                                                 </p>
-                                                                                
+
                                                                             </div>
                                                                         </div>
-                                                                    </li>
-                                                                </a>
-                                                               
+                                                                    </a>
+                                                                </li>
                                                             </ul>
                                                         </div>
                                                     </div>
+
+
 
                                                     <div style="display: flex; justify-content: center;">
                                                         <a href="PropertyBuyers.html">
@@ -959,8 +1067,15 @@
                                                         </a>
                                                     </div>
 
-                                                    <div style="padding-top: 20px;">
-                                                        <h6 style="padding-top: 12px; color: black;"><b>Mortgage</b>
+
+
+
+                                                    <div>
+
+                                                        <hr>
+
+
+                                                        <h6 style="padding-top: 20px; color: black;"><b>Mortgage</b>
                                                         </h6>
                                                         <div class="category-property">
                                                             <form>
@@ -986,15 +1101,18 @@
                                                                 </div>
                                                                 <!-- <button type="submit"
                                                                     class="btn btn-gradient color-2 btn-block btn-pill">Calculate</button> -->
-                                                                    <div style="display: flex; justify-content: center;">
-                                                                        <button type="submit"
+
+
+                                                                <div style="display: flex; justify-content: center;">
+
+
+                                                                    <button type="submit"
                                                                         class="btn btn-gradient color-2 btn-block btn-pill">Calculate</button>
-                                                                        
-                                                                    </div>
+
+                                                                </div>
                                                             </form>
                                                         </div>
                                                     </div>
-
 
                                                 </div>
 
@@ -1082,7 +1200,7 @@
 
                     <!-- List view -->
                     <div class="col-xl-9 col-lg-8 property-grid-2">
-                        <div style="text-align:center;" class="filter-panel1">
+                        <!-- <div style="text-align:center;" class="filter-panel1">
                             <div class="top-panel">
                                 <div>
                                     <b style="font-weight: 600;font-size: 25px;color: #ff5c41;">
@@ -1090,7 +1208,7 @@
                                     </b>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="filter-panel tab-top-panel"
                             style="display: flex; justify-content: space-between; padding: top 5px; ">
@@ -1107,7 +1225,7 @@
 
                                 </div>
                             </div>
-                            <ul class="grid-list-filter d-flex">
+                            <ul class="grid-list-filter">
                                 <li>
                                     <div class="dropdown">
                                         <span class="dropdown-toggle font-rubik" data-bs-toggle="dropdown"><span>Sort by
@@ -1121,6 +1239,14 @@
                                         </div>
                                     </div>
                                 </li>
+
+                                <li class="d-lg-none d-block">
+                                    <div>
+                                        <h6 class="mb-0 mobile-filter font-roboto">Filter <i data-feather="align-center"
+                                                class="float-end"></i></h6>
+                                    </div>
+                                </li>
+
                             </ul>
                         </div>
 
@@ -1178,7 +1304,7 @@
 
 
 
-                                            <ul class="property-features">
+                                            <!-- <ul class="property-features">
                                                 <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                                                         height="16" fill="currentColor" class="bi bi-house"
                                                         viewBox="0 0 16 16">
@@ -1220,8 +1346,43 @@
                                                 <li style="gap: 5px;">
 
                                                     <span>Dec 4, 2012</span>
-                                            </ul>
+                                            </ul> -->
 
+
+
+                                            <ul class="property-features">
+                                                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                                                    </svg> 3 BHK</li>
+                                                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-key" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8m4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5" />
+                                                        <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                                                    </svg> Ready to move</li>
+                                            </ul>
+                                            <ul class="property-features">
+                                                <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/double-bed.svg"
+                                                        class="img-fluid" alt="" style="margin-right: 0px;"> Furnished
+                                                </li>
+                                                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-p-circle" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.5 4.002h2.962C10.045 4.002 11 5.104 11 6.586c0 1.494-.967 2.578-2.55 2.578H6.784V12H5.5zm2.77 4.072c.893 0 1.419-.545 1.419-1.488s-.526-1.482-1.42-1.482H6.778v2.97z" />
+                                                    </svg> Bike And Car</li>
+                                            </ul>
+                                            <ul class="property-features">
+                                                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-compass" viewBox="0 0 16 16">
+                                                        <path
+                                                            d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016m6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0" />
+                                                        <path
+                                                            d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z" />
+                                                    </svg> North- East</li>
+                                                <li><span>Dec 4, 2012</span></li>
+                                            </ul>
 
 
 
@@ -1555,7 +1716,7 @@
                                                 <li style="gap: 5px;"><img
                                                         src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/double-bed.svg"
                                                         class="img-fluid" alt="" style="margin-right: 0px;">
-                                                    Semi-Furnished
+                                                    Furnished
                                                 </li>
                                                 <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                                                         height="16" fill="currentColor" class="bi bi-p-circle"
@@ -2400,7 +2561,7 @@
                                         <li style="gap: 5px;"><img
                                                 src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/double-bed.svg"
                                                 class="img-fluid" alt="" style="margin-right: 0px;">
-                                            Semi-Furnished
+                                            Furnished
                                         </li>
                                         <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                                                 height="16" fill="currentColor" class="bi bi-p-circle"
@@ -4632,6 +4793,26 @@
         }
 
     </script>
+
+<script>
+    function moveTestimonial() {
+        const testimonialSection = document.querySelector('.testimonial-style-2');
+        const propertyGrid = document.querySelector('.property-grid-2');
+
+        // Check if the screen width is less than or equal to 990px
+        if (window.innerWidth <= 990) {
+            // Move testimonial section after property grid
+            propertyGrid.insertAdjacentElement('afterend', testimonialSection);
+        }
+    }
+
+    // Run on page load
+    document.addEventListener('DOMContentLoaded', moveTestimonial);
+
+    // Run on window resize
+    window.addEventListener('resize', moveTestimonial);
+</script>
+
 </body>
 
 <!-- Mirrored from themes.pixelstrap.com/sheltos/main/tab-layout.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 20 Aug 2024 05:36:04 GMT -->

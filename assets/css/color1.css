@@ -41,7 +41,7 @@ Author URI: https://themeforest.net/user/pixelstrap
 */
 :root {
   --theme-default: #6432b8;
-  --theme-default2: #9516d7;
+  --theme-default2: #ff5c41;
   --theme-gradient1: linear-gradient(to right, var(--theme-default) 0%, var(--theme-default2) 51%, var(--theme-default) 100%);
   --theme-gradient2: linear-gradient(to right, var(--theme-default) 0%, var(--theme-default2) 100%);
   --theme-gradient3: linear-gradient(48deg, var(--theme-default) 0%, var(--theme-default2) 100%);
@@ -3739,9 +3739,9 @@ input[type='radio'].radio_animated {
 .service-section {
   position: relative; }
   .service-section .property-service > div .service-box {
-    text-align: left;
+    text-align: justify;
     border-radius: 15px;
-    padding: 25px;
+    padding: 20px;
     -webkit-transition: 0.5s;
     transition: 0.5s;
     background: #ffffff;
@@ -3940,14 +3940,16 @@ input[type='radio'].radio_animated {
 .service-slider .service-wrapper .service-details {
   border-radius: 5px;
   /* padding: 40px; */
-  padding: 35px 25px 25px 25px;
+  padding: 25px 25px 25px 25px;
   background-color: #ffffff;
   -webkit-box-shadow: 0 0 35px rgba(0, 0, 0, 0.07);
           box-shadow: 0 0 35px rgba(0, 0, 0, 0.07); }
   .service-slider .service-wrapper .service-details p {
     line-height: 1.75;
-    margin-bottom: 10px;
-    color: rgba(88, 97, 103, 0.7); }
+    text-align: justify;
+    margin-bottom: 0px;
+    color: rgba(88, 97, 103, 0.7);
+   }
   .service-slider .service-wrapper .service-details h3 {
     color: #586167;
     font-size: calc(18px + (22 - 18) * ((100vw - 320px) / (1920 - 320)));
@@ -4133,13 +4135,13 @@ input[type='radio'].radio_animated {
         margin-left: -1px;
         margin-top: 9px;
         background: #ffffff;
-        stroke: #9516d7;
+        stroke: #ff5c41;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         -webkit-animation: bounceIn 1s infinite;
                 animation: bounceIn 1s infinite; }
       .feature-section .feature-1 .feature-wrapper .property-details .round-half:hover svg {
-        fill: #9516d7; }
+        fill: #ff5c41; }
       .feature-section .feature-1 .feature-wrapper .property-details .round-half.color-6 svg {
         stroke: #2c2e97; }
       .feature-section .feature-1 .feature-wrapper .property-details .round-half.color-6:hover svg {
@@ -7442,9 +7444,10 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   -webkit-transition: 0.8s;
-  transition: 0.8s; }
+  transition: 0.8s;
+position: sticky; }
   header.fixed-header.fixed .main-navbar .nav-menu > li {
     padding-top: 15px;
     padding-bottom: 15px; }

@@ -28,6 +28,31 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/color1.css">
 
+    <style>
+        /* General styling for the nav menu */
+   .nav-menu {
+       list-style-type: none;
+       padding: 0;
+   }
+ 
+   /* Styling for the menu-title links */
+   .nav-menu .menu-title {
+       text-decoration: none;
+       color: #000; /* Default color */
+       padding: 10px 15px;
+       display: block;
+   }
+ 
+   /* Hover effect: change color to orange when hovered */
+   .nav-menu .menu-title:hover {
+       color: #f35d43;
+   }
+ 
+   /* Active state: the current page's link will be orange */
+   .nav-menu .menu-title.active {
+       color: #f35d43;
+   }
+   </style>
 </head>
 
 <body>
@@ -71,7 +96,7 @@
                                         <a class="menu-title"  href="layout-10.html">Home</a>
                                     </li>
                                     <li>
-                                        <a class="menu-title" href="about-us-2.html">About</a>
+                                        <a class="menu-title nav-link active" href="about-us-2.html">About</a>
                                     </li>
                                     <li>
                                         <a class="menu-title" href="tab-layout.html">Property Listing</a>
@@ -140,7 +165,7 @@
 
     <!-- About us section start -->
     <section class="about-main">
-        <div style="padding-top: 100px;" class="container">
+        <div  class="container">
             <div class="row">
                 <div class="col">
                     <div class="title-2">
@@ -166,7 +191,7 @@
                             <div class="col-xl-5 col-lg-7">
                                 <div class="about-content">
                                     <h3>We are the expert of team communication</h3>
-                                    <p class="font-roboto">Residences can be classified by and how they are connected to
+                                    <p class="font-roboto" style="text-align: justify;">Residences can be classified by and how they are connected to
                                         neighbouring residences and land.
                                         Different types of housing tenure can be used for the same physical type </p>
                                 </div>
@@ -220,7 +245,7 @@
                                     <div class="details">
                                         <h3><span>Transforming Real Estate, </span>One
                                             Home at a Time</h3>
-                                        <p class="font-roboto" style="width: 100%;">
+                                        <p class="font-roboto" style="width: 100%; text-align: justify;">
                                             Our mission is to revolutionize the real estate experience by providing a
                                             user-friendly platform that connects buyers, sellers, and renters with their
                                             ideal properties. We aim to empower our users with comprehensive property
@@ -263,7 +288,7 @@
                                     <i data-feather="activity"></i>
                                 </div>
                                 <h3><a href="services.html">Tax Advantage</a></h3>
-                                <p>Residences can be classified by and how they are connected to neighbouring residences
+                                <p style="text-align: justify;">Residences can be classified by and how they are connected to neighbouring residences
                                     and land</p>
                             </div>
                         </div>
@@ -273,7 +298,7 @@
                                     <i data-feather="home"></i>
                                 </div>
                                 <h3><a href="services.html">Property Insurance</a></h3>
-                                <p>Residences can be classified by and how they are connected to neighbouring residences
+                                <p style="text-align: justify;">Residences can be classified by and how they are connected to neighbouring residences
                                     and land.</p>
                             </div>
                         </div>
@@ -283,7 +308,7 @@
                                     <i data-feather="dollar-sign"></i>
                                 </div>
                                 <h3><a href="services.html">Lowest Commission</a></h3>
-                                <p>Residences can be classified by and how they are connected to neighbouring residences
+                                <p style="text-align: justify;">Residences can be classified by and how they are connected to neighbouring residences
                                     and land.</p>
                             </div>
                         </div>
@@ -301,8 +326,8 @@
                 <div class="col">
                     <div class="banner-3" style="padding: 0px;">
                         <span class="label label-light label-flat color-4">#Vision</span>
-                        <h2> Shaping the Future of <br /> Real Estate </h2>
-                        <p>To be the leading digital real estate platform that redefines how people buy, sell, and rent
+                        <h2> Shaping the Future of Real Estate </h2>
+                        <p style="text-align: justify;">To be the leading digital real estate platform that redefines how people buy, sell, and rent
                             properties by offering cutting-edge technology, unmatched customer service, and a commitment
                             to sustainability. We envision a future where finding a home is not only easy and enjoyable
                             but also contributes to building vibrant, inclusive, and environmentally responsible
@@ -357,7 +382,7 @@
                                         <h3>Civil Engineer</h3>
                                         <span class="font-roboto"><i data-feather="mail"
                                                 class="me-1"></i>rohan.deshmukh@example.com</span>
-                                        <p class="font-roboto">Specializes in urban development projects and
+                                        <p class="font-roboto" style="text-align: justify;">Specializes in urban development projects and
                                             infrastructure design, ensuring sustainable building practices in Sangli.
                                         </p>
                                     </div>
@@ -393,7 +418,7 @@
                                         <h3>Civil Engineer</h3>
                                         <span class="font-roboto"><i data-feather="mail"
                                                 class="me-1"></i>sanjana.patil@example.com</span>
-                                        <p class="font-roboto">Focused on sustainable construction methods and green
+                                        <p class="font-roboto" style="text-align: justify;">Focused on sustainable construction methods and green
                                             building initiatives, enhancing the city's infrastructure.</p>
                                     </div>
                                 </div>
@@ -428,7 +453,7 @@
                                         <h3>Civil Engineer</h3>
                                         <span class="font-roboto"><i data-feather="mail"
                                                 class="me-1"></i>amit.kulkarni@example.com</span>
-                                        <p class="font-roboto">Expert in structural engineering, focusing on the
+                                        <p class="font-roboto" style="text-align: justify;">Expert in structural engineering, focusing on the
                                             development of resilient and modern architectural solutions in Sangli.</p>
                                     </div>
                                 </div>

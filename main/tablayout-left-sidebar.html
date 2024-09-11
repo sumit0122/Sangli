@@ -37,6 +37,119 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/color1.css">
 
+
+
+    <style>
+           /*  */
+
+
+        /* Card Mobile View And Tab View Css */
+
+        
+        /* .property-details {
+            padding: 20px;
+        }
+
+        .property-features {
+            display: flex;
+            flex-wrap: wrap;
+            list-style-type: none;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .property-features li {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 16px;
+        } */
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+
+            Tablet and Mobile
+            .property-features {
+                flex-direction: column;
+            }
+
+            .property-features li {
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .property-features svg,
+            .property-features img {
+                width: 14px;
+                height: 14px;
+            }
+
+            .property-features li span {
+                text-align: right;
+            }
+        }
+
+        /* @media (max-width: 480px) {
+
+            Mobile
+            .property-features {
+                flex-direction: column;
+            }
+
+            .property-features li {
+                width: 100%;
+                justify-content: space-between;
+                font-size: 14px;
+            }
+
+            .property-features svg,
+            .property-features img {
+                width: 12px;
+                height: 12px;
+            }
+        } */
+
+        /* Desktop */
+        @media (min-width: 769px) {
+            .property-features li {
+                font-size: 16px;
+            }
+
+            .property-features svg,
+            .property-features img {
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+    </style>
+
+<style>
+    /* General styling for the nav menu */
+.nav-menu {
+   list-style-type: none;
+   padding: 0;
+}
+
+/* Styling for the menu-title links */
+.nav-menu .menu-title {
+   text-decoration: none;
+   color: #000; /* Default color */
+   padding: 10px 15px;
+   display: block;
+}
+
+/* Hover effect: change color to orange when hovered */
+.nav-menu .menu-title:hover {
+   color: #f35d43;
+}
+
+/* Active state: the current page's link will be orange */
+.nav-menu .menu-title.active {
+   color: #f35d43;
+}
+</style>
+
 </head>
 
 <body>
@@ -89,7 +202,7 @@
                                         </li>
 
                                         <li>
-                                            <a class="menu-title" href="tablayout-left-sidebar.html">Project Listing</a>
+                                            <a class="menu-title nav-link active" href="tablayout-left-sidebar.html">Project Listing</a>
                                         </li>
                                         <li>
                                             <a class="menu-title" href="contact-3.html">Contact Us</a>
@@ -152,8 +265,9 @@
     <!-- breadcrumb end -->
 
 
-    <section style="padding-top: 140px; padding-bottom: 0px;" class="property-section">
-        <div class="container">
+    <section style=" padding-bottom: 0px;" class="property-section">
+        <div class="container" style="padding-left: 30px;
+    padding-right: 30px;">
             <div class="col-12">
 
                 <!-- <p>kskskks</p> -->
@@ -203,7 +317,7 @@
 
             <div class="row ratio_63">
 
-                <div style="overflow-y: auto; height: 1030px;" class="col-xl-3 col-lg-4">
+                <div style="overflow-y: auto; height: auto;" class="col-xl-3 col-lg-4">
                     <div class="left-sidebar">
                         <div class="filter-cards">
                             <div class="advance-card">
@@ -239,6 +353,7 @@
 
                                             <!-- BHK Type Dropdown -->
                                             <div class="col-12">
+                                                <p style="color: black;"><b>BHK Type</b></p>
                                                 <div class="dropdown">
                                                     <span class="dropdown-toggle font-rubik" data-bs-toggle="dropdown">
                                                         <span>BHK Type</span>
@@ -267,29 +382,45 @@
                                                 <p class="pt-3 " style="color: black;"><b>Availability</b></p>
                                                 <div class="d-flex flex-column gap-3">
                                                     <div class="d-flex flex-wrap">
-                                                        <div class="d-flex align-items-center w-50">
-                                                            <input style="height: 20px;width: 20px; margin-right: 8px;"
+                                                        <div class="d-flex align-items-center w-100">
+                                                            <input style="height: 15px; width: 15px; margin-right: 8px;"
                                                                 type="radio" name="availability">
                                                             <p style="margin: 0;">Immediate</p>
                                                         </div>
-                                                        <div class="d-flex align-items-center w-50">
-                                                            <input style="height: 20px;width: 20px; margin-right: 8px;"
+                                                        
+                                                    </div>
+
+
+                                                    <div class="d-flex flex-wrap">
+                                                      
+                                                        <div class="d-flex align-items-center w-100">
+                                                            <input style="height: 15px; width: 15px; margin-right: 8px;"
                                                                 type="radio" name="availability">
                                                             <p style="margin: 0;">Within 15 Days</p>
                                                         </div>
                                                     </div>
+
+
                                                     <div class="d-flex flex-wrap">
-                                                        <div class="d-flex align-items-center w-50">
-                                                            <input style="height: 20px;width: 20px; margin-right: 8px;"
+                                                      
+                                                        <div class="d-flex align-items-center w-100">
+                                                            <input style="height: 15px; width: 15px; margin-right: 8px;"
                                                                 type="radio" name="availability">
                                                             <p style="margin: 0;">Within 30 Days</p>
                                                         </div>
-                                                        <div class="d-flex align-items-center w-50">
-                                                            <input style="height: 20px;width: 20px; margin-right: 8px;"
+                                                    </div>
+
+
+                                                    <div class="d-flex flex-wrap">
+                                                      
+                                                        <div class="d-flex align-items-center w-100">
+                                                            <input style="height: 15px; width: 15px; margin-right: 8px;"
                                                                 type="radio" name="availability">
                                                             <p style="margin: 0;">After 30 Days</p>
                                                         </div>
                                                     </div>
+
+
                                                 </div>
                                             </div>
 
@@ -299,18 +430,18 @@
                                             <div class="col-12">
                                                 <p class="pt-3 " style="color: black;"><b>Property Type</b></p>
                                                 <div class="d-flex flex-column gap-3">
-                                                    <div class="d-flex flex-wrap align-items-center pb-2">
-                                                        <input style="height: 20px;width: 20px; margin-right: 8px;"
+                                                    <div class="d-flex flex-wrap align-items-center">
+                                                        <input style="height: 15px; width: 15px; margin-right: 8px;"
                                                             type="checkbox" name="property-type">
                                                         <p style="margin: 0;">Apartment</p>
                                                     </div>
-                                                    <div class="d-flex flex-wrap align-items-center pb-2">
-                                                        <input style="height: 20px;width: 20px; margin-right: 8px;"
+                                                    <div class="d-flex flex-wrap align-items-center">
+                                                        <input style="height: 15px; width: 15px; margin-right: 8px;"
                                                             type="checkbox" name="property-type">
                                                         <p style="margin: 0;">Independent House/Villa</p>
                                                     </div>
-                                                    <div class="d-flex flex-wrap align-items-center pb-2">
-                                                        <input style="height: 20px;width: 20px; margin-right: 8px;"
+                                                    <div class="d-flex flex-wrap align-items-center">
+                                                        <input style="height: 15px; width: 15px; margin-right: 8px;"
                                                             type="checkbox" name="property-type">
                                                         <p style="margin: 0;">Gated Community Villa</p>
                                                     </div>
@@ -323,17 +454,17 @@
                                                 <div class="d-flex flex-column gap-3">
                                                     <div class="d-flex flex-wrap">
                                                         <div class="d-flex align-items-center">
-                                                            <input style="height: 20px;width: 20px; margin-right: 8px;"
+                                                            <input style="height: 15px; width: 15px; margin-right: 8px;"
                                                                 type="checkbox" name="furnishing">
                                                             <p style="margin: 0;">Full</p>
                                                         </div> &nbsp;
                                                         <div class="d-flex align-items-center">
-                                                            <input style="height: 20px;width: 20px; margin-right: 8px;"
+                                                            <input style="height: 15px; width: 15px; margin-right: 8px;"
                                                                 type="checkbox" name="furnishing">
                                                             <p style="margin: 0;">Semi</p>
                                                         </div> &nbsp;
                                                         <div class="d-flex align-items-center">
-                                                            <input style="height: 20px;width: 20px; margin-right: 8px;"
+                                                            <input style="height: 15px; width: 15px; margin-right: 8px;"
                                                                 type="checkbox" name="furnishing">
                                                             <p style="margin: 0;">None</p>
                                                         </div>
@@ -347,29 +478,32 @@
                                                 <div class="d-flex flex-column gap-3">
                                                     <div class="d-flex flex-wrap">
                                                         <div class="d-flex align-items-center">
-                                                            <input style="height: 20px;width: 20px; margin-right: 8px;"
+                                                            <input style="height: 15px; width: 15px; margin-right: 8px;"
                                                                 type="checkbox" name="parking">
                                                             <p style="margin: 0;">2 Wheeler</p>
                                                         </div> &nbsp;
                                                         <div class="d-flex align-items-center">
-                                                            <input style="height: 20px;width: 20px; margin-right: 8px;"
+                                                            <input style="height: 15px; width: 15px; margin-right: 8px;"
                                                                 type="checkbox" name="parking">
                                                             <p style="margin: 0;">4 Wheeler</p>
                                                         </div>
                                                     </div>
                                                     <div class="d-flex flex-wrap">
                                                         <div class="d-flex align-items-center">
-                                                            <input style="height: 20px;width: 20px; margin-right: 8px;"
+                                                            <input style="height: 15px; width: 15px; margin-right: 8px;"
                                                                 type="checkbox" name="lease">
                                                             <p style="margin: 0;">Show Only Lease Properties</p>
                                                         </div>
                                                     </div>
                                                 </div>
+                                  
                                             </div>
-
+                                            <hr>
 
                                             <div style="display: flex;
                                             justify-content: center;">
+
+                                            
 
                                                 <a href="PropertyBuyers.html">
                                                     <button type="submit"
@@ -465,13 +599,13 @@
 
                                                         <div style="display: flex; align-items: center; width: 50%;">
                                                             <input
-                                                                style="height: 20px;width: 20px; margin-right: 8px; cursor: pointer;"
+                                                                style="height: 15px; width: 15px; margin-right: 8px; cursor: pointer;"
                                                                 type="radio" name="check">
                                                             <p style="margin: 0;">1 or more
                                                         </div>
                                                         <div style="display: flex; align-items: center; width: 50%;">
                                                             <input
-                                                                style="height: 20px;width: 20px; margin-right: 8px; cursor: pointer;"
+                                                                style="height: 15px; width: 15px; margin-right: 8px; cursor: pointer;"
                                                                 type="radio" name="check">
                                                             <p style="margin: 0;">2 or more</p>
                                                         </div>
@@ -482,7 +616,7 @@
                                                     <div style="display: flex; align-items: center; gap: 20px; ">
                                                         <div style="display: flex; align-items: center;width: 50%;">
                                                             <input
-                                                                style="height: 20px;width: 20px; margin-right: 8px; cursor: pointer;"
+                                                                style="height: 15px; width: 15px; margin-right: 8px; cursor: pointer;"
                                                                 type="radio" name="check">
                                                             <p style="margin: 0;">3 or more</p>
                                                         </div>
@@ -555,6 +689,7 @@
                                             </div>
 
 
+                                            <hr>
                                             <div style="display: flex;
                                             justify-content: center;">
 
@@ -636,7 +771,7 @@
                             <div>
                                 <div>
                                     <b style="font-weight: 600;font-size: 25px;color: #ff5c41;">
-                                        Project Listing
+                                        <!-- Project Listing -->
                                     </b>
     
                                 </div>
@@ -660,7 +795,7 @@
 
                                 <li class="d-lg-none d-block">
                                     <div>
-                                        <h6 class="mb-0 mobile-filter font-roboto">Advance search <i
+                                        <h6 class="mb-0 mobile-filter font-roboto">Filter <i
                                                 data-feather="align-center" class="float-end"></i></h6>
                                     </div>
                                 </li>
@@ -718,29 +853,58 @@
                                         <h6>₹58.0 L - 74.0L </h6>
 
 
+                                        <!-- <ul class="property-features">
+                                            <li>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                                    <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                                                </svg> &nbsp; 6: BHK
+                                            </li>
+                                            <li>
+                                                <img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/square-ruler-tool.svg" class="img-fluid ruler-tool" alt=""> 
+                                                500 - 800: Sq Ft
+                                            </li>
+                                        </ul>
+                                    
                                         <ul class="property-features">
+                                            <li>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                                                    <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
+                                                </svg> &nbsp; Aug 4, 2024
+                                            </li>
+                                            <li>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-p-circle" viewBox="0 0 16 16">
+                                                    <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.5 4.002h2.962C10.045 4.002 11 5.104 11 6.586c0 1.494-.967 2.578-2.55 2.578H6.784V12H5.5zm2.77 4.072c.893 0 1.419-.545 1.419-1.488s-.526-1.482-1.42-1.482H6.778v2.97z" />
+                                                </svg> &nbsp; Bike And Car
+                                            </li>
+                                        </ul> -->
+
+                                        <ul>
                                             <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
                                                     <path
                                                         d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
-                                                </svg> &nbsp;6 : BHK</li>
+                                                </svg> &nbsp;9 : BHK</li>
+                                            <!-- <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/bathroom.svg"
+                                                    class="img-fluid" alt="">4: Baths</li> -->
                                             <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/square-ruler-tool.svg"
-                                                    class="img-fluid ruler-tool" alt="">500 - 800: Sq Ft</li>
+                                                    class="img-fluid ruler-tool" alt="">700-900: Sq Ft</li>
                                         </ul>
-
 
                                         <ul>
                                             <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
                                                     <path
                                                         d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
-                                                </svg> &nbsp; Aug 4, 2024</li>
+                                                </svg> &nbsp; Feb 4, 2022</li>
                                             <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     fill="currentColor" class="bi bi-p-circle" viewBox="0 0 16 16">
                                                     <path
                                                         d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.5 4.002h2.962C10.045 4.002 11 5.104 11 6.586c0 1.494-.967 2.578-2.55 2.578H6.784V12H5.5zm2.77 4.072c.893 0 1.419-.545 1.419-1.488s-.526-1.482-1.42-1.482H6.778v2.97z" />
                                                 </svg> &nbsp; Bike And Car</li>
                                         </ul>
+
+
+                                        
                                         <div class="property-btn d-flex">
                                             <span> <b> Developed By : &nbsp;</b>Patil Contraction</span>
                                             <!-- <button type="button" onclick="document.location='single-property-1.html'"
@@ -807,7 +971,7 @@
 
 
 
-                                        <ul class="property-features">
+                                        <ul>
                                             <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
                                                     <path
@@ -899,7 +1063,7 @@
 
 
 
-                                        <ul class="property-features">
+                                        <ul>
                                             <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
                                                     <path
@@ -995,7 +1159,7 @@
 
 
 
-                                        <ul class="property-features">
+                                        <ul>
                                             <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
                                                     <path
@@ -1090,7 +1254,7 @@
 
 
 
-                                        <ul class="property-features">
+                                        <ul>
                                             <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
                                                     <path
@@ -1181,7 +1345,7 @@
 
 
 
-                                        <ul class="property-features">
+                                        <ul>
                                             <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
                                                     <path
@@ -1281,7 +1445,7 @@
 
 
 
-                                        <ul class="property-features">
+                                        <ul>
                                             <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
                                                     <path
@@ -1378,7 +1542,7 @@
 
 
 
-                                        <ul class="property-features">
+                                        <ul>
                                             <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
                                                     <path
@@ -1474,7 +1638,7 @@
                                         <h6>₹82.0 L - 98.0L </h6>
 
 
-                                        <ul class="property-features">
+                                        <ul>
                                             <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
                                                     <path
@@ -1677,6 +1841,8 @@
                                             Jan 8, 2025
                                         </li>
                                     </ul>
+
+
                                     <ul>
                                         <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/square-ruler-tool.svg"
                                             class="img-fluid ruler-tool" alt="">500 Sq Ft</li>
@@ -1910,7 +2076,7 @@
                 <div class="col">
                     <div class="title-1 text-white">
                         <!-- <span class="label label-gradient color-1">Our</span> -->
-                        <h2>Trending projects</h2>
+                        <h2 style="color: #ff5c41">Trending projects</h2>
                         <hr>
                     </div>
                     <div class="feature-1 arrow-light">
@@ -1922,7 +2088,7 @@
                                             <div class="property-details">
                                                 <span class="font-roboto">Sangli</span>
                                                 <a href="single-property-8.html" class="mb-3">
-                                                    <h3 class="d-flex">Little Acorn Farm <span><span
+                                                    <h3 style="color: #ff5c41">Little Acorn Farm <span><span
                                                                 class="label label-dark label-pill">Open
                                                                 house</span></span></h3>
                                                 </a>
@@ -1953,7 +2119,7 @@
 
 
                                                 </ul>
-                                                <a href="user-favourites.html">
+                                                <a>
                                                     <span class="round-half">
                                                         <i data-feather="heart"></i>
                                                     </span>

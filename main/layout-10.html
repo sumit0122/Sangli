@@ -35,6 +35,32 @@
     <!-- Template css -->
     <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/color1.css">
+ 
+    <style>
+        /* General styling for the nav menu */
+   .nav-menu {
+       list-style-type: none;
+       padding: 0;
+   }
+ 
+   /* Styling for the menu-title links */
+   .nav-menu .menu-title {
+       text-decoration: none;
+       color: #000; /* Default color */
+       padding: 10px 15px;
+       display: block;
+   }
+ 
+   /* Hover effect: change color to orange when hovered */
+   .nav-menu .menu-title:hover {
+       color: #f35d43;
+   }
+ 
+   /* Active state: the current page's link will be orange */
+   .nav-menu .menu-title.active {
+       color: #f35d43;
+   }
+   </style>
 
 </head>
 
@@ -58,8 +84,10 @@
                     <div class="menu">
                         <div class="brand-logo">
                             <a href="layout-10.html">
-                                <img src="../assets/images/sangli-properties.png" alt="" class="img-fluid for-light" style="border-radius: 15px;">
-                                <img src="../assets/images/sangli-properties.png" alt="" class="img-fluid for-dark" style="border-radius: 15px;">
+                                <img src="../assets/images/sangli-properties.png" alt="" class="img-fluid for-light"
+                                    style="border-radius: 15px;">
+                                <img src="../assets/images/sangli-properties.png" alt="" class="img-fluid for-dark"
+                                    style="border-radius: 15px;">
                             </a>
                         </div>
                         <nav>
@@ -76,7 +104,7 @@
                                             </div>
                                         </li>
                                         <li>
-                                            <a class="menu-title"  href="layout-10.html">Home</a>
+                                            <a class="menu-title nav-link active" href="layout-10.html">Home</a>
                                         </li>
                                         <li>
                                             <a class="menu-title" href="about-us-2.html">About</a>
@@ -103,9 +131,11 @@
                         <ul class="header-right">
                             <li style="margin-right: 10px;">
                                 <a href="SubscriptionPlan.html">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" fill="currentColor" class="bi bi-currency-rupee" viewBox="0 0 16 16">
-                                        <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4z"/>
-                                      </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="24" fill="currentColor"
+                                        class="bi bi-currency-rupee" viewBox="0 0 16 16">
+                                        <path
+                                            d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4z" />
+                                    </svg>
                                 </a>
                             </li>
                             <li style="margin-right: 10px;">
@@ -129,7 +159,7 @@
 
     <!-- home section start -->
     <section class="layout-home8 bg-img-2 ratio_landscape" style="padding-bottom: 0px !important;">
-        <div class="container search-container" style="padding-top: 85px;">
+        <div class="container search-container">
             <div class="row m-0">
                 <div class="col-xl-9 col-lg-10">
                     <div class="home-left-content">
@@ -150,6 +180,7 @@
                             </ul>
                             <div class="tab-content" id="home-tabContent">
 
+                                <!-- Buy -->
                                 <div class="tab-pane fade show active" id="buy">
                                     <div class="row review-form gx-3">
                                         <!-- Location Dropdown -->
@@ -193,16 +224,14 @@
                                             border: 1px solid #eee;
                                             border-radius: 4px;">
 
-                                                
 
                                                 <!-- Property Type -->
-                                                <div class="col-lg-3 col-md-6 col-sm-6" style="margin-bottom: 7px;">
+                                                <div class="col-lg-3 col-md-6 col-sm-6">
                                                     <label><input type="radio" name="propertyTypeBuy" id="fullHouseBuy"
                                                             value="Full House" checked> Full House</label>
                                                     <label class="ms-3"><input type="radio" name="propertyTypeBuy"
                                                             id="landBuy" value="Land"> Land</label>
                                                 </div>
-
 
 
                                                 <!-- BHK Type -->
@@ -257,12 +286,13 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!-- Buy End -->
 
-
-
+                                <!-- Rent -->
                                 <div class="tab-pane fade tab-listing" id="rent">
                                     <div class="row review-form gx-3">
-                                        <div class="col-lg-3 col-sm-6">
+                                        <!-- Location Dropdown -->
+                                        <div class="col-12 col-sm-4 col-lg-3 mb-3 mb-lg-0">
                                             <div class="dropdown">
                                                 <span class="dropdown-toggle font-rubik" data-bs-toggle="dropdown">
                                                     <span>Sangli</span> <i class="fas fa-angle-down"></i>
@@ -275,23 +305,35 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-7 col-md-6">
+
+                                        <!-- Search Input -->
+                                        <div class="col-12 col-sm-8 col-lg-7 mb-3 mb-lg-0">
                                             <div class="search-input-container">
                                                 <div id="tags-container" class="tags-container"></div>
                                                 <input type="text" id="search-input" class="form-control"
                                                     placeholder="Search your location">
                                             </div>
                                         </div>
-                                        <div class="col-lg-2 col-md-6" style="margin-top: 3px;">
-                                            <button type="button" onclick="document.location='tab-layout.html'"
-                                                class="btn btn-gradient color-4">Search</button>
+
+                                        <!-- Search Button (Visible on large screens only) -->
+                                        <div class="col-sm-2 col-lg-2 smbutton d-none d-lg-block"
+                                            style="margin-top: 3px;">
+                                            <button type="button" onclick="document.location='list-left-sidebar.html'"
+                                                class="btn btn-gradient color-4 search-btn w-100">
+                                                Search
+                                            </button>
                                         </div>
                                     </div>
 
-                                    <div class="feature-content text-start p-0  mt-0">
-                                        <div class="left-sidebar">
-                                            <div class="row gx-2" style="align-items: center;">
-                                                <div class="col-md-5">
+                                    <!-- Filters Section -->
+                                    <div class="feature-content text-start p-0 mt-0">
+                                        <div class="advance-search">
+                                            <div class="row gx-2 align-items-center" style="padding: 12px 10px 10px;
+                                            border: 1px solid #eee;
+                                            border-radius: 4px;">
+
+                                                <!-- Property Type -->
+                                                <div class="col-lg-5 col-md-6 col-sm-6">
                                                     <label><input type="radio" name="propertyTypeRent"
                                                             id="fullHouseRent" value="Full House" checked>
                                                         Full House</label>
@@ -303,7 +345,10 @@
                                                             value="Flatmates">
                                                         Flatmates</label>
                                                 </div>
-                                                <div class="col-md-3">
+
+
+                                                <!-- BHK Type -->
+                                                <div class="col-lg-3 col-md-6 col-sm-6">
                                                     <div class="dropdown">
                                                         <span class="dropdown-toggle font-rubik"
                                                             data-bs-toggle="dropdown"><span>BHK Type</span> <i
@@ -316,7 +361,9 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-3">
+
+                                                <!-- Property Status -->
+                                                <div class="col-lg-3 col-md-6 col-sm-6">
                                                     <div class="dropdown">
                                                         <span class="dropdown-toggle font-rubik"
                                                             data-bs-toggle="dropdown"><span>Availability</span> <i
@@ -333,14 +380,29 @@
                                                         </div>
                                                     </div>
                                                 </div>
+
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
+                                    <!-- Search Button (Visible on small and medium screens) -->
+                                    <div class="row mt-3 d-block d-lg-none">
+                                        <div class="col-12">
+                                            <button type="button" onclick="document.location='tab-layout.html'"
+                                                class="btn btn-gradient color-4 search-btn w-100">
+                                                Search
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Rent End -->
+
+
+                                <!-- Commercial -->
                                 <div class="tab-pane fade tab-listing" id="commercial">
                                     <div class="row review-form gx-3">
-                                        <div class="col-lg-3 col-sm-6">
+                                        <!-- Location Dropdown -->
+                                        <div class="col-12 col-sm-4 col-lg-3 mb-3 mb-lg-0">
                                             <div class="dropdown">
                                                 <span class="dropdown-toggle font-rubik" data-bs-toggle="dropdown">
                                                     <span>Sangli</span> <i class="fas fa-angle-down"></i>
@@ -353,29 +415,35 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-7 col-md-6">
+
+                                        <!-- Search Input -->
+                                        <div class="col-12 col-sm-8 col-lg-7 mb-3 mb-lg-0">
                                             <div class="search-input-container">
                                                 <div id="tags-container" class="tags-container"></div>
                                                 <input type="text" id="search-input" class="form-control"
                                                     placeholder="Search your location">
                                             </div>
                                         </div>
-                                        <div class="col-lg-2 col-md-6 " style="margin-top: 3px;">
-                                            <button type="button" onclick="document.location=''"
-                                                class="btn btn-gradient color-4">Search</button>
+
+                                        <!-- Search Button (Visible on large screens only) -->
+                                        <div class="col-sm-2 col-lg-2 smbutton d-none d-lg-block"
+                                            style="margin-top: 3px;">
+                                            <button type="button" onclick="document.location='list-left-sidebar.html'"
+                                                class="btn btn-gradient color-4 search-btn w-100">
+                                                Search
+                                            </button>
                                         </div>
                                     </div>
-                                    <div class="feature-content text-start p-0  mt-0">
-                                        <div class="left-sidebar">
-                                            <div class="row gx-2" style="align-items: center;">
-                                                <!-- <div class="col-md-2">
-                                                    <label><input type="radio" name="propertyTypeCommercial" id="rentCommercial" value="Rent" checked>
-                                                        Rent</label>
-                                                    <label style="margin-left: 18px;"><input type="radio" name="propertyTypeCommercial" id="buyCommercial"
-                                                            value="Buy">
-                                                        Buy</label>
-                                                </div> -->
-                                                <div class="col-md-3">
+
+                                    <!-- Filters Section -->
+                                    <div class="feature-content text-start p-0 mt-0">
+                                        <div class="advance-search">
+                                            <div class="row gx-2 align-items-center" style="padding: 12px 10px 10px;
+                                            border: 1px solid #eee;
+                                            border-radius: 4px;">
+
+                                                <!-- Property Type -->
+                                                <div class="col-lg-3 col-md-6 col-sm-6">
                                                     <div class="dropdown">
                                                         <span class="dropdown-toggle font-rubik"
                                                             data-bs-toggle="dropdown"><span>Property Tyoe</span> <i
@@ -391,20 +459,60 @@
                                                         </div>
                                                     </div>
                                                 </div>
+
+
+                                                <!-- BHK Type -->
+                                                <!-- <div class="col-lg-3 col-md-6 col-sm-6">
+                                                    <div class="dropdown">
+                                                        <span class="dropdown-toggle font-rubik"
+                                                            data-bs-toggle="dropdown"><span>BHK Type</span> <i
+                                                                class="fas fa-angle-down"></i></span>
+                                                        <div class="dropdown-menu text-start">
+                                                            <a class="dropdown-item" href="javascript:void(0)">1 BHK</a>
+                                                            <a class="dropdown-item" href="javascript:void(0)">2 BHK</a>
+                                                            <a class="dropdown-item" href="javascript:void(0)">3 BHK</a>
+                                                            <a class="dropdown-item" href="javascript:void(0)">4 BHK</a>
+                                                        </div>
+                                                    </div>
+                                                </div> -->
+
+                                                <!-- Property Status -->
+                                                <!-- <div class="col-lg-3 col-md-6 col-sm-6">
+                                                    <div class="dropdown">
+                                                        <span class="dropdown-toggle font-rubik"
+                                                            data-bs-toggle="dropdown"><span>Availability</span> <i
+                                                                class="fas fa-angle-down"></i></span>
+                                                        <div class="dropdown-menu text-start">
+                                                            <a class="dropdown-item"
+                                                                href="javascript:void(0)">Immediate</a>
+                                                            <a class="dropdown-item" href="javascript:void(0)">Within 15
+                                                                Days</a>
+                                                            <a class="dropdown-item" href="javascript:void(0)">Within 30
+                                                                Days</a>
+                                                            <a class="dropdown-item" href="javascript:void(0)">After 30
+                                                                Days</a>
+                                                        </div>
+                                                    </div>
+                                                </div> -->
+
                                             </div>
                                         </div>
                                     </div>
+
+                                    <!-- Search Button (Visible on small and medium screens) -->
+                                    <div class="row mt-3 d-block d-lg-none">
+                                        <div class="col-12">
+                                            <button type="button" onclick="document.location='tab-layout.html'"
+                                                class="btn btn-gradient color-4 search-btn w-100">
+                                                Search
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
+                                <!-- Commercial End -->
+
                             </div>
                         </div>
-
-                        <!-- <div style="text-align: center; padding-top: 20px;">
-                            <h6>Want to sell or rent Property ?</h6>
-
-                            <button onclick="document.location='submit-property.html'" type="button"
-                                class="btn btn-lg btn-gradient btn-pill color-2">submit
-                                property</button>
-                        </div> -->
                     </div>
 
                 </div>
@@ -580,50 +688,8 @@
             </div>
         </div>
 
-
-
     </section>
-
-
     <!-- home section end -->
-
-
-    <!-- Submit property start -->
-    <!-- <section class="home-section layout-5">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xl-8 col-md-11">
-                    <div class="home-main">
-                        <div class="home-content">
-                            <div>
-                                <label style="color: white;
-                                font-size: 29px;
-                                font-weight: 600;" for="">Sangli Properties</label>
-
-                                <h6>Want to sell or rent Property ?</h6>
-                                <h1>How <span class="typed"></span></h1>
-                                <div class="row">
-                                    <div class="col-xl-8">
-                                        <p>Elegant retreat in a quiet Coral Gables setting. This home provides wonderful
-                                            entertaining spaces with a chef
-                                            kitchen opening Elegant retreat in a quiet Coral Gables setting.</p>
-                                    </div>
-                                </div>
-                                <button onclick="document.location='submit-property.html'" type="button"
-                                    class="btn btn-lg btn-gradient btn-pill color-2">submit
-                                    property</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="decor-image">
-            <img src="../assets/images/shape.png" alt="" class="img-fluid">
-        </div>
-    </section> -->
-    <!-- Submit property end -->
-
 
     <!-- feature section start -->
     <section class="feature-section ratio_landscape" style="padding-top: 0px;">
@@ -680,7 +746,8 @@
                                                         </div>
                                                         <div>
                                                             <h6 class="h6">Project Area</h6>
-                                                            <h6 class="h61" style="color:black">12 Acres</h6>
+                                                            <h6 class="h61" style="color:#000000ad; padding-top: 4px;">
+                                                                12 Acres</h6>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -689,14 +756,15 @@
                                                         <div style="width: 24px; height: 24px;color: #434c56c4;">
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="20"
                                                                 height="20" fill="currentColor" class="bi bi-rulers"
-                                                                viewBox="0 0 16 16" >
+                                                                viewBox="0 0 16 16">
                                                                 <path
                                                                     d="M1 0a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h5v-1H2v-1h4v-1H4v-1h2v-1H2v-1h4V9H4V8h2V7H2V6h4V2h1v4h1V4h1v2h1V2h1v4h1V4h1v2h1V2h1v4h1V1a1 1 0 0 0-1-1z" />
                                                             </svg>
                                                         </div>
                                                         <div>
                                                             <h6 class="h6">Sizes</h6>
-                                                            <h6 class="h61" style="color: black;">4000 - 9532 Sq Ft</h6>
+                                                            <h6 class="h61" style="color: #000000ad;padding-top: 4px;">
+                                                                4000 - 9532 Sq Ft</h6>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -714,11 +782,12 @@
                                                         </div>
                                                         <div>
                                                             <h6 class="h6">Project Size</h6>
-                                                            <h6 class="h61" style="color: black;">400 units</h6>
+                                                            <h6 class="h61" style="color: #000000ad;padding-top: 4px;">
+                                                                400 units</h6>
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li>
+                                                <li style="padding: 15px 0px 15px 0px">
                                                     <div class="d-flex" style="gap: 6px;">
                                                         <div>
                                                             <i data-feather="calendar"
@@ -726,11 +795,12 @@
                                                         </div>
                                                         <div>
                                                             <h6 class="h6">Launch Date</h6>
-                                                            <h6 class="h61" style="color: black;">Aug 2030</h6>
+                                                            <h6 class="h61" style="color: #000000ad;padding-top: 4px;">
+                                                                Aug 2030</h6>
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li>
+                                                <li style="padding: 15px 0px 15px 0px">
                                                     <div class="d-flex" style="gap: 6px;">
                                                         <div>
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="20"
@@ -742,11 +812,12 @@
                                                         </div>
                                                         <div>
                                                             <h6 class="h6">Avg. Price</h6>
-                                                            <h6 class="h61" style="color: black;">₹ 12K/sq. ft</h6>
+                                                            <h6 class="h61" style="color: #000000ad;padding-top: 4px;">₹
+                                                                12K/sq. ft</h6>
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li>
+                                                <li style="padding: 15px 0px 15px 0px">
                                                     <div class="d-flex" style="gap: 6px;">
                                                         <div>
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="20"
@@ -760,7 +831,8 @@
                                                         </div>
                                                         <div>
                                                             <h6 class="h6">Passession Starts</h6>
-                                                            <h6 class="h61" style="color: black;">Jan 2026</h6>
+                                                            <h6 class="h61" style="color: #000000ad;padding-top: 4px;">
+                                                                Jan 2026</h6>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -772,22 +844,25 @@
                                                         </div>
                                                         <div>
                                                             <h6 class="h6">Configartion</h6>
-                                                            <h6 class="h61" style="color: black;">3, 2 BHK</h6>
+                                                            <h6 class="h61" style="color: #000000ad;padding-top: 4px;">
+                                                                3, 2 BHK</h6>
                                                         </div>
                                                     </div>
                                                 </li>
                                                 <li>
                                                     <div class="d-flex" style="gap: 6px;">
                                                         <div>
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                                            fill="currentColor" class="bi bi-p-circle" viewBox="0 0 16 16">
-                                                            <path
-                                                                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.5 4.002h2.962C10.045 4.002 11 5.104 11 6.586c0 1.494-.967 2.578-2.55 2.578H6.784V12H5.5zm2.77 4.072c.893 0 1.419-.545 1.419-1.488s-.526-1.482-1.42-1.482H6.778v2.97z" />
-                                                        </svg>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                height="20" fill="currentColor" class="bi bi-p-circle"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.5 4.002h2.962C10.045 4.002 11 5.104 11 6.586c0 1.494-.967 2.578-2.55 2.578H6.784V12H5.5zm2.77 4.072c.893 0 1.419-.545 1.419-1.488s-.526-1.482-1.42-1.482H6.778v2.97z" />
+                                                            </svg>
                                                         </div>
                                                         <div>
                                                             <h6 class="h6">Parking</h6>
-                                                            <h6 class="h61" style="color: black;">Bike And Car</h6>
+                                                            <h6 class="h61" style="color: #000000ad;padding-top: 4px;">
+                                                                Bike And Car</h6>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -805,19 +880,20 @@
                                                         </div>
                                                         <div>
                                                             <h6 class="h6">Rera Id</h6>
-                                                            <h6 class="h61" style="color: black;">P9387362789</h6>
+                                                            <h6 class="h61" style="color: #000000ad;padding-top: 4px;">
+                                                                P9387362789</h6>
                                                         </div>
                                                     </div>
                                                 </li>
                                             </ul>
-                                            <ul class="feature-price">
+                                            <ul class="feature-price" style="padding: 10px 20px 10px 20px;">
                                                 <li>
                                                     <h3>₹40 Lac - ₹55 Lac</h3>
-                                                    <h6>Home For Sale</h6>
+                                                    <!-- <h6>Home For Sale</h6> -->
                                                 </li>
-                                                <li><button type="button"
-                                                        class="btn btn-solid color-3 btn-flat"
-                                                        style="border-radius: 5px;" data-bs-toggle="modal" data-bs-target="#login-modal">contact</button></li>
+                                                <li><button type="button" class="btn btn-solid color-3 btn-flat"
+                                                        style="border-radius: 5px;" data-bs-toggle="modal"
+                                                        data-bs-target="#login-modal">contact</button></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -864,7 +940,8 @@
                                                         </div>
                                                         <div>
                                                             <h6 class="h6">Project Area</h6>
-                                                            <h6 class="h61" style="color: black;">7 Acres</h6>
+                                                            <h6 class="h61" style="color: #000000ad;padding-top: 4px;">7
+                                                                Acres</h6>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -880,7 +957,8 @@
                                                         </div>
                                                         <div>
                                                             <h6 class="h6">Sizes</h6>
-                                                            <h6 class="h61" style="color: black;">7000 - 1500 Sq Ft</h6>
+                                                            <h6 class="h61" style="color: #000000ad;padding-top: 4px;">
+                                                                7000 - 1500 Sq Ft</h6>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -898,11 +976,12 @@
                                                         </div>
                                                         <div>
                                                             <h6 class="h6">Project Size</h6>
-                                                            <h6 class="h61" style="color: black;">200 units</h6>
+                                                            <h6 class="h61" style="color: #000000ad;padding-top: 4px;">
+                                                                200 units</h6>
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li>
+                                                <li style="padding: 15px 0px 15px 0px">
                                                     <div class="d-flex" style="gap: 6px;">
                                                         <div>
                                                             <i data-feather="calendar"
@@ -910,11 +989,12 @@
                                                         </div>
                                                         <div>
                                                             <h6 class="h6">Launch Date</h6>
-                                                            <h6 class="h61" style="color: black;">Aug 2027</h6>
+                                                            <h6 class="h61" style="color: #000000ad;padding-top: 4px;">
+                                                                Aug 2027</h6>
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li>
+                                                <li style="padding: 15px 0px 15px 0px">
                                                     <div class="d-flex" style="gap: 6px;">
                                                         <div>
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="20"
@@ -926,11 +1006,12 @@
                                                         </div>
                                                         <div>
                                                             <h6 class="h6">Avg. Price</h6>
-                                                            <h6 class="h61" style="color: black;">₹ 10K/sq. ft</h6>
+                                                            <h6 class="h61" style="color: #000000ad;padding-top: 4px;">₹
+                                                                10K/sq. ft</h6>
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li>
+                                                <li style="padding: 15px 0px 15px 0px">
                                                     <div class="d-flex" style="gap: 6px;">
                                                         <div>
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="20"
@@ -944,7 +1025,8 @@
                                                         </div>
                                                         <div>
                                                             <h6 class="h6">Passession Starts</h6>
-                                                            <h6 class="h61" style="color: black;">Jan 2025</h6>
+                                                            <h6 class="h61" style="color: #000000ad;padding-top: 4px;">
+                                                                Jan 2025</h6>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -956,22 +1038,25 @@
                                                         </div>
                                                         <div>
                                                             <h6 class="h6">Configartion</h6>
-                                                            <h6 class="h61" style="color: black;">3, 2 BHK</h6>
+                                                            <h6 class="h61" style="color: #000000ad;padding-top: 4px;">
+                                                                3, 2 BHK</h6>
                                                         </div>
                                                     </div>
                                                 </li>
                                                 <li>
                                                     <div class="d-flex" style="gap: 6px;">
                                                         <div>
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                                            fill="currentColor" class="bi bi-p-circle" viewBox="0 0 16 16">
-                                                            <path
-                                                                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.5 4.002h2.962C10.045 4.002 11 5.104 11 6.586c0 1.494-.967 2.578-2.55 2.578H6.784V12H5.5zm2.77 4.072c.893 0 1.419-.545 1.419-1.488s-.526-1.482-1.42-1.482H6.778v2.97z" />
-                                                        </svg>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                height="20" fill="currentColor" class="bi bi-p-circle"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.5 4.002h2.962C10.045 4.002 11 5.104 11 6.586c0 1.494-.967 2.578-2.55 2.578H6.784V12H5.5zm2.77 4.072c.893 0 1.419-.545 1.419-1.488s-.526-1.482-1.42-1.482H6.778v2.97z" />
+                                                            </svg>
                                                         </div>
                                                         <div>
                                                             <h6 class="h6">Parking</h6>
-                                                            <h6 class="h61" style="color: black;">Bike And Car</h6>
+                                                            <h6 class="h61" style="color: #000000ad;padding-top: 4px;">
+                                                                Bike And Car</h6>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -989,21 +1074,23 @@
                                                         </div>
                                                         <div>
                                                             <h6 class="h6">Rera Id</h6>
-                                                            <h6 class="h61" style="color: black;">D9387362789</h6>
+                                                            <h6 class="h61" style="color: #000000ad;padding-top: 4px;">
+                                                                D9387362789</h6>
                                                         </div>
                                                     </div>
                                                 </li>
                                             </ul>
-                                            <ul class="feature-price">
+                                            <ul class="feature-price" style="padding: 10px 20px 10px 20px;">
                                                 <li>
                                                     <h3>₹30 Lac - ₹35 Lac</h3>
-                                                    <h6>Home For Sale</h6>
+                                                    <!-- <h6>Home For Sale</h6> -->
                                                 </li>
                                                 <li>
-                                                    <button type="button"
-                                                    data-bs-toggle="modal" data-bs-target="#login-modal"
+                                                    <button type="button" data-bs-toggle="modal"
+                                                        data-bs-target="#login-modal"
                                                         class="btn btn-solid color-3 btn-flat"
-                                                        style="border-radius: 5px;">contact</button></li>
+                                                        style="border-radius: 5px;">contact</button>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -1050,7 +1137,8 @@
                                                         </div>
                                                         <div>
                                                             <h6 class="h6">Project Area</h6>
-                                                            <h6 class="h61" style="color: black;">8 Acres</h6>
+                                                            <h6 class="h61" style="color: #000000ad;padding-top: 4px;">8
+                                                                Acres</h6>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -1066,7 +1154,8 @@
                                                         </div>
                                                         <div>
                                                             <h6 class="h6">Sizes</h6>
-                                                            <h6 class="h61" style="color: black;">800 - 1000 Sq Ft</h6>
+                                                            <h6 class="h61" style="color: #000000ad;padding-top: 4px;">
+                                                                800 - 1000 Sq Ft</h6>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -1084,11 +1173,12 @@
                                                         </div>
                                                         <div>
                                                             <h6 class="h6">Project Size</h6>
-                                                            <h6 class="h61" style="color: black;">150 units</h6>
+                                                            <h6 class="h61" style="color: #000000ad;padding-top: 4px;">
+                                                                150 units</h6>
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li>
+                                                <li style="padding: 15px 0px 15px 0px">
                                                     <div class="d-flex" style="gap: 6px;">
                                                         <div>
                                                             <i data-feather="calendar"
@@ -1096,11 +1186,12 @@
                                                         </div>
                                                         <div>
                                                             <h6 class="h6">Launch Date</h6>
-                                                            <h6 class="h61" style="color: black;">Jan 2028</h6>
+                                                            <h6 class="h61" style="color: #000000ad;padding-top: 4px;">
+                                                                Jan 2028</h6>
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li>
+                                                <li style="padding: 15px 0px 15px 0px">
                                                     <div class="d-flex" style="gap: 6px;">
                                                         <div>
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="20"
@@ -1112,11 +1203,12 @@
                                                         </div>
                                                         <div>
                                                             <h6 class="h6">Avg. Price</h6>
-                                                            <h6 class="h61" style="color: black;">₹ 11K/sq. ft</h6>
+                                                            <h6 class="h61" style="color: #000000ad;padding-top: 4px;">₹
+                                                                11K/sq. ft</h6>
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li>
+                                                <li style="padding: 15px 0px 15px 0px">
                                                     <div class="d-flex" style="gap: 6px;">
                                                         <div>
                                                             <svg xmlns="http://www.w3.org/2000/svg" width="20"
@@ -1130,7 +1222,8 @@
                                                         </div>
                                                         <div>
                                                             <h6 class="h6">Passession Starts</h6>
-                                                            <h6 class="h61" style="color: black;">Aug 2025</h6>
+                                                            <h6 class="h61" style="color: #000000ad;padding-top: 4px;">
+                                                                Aug 2025</h6>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -1142,22 +1235,25 @@
                                                         </div>
                                                         <div>
                                                             <h6 class="h6">Configartion</h6>
-                                                            <h6 class="h61" style="color: black;">3, 2 BHK</h6>
+                                                            <h6 class="h61" style="color: #000000ad;padding-top: 4px;">
+                                                                3, 2 BHK</h6>
                                                         </div>
                                                     </div>
                                                 </li>
                                                 <li>
                                                     <div class="d-flex" style="gap: 6px;">
                                                         <div>
-                                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                                            fill="currentColor" class="bi bi-p-circle" viewBox="0 0 16 16">
-                                                            <path
-                                                                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.5 4.002h2.962C10.045 4.002 11 5.104 11 6.586c0 1.494-.967 2.578-2.55 2.578H6.784V12H5.5zm2.77 4.072c.893 0 1.419-.545 1.419-1.488s-.526-1.482-1.42-1.482H6.778v2.97z" />
-                                                        </svg>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                height="20" fill="currentColor" class="bi bi-p-circle"
+                                                                viewBox="0 0 16 16">
+                                                                <path
+                                                                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.5 4.002h2.962C10.045 4.002 11 5.104 11 6.586c0 1.494-.967 2.578-2.55 2.578H6.784V12H5.5zm2.77 4.072c.893 0 1.419-.545 1.419-1.488s-.526-1.482-1.42-1.482H6.778v2.97z" />
+                                                            </svg>
                                                         </div>
                                                         <div>
                                                             <h6 class="h6">Parking</h6>
-                                                            <h6 class="h61" style="color: black;">Bike And Car</h6>
+                                                            <h6 class="h61" style="color: #000000ad;padding-top: 4px;">
+                                                                Bike And Car</h6>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -1175,18 +1271,19 @@
                                                         </div>
                                                         <div>
                                                             <h6 class="h6">Rera Id</h6>
-                                                            <h6 class="h61" style="color: black;">P9387362689</h6>
+                                                            <h6 class="h61" style="color: #000000ad;padding-top: 4px;">
+                                                                P9387362689</h6>
                                                         </div>
                                                     </div>
                                                 </li>
                                             </ul>
-                                            <ul class="feature-price">
+                                            <ul class="feature-price" style="padding: 10px 20px 10px 20px;">
                                                 <li>
                                                     <h3>₹8 Lac - ₹15 Lac</h3>
-                                                    <h6>Home For Sale</h6>
+                                                    <!-- <h6>Home For Sale</h6> -->
                                                 </li>
-                                                <li><button type="button"
-                                                    data-bs-toggle="modal" data-bs-target="#login-modal"
+                                                <li><button type="button" data-bs-toggle="modal"
+                                                        data-bs-target="#login-modal"
                                                         class="btn btn-solid color-3 btn-flat"
                                                         style="border-radius: 5px;">contact</button></li>
                                             </ul>
@@ -1200,8 +1297,6 @@
             </div>
         </div>
     </section>
-    <!-- feature section end -->
-
     <!-- feature section end -->
 
     <!-- Whar are you looking for start -->
@@ -1223,8 +1318,6 @@
                                 class="nav-link">Land</a></li>
                         <li class="nav-item"><a href="#" data-bs-target="#office" data-bs-toggle="tab"
                                 class="nav-link">Office</a></li>
-                        <!-- <li class="nav-item"><a href="#" data-bs-target="#appartment" data-bs-toggle="tab"
-                                    class="nav-link">Apartment</a></li> -->
                     </ul>
                     <div id="tabsContent" class="tab-content">
                         <div id="residential" class="tab-pane fade">
@@ -1260,19 +1353,7 @@
                                             <a href="single-property-8.html">
                                                 <h3>Merrick in Spring Way</h3>
                                             </a>
-                                            <h6 class="color-2">₹10.00 Lac
-                                            </h6>
-                                            <!-- <p class="font-roboto">Elegant retreat in a quiet Coral Gables setting. This
-                                                home provides wonderful entertaining spaces with a chef
-                                                kitchen opening…</p> -->
-                                            <!-- <ul>
-                                                <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/double-bed.svg"
-                                                        class="img-fluid" alt="">Bed : 4</li>
-                                                <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/bathroom.svg"
-                                                        class="img-fluid" alt="">Baths : 4</li>
-                                                <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/square-ruler-tool.svg"
-                                                        class="img-fluid ruler-tool" alt="">Sq Ft : 5000</li>
-                                            </ul> -->
+                                            <h6 class="color-2">₹10.00 Lac</h6>
                                             <ul class="property-features">
                                                 <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                         fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
@@ -1338,19 +1419,7 @@
                                             <a href="single-property-8.html">
                                                 <h3>Allen’s Acres Way</h3>
                                             </a>
-                                            <h6 class="color-2">₹33.00 Lac
-                                            </h6>
-                                            <!-- <p class="font-roboto">This home provides wonderful entertaining spaces with
-                                                a chef
-                                                kitchen opening. Elegant retreat in a quiet Coral Gables opening….</p>
-                                            <ul>
-                                                <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/double-bed.svg"
-                                                        class="img-fluid" alt="">Bed : 3</li>
-                                                <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/bathroom.svg"
-                                                        class="img-fluid" alt="">Baths : 1</li>
-                                                <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/square-ruler-tool.svg"
-                                                        class="img-fluid ruler-tool" alt="">Sq Ft : 1000</li>
-                                            </ul> -->
+                                            <h6 class="color-2">₹33.00 Lac</h6>
                                             <ul class="property-features">
                                                 <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                         fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
@@ -1416,19 +1485,7 @@
                                             <a href="single-property-8.html">
                                                 <h3>Hidden Spring Hideaway</h3>
                                             </a>
-                                            <h6 class="color-2">₹25.00 Lac
-                                            </h6>
-                                            <!-- <p class="font-roboto">The most common and most absolute type of estate, the
-                                                tenant enjoys the greatest discretion over the disposal of the property.
-                                            </p>
-                                            <ul>
-                                                <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/double-bed.svg"
-                                                        class="img-fluid" alt="">Bed : 5</li>
-                                                <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/bathroom.svg"
-                                                        class="img-fluid" alt="">Baths : 3</li>
-                                                <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/square-ruler-tool.svg"
-                                                        class="img-fluid ruler-tool" alt="">Sq Ft : 4500</li>
-                                            </ul> -->
+                                            <h6 class="color-2">₹25.00 Lac</h6>
                                             <ul class="property-features">
                                                 <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                         fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
@@ -1513,19 +1570,7 @@
                                             <a href="single-property-8.html">
                                                 <h3>Little Acorn Farm</h3>
                                             </a>
-                                            <h6 class="color-2">₹10.00 Lac
-                                            </h6>
-                                            <!-- <p class="font-roboto">This home provides wonderful entertaining spaces with
-                                                a chef
-                                                kitchen opening. Elegant retreat in a quiet Coral Gables .</p>
-                                            <ul>
-                                                <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/double-bed.svg"
-                                                        class="img-fluid" alt="">Bed : 4</li>
-                                                <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/bathroom.svg"
-                                                        class="img-fluid" alt="">Baths : 4</li>
-                                                <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/square-ruler-tool.svg"
-                                                        class="img-fluid ruler-tool" alt="">Sq Ft : 5000</li>
-                                            </ul> -->
+                                            <h6 class="color-2">₹10.00 Lac</h6>
                                             <ul class="property-features">
                                                 <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                         fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
@@ -1606,19 +1651,7 @@
                                             <a href="single-property-8.html">
                                                 <h3>Allen’s Acres Way</h3>
                                             </a>
-                                            <h6 class="color-2">₹33.00 Lac
-                                            </h6>
-                                            <!-- <p class="font-roboto">An interior designer is someone who
-                                                plans,researches,coordinates,management and manages such enhancement
-                                                projects.</p>
-                                            <ul>
-                                                <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/double-bed.svg"
-                                                        class="img-fluid" alt="">Bed : 3</li>
-                                                <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/bathroom.svg"
-                                                        class="img-fluid" alt="">Baths : 1</li>
-                                                <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/square-ruler-tool.svg"
-                                                        class="img-fluid ruler-tool" alt="">Sq Ft : 1000</li>
-                                            </ul> -->
+                                            <h6 class="color-2">₹33.00 Lac</h6>
                                             <ul class="property-features">
                                                 <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                         fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
@@ -1699,19 +1732,7 @@
                                             <a href="single-property-8.html">
                                                 <h3>Hidden Spring Hideaway</h3>
                                             </a>
-                                            <h6 class="color-2">₹25.00 Lac
-                                            </h6>
-                                            <!-- <p class="font-roboto">This home provides wonderful entertaining spaces with
-                                                a chef
-                                                kitchen opening. Elegant retreat in a quiet Coral Gables .</p>
-                                            <ul>
-                                                <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/double-bed.svg"
-                                                        class="img-fluid" alt="">Bed : 5</li>
-                                                <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/bathroom.svg"
-                                                        class="img-fluid" alt="">Baths : 3</li>
-                                                <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/square-ruler-tool.svg"
-                                                        class="img-fluid ruler-tool" alt="">Sq Ft : 4500</li>
-                                            </ul> -->
+                                            <h6 class="color-2">₹25.00 Lac</h6>
                                             <ul class="property-features">
                                                 <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                         fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
@@ -1781,19 +1802,7 @@
                                             <a href="single-property-8.html">
                                                 <h3>Passion For Property</h3>
                                             </a>
-                                            <h6 class="color-2">₹33.00 Lac
-                                            </h6>
-                                            <!-- <p class="font-roboto">Elegant retreat in a quiet Coral Gables setting. This
-                                                home provides wonderful entertaining spaces with a chef
-                                                kitchen opening…</p>
-                                            <ul>
-                                                <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/double-bed.svg"
-                                                        class="img-fluid" alt="">Bed : 4</li>
-                                                <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/bathroom.svg"
-                                                        class="img-fluid" alt="">Baths : 4</li>
-                                                <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/square-ruler-tool.svg"
-                                                        class="img-fluid ruler-tool" alt="">Sq Ft : 5000</li>
-                                            </ul> -->
+                                            <h6 class="color-2">₹33.00 Lac</h6>
                                             <ul class="property-features">
                                                 <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                         fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
@@ -1860,17 +1869,6 @@
                                                 <h3>Precious Properties</h3>
                                             </a>
                                             <h6 class="color-2">₹30.00 Lac</h6>
-                                            <!-- <p class="font-roboto">Elegant retreat in a quiet Coral Gables setting. This
-                                                home provides wonderful entertaining spaces with a chef
-                                                kitchen opening…</p>
-                                            <ul>
-                                                <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/double-bed.svg"
-                                                        class="img-fluid" alt="">Bed : 4</li>
-                                                <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/bathroom.svg"
-                                                        class="img-fluid" alt="">Baths : 4</li>
-                                                <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/square-ruler-tool.svg"
-                                                        class="img-fluid ruler-tool" alt="">Sq Ft : 5000</li>
-                                            </ul> -->
                                             <ul class="property-features">
                                                 <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                         fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
@@ -1937,17 +1935,6 @@
                                                 <h3>Property Professionals</h3>
                                             </a>
                                             <h6 class="color-2">₹70.00 Lac</h6>
-                                            <!-- <p class="font-roboto">Elegant retreat in a quiet Coral Gables setting. This
-                                                home provides wonderful entertaining spaces with a chef
-                                                kitchen opening…</p>
-                                            <ul>
-                                                <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/double-bed.svg"
-                                                        class="img-fluid" alt="">Bed : 4</li>
-                                                <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/bathroom.svg"
-                                                        class="img-fluid" alt="">Baths : 4</li>
-                                                <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/square-ruler-tool.svg"
-                                                        class="img-fluid ruler-tool" alt="">Sq Ft : 5000</li>
-                                            </ul> -->
                                             <ul class="property-features">
                                                 <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                         fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
@@ -2018,17 +2005,6 @@
                                                 <h3>Merrick in Spring Way</h3>
                                             </a>
                                             <h6 class="color-2">₹35.00 Lac</h6>
-                                            <!-- <p class="font-roboto">Elegant retreat in a quiet Coral Gables setting. This
-                                                home provides wonderful entertaining spaces with a chef
-                                                kitchen opening…</p>
-                                            <ul>
-                                                <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/double-bed.svg"
-                                                        class="img-fluid" alt="">Bed : 4</li>
-                                                <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/bathroom.svg"
-                                                        class="img-fluid" alt="">Baths : 4</li>
-                                                <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/square-ruler-tool.svg"
-                                                        class="img-fluid ruler-tool" alt="">Sq Ft : 5000</li>
-                                            </ul> -->
                                             <ul class="property-features">
                                                 <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                         fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
@@ -2094,19 +2070,7 @@
                                             <a href="single-property-8.html">
                                                 <h3>Property Professionals</h3>
                                             </a>
-                                            <h6 class="color-2">₹25.00 Lac
-                                            </h6>
-                                            <!-- <p class="font-roboto">Elegant retreat in a quiet Coral Gables setting. This
-                                                home provides wonderful entertaining spaces with a chef
-                                                kitchen opening…</p>
-                                            <ul>
-                                                <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/double-bed.svg"
-                                                        class="img-fluid" alt="">Bed : 4</li>
-                                                <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/bathroom.svg"
-                                                        class="img-fluid" alt="">Baths : 4</li>
-                                                <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/square-ruler-tool.svg"
-                                                        class="img-fluid ruler-tool" alt="">Sq Ft : 5000</li>
-                                            </ul> -->
+                                            <h6 class="color-2">₹25.00 Lac</h6>
                                             <ul class="property-features">
                                                 <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                         fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
@@ -2172,19 +2136,7 @@
                                             <a href="single-property-8.html">
                                                 <h3>Hidden Spring Hideaway</h3>
                                             </a>
-                                            <h6 class="color-2">₹25.00 Lac
-                                            </h6>
-                                            <!-- <p class="font-roboto">Real estate market in most countries are not as
-                                                organize or efficient as markets for other, more liquid investment
-                                                instruments opening….</p>
-                                            <ul>
-                                                <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/double-bed.svg"
-                                                        class="img-fluid" alt="">Bed : 5</li>
-                                                <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/bathroom.svg"
-                                                        class="img-fluid" alt="">Baths : 3</li>
-                                                <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/square-ruler-tool.svg"
-                                                        class="img-fluid ruler-tool" alt="">Sq Ft : 4500</li>
-                                            </ul> -->
+                                            <h6 class="color-2">₹25.00 Lac</h6>
                                             <ul class="property-features">
                                                 <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                         fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
@@ -2285,10 +2237,7 @@
                                     <a href="single-property-8.html">
                                         <h3>Merrick in Spring Way</h3>
                                     </a>
-                                    <h6>₹25.00 Lac
-                                    </h6>
-                                    <!-- <p class="font-roboto">Real estate is divided into several categories, including
-                                        residential property, commercial property and industrial property.</p> -->
+                                    <h6>₹25.00 Lac</h6>
                                     <ul class="property-features">
                                         <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                 fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
@@ -2382,8 +2331,6 @@
                                     </a>
                                     <h6>₹33.00 Lac
                                     </h6>
-                                    <!-- <p class="font-roboto">The most common and most absolute type of estate, the tenant
-                                        enjoys the greatest discretion over the disposal of the property.</p> -->
                                     <ul class="property-features">
                                         <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                 fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
@@ -2408,14 +2355,6 @@
                                                     d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.5 4.002h2.962C10.045 4.002 11 5.104 11 6.586c0 1.494-.967 2.578-2.55 2.578H6.784V12H5.5zm2.77 4.072c.893 0 1.419-.545 1.419-1.488s-.526-1.482-1.42-1.482H6.778v2.97z" />
                                             </svg> &nbsp; Bike And Car</li>
                                     </ul>
-                                    <!-- <ul>
-                                        <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/double-bed.svg"
-                                                class="img-fluid" alt="">Bed : 3</li>
-                                        <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/bathroom.svg"
-                                                class="img-fluid" alt="">Baths : 1</li>
-                                        <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/square-ruler-tool.svg"
-                                                class="img-fluid ruler-tool" alt="">Sq Ft : 1000</li>
-                                    </ul> -->
                                     <div class="property-btn d-flex">
                                         <span>May 14, 2022</span>
                                         <button type="button" class="btn btn-dashed btn-pill color-2"
@@ -2470,19 +2409,7 @@
                                     <a href="single-property-8.html">
                                         <h3>Hidden Spring Hideaway</h3>
                                     </a>
-                                    <h6>₹10.00 Lac
-                                    </h6>
-                                    <!-- <p class="font-roboto">Real estate market in most countries are not as organize or
-                                        efficient as markets for other, more liquid investment instruments property .
-                                    </p>
-                                    <ul>
-                                        <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/double-bed.svg"
-                                                class="img-fluid" alt="">Bed : 5</li>
-                                        <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/bathroom.svg"
-                                                class="img-fluid" alt="">Baths : 3</li>
-                                        <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/square-ruler-tool.svg"
-                                                class="img-fluid ruler-tool" alt="">Sq Ft : 4500</li>
-                                    </ul> -->
+                                    <h6>₹10.00 Lac</h6>
                                     <ul class="property-features">
                                         <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                 fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
@@ -2535,8 +2462,6 @@
                     <div class="title-2">
 
                         <a href="tab-layout.html" class="btn btn-gradient btn-pill color-2">View More</a>
-                        <!-- <button type="button" onclick="document.location='tab-layout.html'"
-                            class="btn btn-dashed btn-pill color-2">View More</button> -->
 
                     </div>
                 </div>
@@ -2545,7 +2470,7 @@
     </section>
     <!-- property section end -->
 
- 
+
     <!-- Project section start -->
     <section class="property-section slick-between slick-shadow" style="padding-top: 20px !important;">
         <div class="container">
@@ -2569,17 +2494,19 @@
                                             <h4>Taksh Residency</h4>
                                             <p class="font-roboto">Developed by: Kohinoor Group </p>
 
-                                            <h6><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
-                                                <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
-                                                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
-                                              </svg> Vishrambag, Sangli
+                                            <h6><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
+                                                    <path
+                                                        d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                                                </svg> Vishrambag, Sangli
                                             </h6>
                                             <div class="d-flex" style="gap: 6px;">
                                                 <div>
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                                        height="16" fill="currentColor"
-                                                        class="bi bi-patch-check" viewBox="0 0 16 16"
-                                                        style="color: #434c56c4;">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-patch-check"
+                                                        viewBox="0 0 16 16" style="color: #434c56c4;">
                                                         <path fill-rule="evenodd"
                                                             d="M10.354 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708 0" />
                                                         <path
@@ -2591,7 +2518,7 @@
                                                     <!-- <h6 class="h61">P9387362789</h6> -->
                                                 </div>
                                             </div>
-                                            <a href="single-property-6.html">View Details</a>
+                                            <a href="single-property-1.html">View Details</a>
                                         </div>
                                     </div>
                                 </div>
@@ -2618,8 +2545,8 @@
                                         <li>
                                             <div class="d-flex">
                                                 <div class="property-icon color-4">
-                                                    <svg fill="#f35d43" height="22px" width="22px" version="1.1"
-                                                        id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                                    <svg fill="#f35d43" width="16" height="16" version="1.1" id="Capa_1"
+                                                        xmlns="http://www.w3.org/2000/svg"
                                                         xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60 60"
                                                         xml:space="preserve" transform="rotate(270)">
                                                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -2642,7 +2569,7 @@
                                                 <div class="property-icon color-4">
                                                     <svg viewBox="0 0 45 45" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg"
-                                                        style="width: 30px; height: 30px;">
+                                                        style="width: 27px; height: 24px;">
                                                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                                         <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
                                                             stroke-linejoin="round"></g>
@@ -2660,7 +2587,7 @@
                                         <li>
                                             <div class="d-flex">
                                                 <div class="property-icon color-4">
-                                                    <svg fill="#f35d43" width="25px" height="25px"
+                                                    <svg fill="#f35d43" width="18" height="18"
                                                         viewBox="0 0 100.353 100.353" id="Layer_1" version="1.1"
                                                         xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
                                                         xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -2712,16 +2639,18 @@
                                             <h4>Amogh Apartment</h4>
                                             <p class="font-roboto">Developed by: Ratna Developers</p>
 
-                                            <h6><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
-                                                <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
-                                                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
-                                              </svg>Kupwad, Sangli</h6>
+                                            <h6><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
+                                                    <path
+                                                        d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                                                </svg>Kupwad, Sangli</h6>
                                             <div class="d-flex" style="gap: 6px;">
                                                 <div>
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                                        height="16" fill="currentColor"
-                                                        class="bi bi-patch-check" viewBox="0 0 16 16"
-                                                        style="color: #434c56c4;">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-patch-check"
+                                                        viewBox="0 0 16 16" style="color: #434c56c4;">
                                                         <path fill-rule="evenodd"
                                                             d="M10.354 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708 0" />
                                                         <path
@@ -2732,7 +2661,7 @@
                                                     <h6>Rera Id: D9387362789</h6>
                                                 </div>
                                             </div>
-                                            <a href="single-property-6.html">View Details</a>
+                                            <a href="single-property-1.html">View Details</a>
                                         </div>
                                     </div>
                                 </div>
@@ -2760,8 +2689,8 @@
                                         <li>
                                             <div class="d-flex">
                                                 <div class="property-icon color-4">
-                                                    <svg fill="#f35d43" height="22px" width="22px" version="1.1"
-                                                        id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                                    <svg fill="#f35d43" width="18" height="18" version="1.1" id="Capa_1"
+                                                        xmlns="http://www.w3.org/2000/svg"
                                                         xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60 60"
                                                         xml:space="preserve" transform="rotate(270)">
                                                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -2784,7 +2713,7 @@
                                                 <div class="property-icon color-4">
                                                     <svg viewBox="0 0 45 45" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg"
-                                                        style="width: 30px; height: 30px;">
+                                                        style="width: 27px; height: 24px;">
                                                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                                         <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
                                                             stroke-linejoin="round"></g>
@@ -2802,7 +2731,7 @@
                                         <li>
                                             <div class="d-flex">
                                                 <div class="property-icon color-4">
-                                                    <svg fill="#f35d43" width="25px" height="25px"
+                                                    <svg fill="#f35d43" width="18" height="18"
                                                         viewBox="0 0 100.353 100.353" id="Layer_1" version="1.1"
                                                         xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
                                                         xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -2854,16 +2783,18 @@
                                             <h4>Shree Residency</h4>
                                             <p class="font-roboto">Developed by: Patil Group </p>
 
-                                            <h6><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
-                                                <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
-                                                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
-                                              </svg> Miraj</h6>
+                                            <h6><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
+                                                    <path
+                                                        d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                                                </svg> Miraj</h6>
                                             <div class="d-flex" style="gap: 6px;">
                                                 <div>
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                                        height="16" fill="currentColor"
-                                                        class="bi bi-patch-check" viewBox="0 0 16 16"
-                                                        style="color: #434c56c4;">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-patch-check"
+                                                        viewBox="0 0 16 16" style="color: #434c56c4;">
                                                         <path fill-rule="evenodd"
                                                             d="M10.354 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708 0" />
                                                         <path
@@ -2876,7 +2807,7 @@
                                                 </div>
                                             </div>
 
-                                            <a href="single-property-6.html">View Details</a>
+                                            <a href="single-property-1.html">View Details</a>
                                         </div>
                                     </div>
                                 </div>
@@ -2904,8 +2835,8 @@
                                         <li>
                                             <div class="d-flex">
                                                 <div class="property-icon color-4">
-                                                    <svg fill="#f35d43" height="22px" width="22px" version="1.1"
-                                                        id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                                    <svg fill="#f35d43" width="18" height="18" version="1.1" id="Capa_1"
+                                                        xmlns="http://www.w3.org/2000/svg"
                                                         xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60 60"
                                                         xml:space="preserve" transform="rotate(270)">
                                                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -2928,7 +2859,7 @@
                                                 <div class="property-icon color-4">
                                                     <svg viewBox="0 0 45 45" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg"
-                                                        style="width: 30px; height: 30px;">
+                                                        style="width: 27px; height: 24px;">
                                                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                                         <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
                                                             stroke-linejoin="round"></g>
@@ -2946,7 +2877,7 @@
                                         <li>
                                             <div class="d-flex">
                                                 <div class="property-icon color-4">
-                                                    <svg fill="#f35d43" width="25px" height="25px"
+                                                    <svg fill="#f35d43" width="18" height="18"
                                                         viewBox="0 0 100.353 100.353" id="Layer_1" version="1.1"
                                                         xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
                                                         xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -2998,18 +2929,20 @@
                                             <h4>Ratna Residency</h4>
                                             <p class="font-roboto">Developed by: Kohinoor Group </p>
 
-                                            <h6><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
-                                                <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
-                                                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
-                                              </svg> Vishrambag, Sangli
+                                            <h6><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
+                                                    <path
+                                                        d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                                                </svg> Vishrambag, Sangli
                                             </h6>
 
                                             <div class="d-flex" style="gap: 6px;">
                                                 <div>
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                                        height="16" fill="currentColor"
-                                                        class="bi bi-patch-check" viewBox="0 0 16 16"
-                                                        style="color: #434c56c4;">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        fill="currentColor" class="bi bi-patch-check"
+                                                        viewBox="0 0 16 16" style="color: #434c56c4;">
                                                         <path fill-rule="evenodd"
                                                             d="M10.354 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708 0" />
                                                         <path
@@ -3022,7 +2955,7 @@
                                                 </div>
                                             </div>
 
-                                            <a href="single-property-6.html">View Details</a>
+                                            <a href="single-property-1.html">View Details</a>
                                         </div>
                                     </div>
                                 </div>
@@ -3193,8 +3126,8 @@
     </section>
     <!-- parallax banner section end -->
 
-     <!-- service section start -->
-     <!-- <section class="service-section service-1">
+    <!-- service section start -->
+    <!-- <section class="service-section service-1">
         <div class="container">
             <div class="row">
                 <div class="col">
@@ -3241,8 +3174,59 @@
     </section> -->
     <!-- service section end -->
 
-        <!-- service 3 start -->
-        <section class="service-section service-bg">
+    <!-- service 3 start -->
+    <!-- service section start -->
+    <section class="service-section service-1">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="title-2">
+                        <h2>Property Services</h2>
+                        <p>Explore Sangli's top properties for sale, rental opportunities, upcoming projects, and more.
+                        </p>
+                    </div>
+                    <div class="row property-service column-space">
+                        <div class="col-xl-4 col-md-6">
+                            <div class="service-box">
+                                <!-- <div class="icon-round">
+                                    <i data-feather="home"></i>
+                                </div> -->
+                                <h3>Buy</h3>
+                                <p>At Sangli Properties, buying is not a transaction. It is a relation. We are the
+                                    matchmakers of the buyer-seller relationship and with us, you can be sure to find
+                                    your perfect match.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6">
+                            <div class="service-box">
+                                <!-- <div class="icon-round">
+                                    <i data-feather="dollar-sign"></i>
+                                </div> -->
+                                <h3>Sell</h3>
+                                <p>Transparency is one of our core values. While helping a property owner or a builder
+                                    sell their property, we take care of your wishes and solve your problem with a touch
+                                    of expertise and ensure 100% transparency in every deal.</p>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6">
+                            <div class="service-box">
+                                <!-- <div class="icon-round">
+                                    <i data-feather="settings"></i>
+                                </div> -->
+                                <h3>Currency Services</h3>
+                                <p>Price and location research is done for every client. With our online portal, you can
+                                    be assured of authentic data. Reaching your right property has never been easier.
+                                    And with us, it is a deal of trust</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- service section end -->
+    <!-- <section class="service-section service-bg">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col">
@@ -3255,44 +3239,28 @@
                         <div class="service-slider ">
                             <div>
                                 <div class="service-wrapper">
-                                    <!-- <div class="top-img-box">
-                                        <div>
-                                            <img src="../assets/images/service/2.png" class="img-fluid" alt="">
-                                            
-                                        </div>
-                                    </div> -->
                                     <div class="service-details">
                                         <h3>Buy</h3>
                                         <p class="font-roboto">At Sangli Properties, buying is not a transaction. It is a relation. We are the matchmakers of the buyer-seller relationship and with us, you can be sure to find your perfect match.</p>
-                                        <!-- <a href="services.html">View details</a> -->
+                                        
                                     </div>
                                 </div>
                             </div>
                             <div>
                                 <div class="service-wrapper">
-                                    <!-- <div class="top-img-box">
-                                        <div>
-                                            <img src="../assets/images/service/1.png" class="img-fluid" alt="">
-                                        </div>
-                                    </div> -->
                                     <div class="service-details">
                                         <h3>Sell</h3>
                                         <p class="font-roboto">Transparency is one of our core values. While helping a property owner or a builder sell their property, we take care of your wishes and solve your problem with a touch of expertise and ensure 100% transparency in every deal.</p>
-                                        <!-- <a href="services.html">View details</a> -->
+                                      
                                     </div>
                                 </div>
                             </div>
                             <div>
                                 <div class="service-wrapper">
-                                    <!-- <div class="top-img-box">
-                                        <div>
-                                            <img src="../assets/images/service/3.png" class="img-fluid" alt="">
-                                        </div>
-                                    </div> -->
                                     <div class="service-details">
                                         <h3>Rent</h3>
                                         <p class="font-roboto">Price and location research is done for every client. With our online portal, you can be assured of authentic data. Reaching your right property has never been easier. And with us, it is a deal of trust</p>
-                                        <!-- <a href="services.html">View details</a> -->
+                                     
                                     </div>
                                 </div>
                             </div>
@@ -3300,8 +3268,8 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- service 3 end -->
+        </section> -->
+    <!-- service 3 end -->
 
     <!-- testimonial section start -->
     <section class="testimonial-style-1">
@@ -3610,6 +3578,12 @@
     <div class="modal fade signup-modal" id="login-modal">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
+                <!-- <div class="modal-header">
+                    <h5 class="modal-title">Log in</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div> -->
                 <div class="modal-body ratio_asos">
                     <div class="row log-in">
                         <div class="col-lg-12">
@@ -4471,11 +4445,11 @@
 
             .detail-list li .h6 {
                 margin-bottom: 4px;
-                font-size: 14px;
+                font-size: 16px;
             }
 
             .detail-list li .h61 {
-                color: black;
+                color: #000000ad;
                 font-size: 14px;
             }
         }

@@ -28,6 +28,32 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/color1.css">
 
+
+    <style>
+        /* General styling for the nav menu */
+   .nav-menu {
+       list-style-type: none;
+       padding: 0;
+   }
+ 
+   /* Styling for the menu-title links */
+   .nav-menu .menu-title {
+       text-decoration: none;
+       color: #000; /* Default color */
+       padding: 10px 15px;
+       display: block;
+   }
+ 
+   /* Hover effect: change color to orange when hovered */
+   .nav-menu .menu-title:hover {
+       color: #f35d43;
+   }
+ 
+   /* Active state: the current page's link will be orange */
+   .nav-menu .menu-title.active {
+       color: #f35d43;
+   }
+   </style>
 </head>
 
 <body>
@@ -81,7 +107,7 @@
                                             <a class="menu-title" href="tablayout-left-sidebar.html">Project Listing</a>
                                         </li>
                                         <li>
-                                            <a class="menu-title" href="contact-3.html">Contact Us</a>
+                                            <a class="menu-title nav-link active" href="contact-3.html">Contact Us</a>
                                         </li>
                                         <li>
                                             <button style="border-radius: 8px;" type="button"
@@ -140,7 +166,7 @@
 
     <!-- Get in touch section start -->
     <section class="small-section contact-3">
-        <div style="padding-top: 50px;" class="container">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-8">
                     <div class="log-in theme-card">
