@@ -113,8 +113,14 @@
 
             .property-features svg,
             .property-features img {
-                width: 16px;
-                height: 16px;
+                width: 14px;
+                height: 14px;
+            }
+        }
+
+        @media screen and (max-width: 991px) and (min-width:770px){
+            .search-width{
+                width: 250px !important;
             }
         }
     </style>
@@ -275,7 +281,7 @@
                             <div class="search-input-container d-flex align-items-center">
                                 <div id="tags-container" class="tags-container"></div>
                                 <input style="border-radius: 15px; width: 400px; height: 40px;" type="text"
-                                    id="search-input" class="form-control" placeholder="Search your location">
+                                    id="search-input" class="form-control search-width" placeholder="Search your location">
                                 &nbsp;&nbsp;&nbsp;
                                 <button type="button" class="btn btn-gradient color-4 search-btn ml-2">
                                     Search
@@ -283,13 +289,38 @@
                             </div>
                             <ul class="grid-list-filter d-flex">
                                 <li>
-                                    <a href="javascript:void(0)" class="listdata">
-                                        List View
+                                    <div class="dropdown">
+                                        <span class="dropdown-toggle font-rubik" data-bs-toggle="dropdown"><span>Sort by
+                                                Newest</span> <i class="fas fa-angle-down ms-lg-3 ms-2"></i></span>
+                                        <div class="dropdown-menu text-start">
+                                            <a class="dropdown-item" href="javascript:void(0)">Sort by Newest</a>
+                                            <a class="dropdown-item" href="javascript:void(0)">Sort by Oldest</a>
+                                            <a class="dropdown-item" href="javascript:void(0)">Sory by featured</a>
+                                            <a class="dropdown-item" href="javascript:void(0)">Sort by price (Low to
+                                                high)</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" class="listdata active1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-list" viewBox="0 2 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                                        </svg>
+                                        List
                                     </a>
                                 </li>
                                 <li>
                                     <a href="javascript:void(0)" class="view-map">
-                                        Map View
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                            <path
+                                                d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
+                                            <path
+                                                d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                                        </svg>
+                                        Map
                                     </a>
                                 </li>
                             </ul>
@@ -740,18 +771,16 @@
                     <div class="filter-panel">
                         <div class="top-panel">
 
-                            <div>
+                            <!-- <div>
                                 <div>
                                     <b style="font-weight: 600;font-size: 25px;color: #ff5c41;">
-                                        <!-- Project Listing -->
+                                        Project Listing
                                     </b>
-
                                 </div>
-
-                            </div>
+                            </div> -->
 
                             <ul class="grid-list-filter d-flex">
-                                <li>
+                                <!-- <li>
                                     <div class="dropdown">
                                         <span class="dropdown-toggle font-rubik" data-bs-toggle="dropdown"><span>Sort by
                                                 Newest</span> <i class="fas fa-angle-down ms-lg-3 ms-2"></i></span>
@@ -763,7 +792,7 @@
                                                 high)</a>
                                         </div>
                                     </div>
-                                </li>
+                                </li> -->
 
                                 <li class="d-lg-none d-block">
                                     <div>
@@ -778,7 +807,8 @@
 
 
 
-                    <div class="property-wrapper-grid" style="overflow-y: scroll; overflow-x: hidden;">
+                    <div class="property-wrapper-grid"
+                        style="overflow-y: scroll; overflow-x: hidden; padding-right: 7px;">
                         <div class="property-2 row column-sm zoom-gallery property-label property-grid">
                             <div class="col-md-4 wow fadeInUp">
                                 <div class="property-box">
@@ -801,15 +831,15 @@
                                             </a>
                                         </div>
 
-                                        <div class="seen-data">
-                                            <i data-feather="camera"></i>
-                                            <!-- <span>42</span> -->
-                                        </div>
+                                        <!-- <div class="seen-data">
+                                            <i data-feather="camera"></i> 
+                                            <span>42</span>
+                                        </div> -->
                                         <div class="overlay-property-box">
-                                            <a href="compare.html" class="effect-round" data-bs-toggle="tooltip"
+                                            <!-- <a href="compare.html" class="effect-round" data-bs-toggle="tooltip"
                                                 data-bs-placement="left" title="Compare">
                                                 <i data-feather="shuffle"></i>
-                                            </a>
+                                            </a> -->
                                             <a href="user-favourites.html" class="effect-round like"
                                                 data-bs-toggle="tooltip" data-bs-placement="left" title="wishlist">
                                                 <i data-feather="heart"></i>
@@ -819,9 +849,11 @@
 
                                     <div class="property-details">
                                         <span class="font-roboto">Sangli</span>
+
                                         <a href="single-property-1.html">
                                             <h3>Little Acorn Farm</h3>
                                         </a>
+
                                         <h6>₹58.0 L - 74.0L </h6>
 
 
@@ -875,14 +907,11 @@
                                                 </svg> &nbsp; Bike And Car</li>
                                         </ul>
 
-
-
                                         <div class="property-btn d-flex">
                                             <span style="font-size: 13px;"> <b> Developed By : &nbsp;</b>Patil Contraction</span>
                                             <!-- <button type="button" onclick="document.location='single-property-1.html'"
                                                 class="btn btn-dashed btn-pill color-2">Details</button> -->
                                         </div>
-
 
                                         <div style="display: flex;justify-content: center; padding-top: 10px;"
                                             class="property-btn d-flex">
@@ -918,15 +947,15 @@
                                             </a>
                                         </div>
 
-                                        <div class="seen-data">
+                                        <!-- <div class="seen-data">
                                             <i data-feather="camera"></i>
-                                            <!-- <span>42</span> -->
-                                        </div>
+                                            <span>42</span>
+                                        </div> -->
                                         <div class="overlay-property-box">
-                                            <a href="compare.html" class="effect-round" data-bs-toggle="tooltip"
+                                            <!-- <a href="compare.html" class="effect-round" data-bs-toggle="tooltip"
                                                 data-bs-placement="left" title="Compare">
                                                 <i data-feather="shuffle"></i>
-                                            </a>
+                                            </a> -->
                                             <a href="user-favourites.html" class="effect-round like"
                                                 data-bs-toggle="tooltip" data-bs-placement="left" title="wishlist">
                                                 <i data-feather="heart"></i>
@@ -939,9 +968,6 @@
                                             <h3>Magnolia Ranch</h3>
                                         </a>
                                         <h6>₹40.0 L - 60.0L </h6>
-
-
-
 
                                         <ul>
                                             <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -1010,15 +1036,15 @@
                                             </a>
                                         </div>
 
-                                        <div class="seen-data">
+                                        <!-- <div class="seen-data">
                                             <i data-feather="camera"></i>
-                                            <!-- <span>42</span> -->
-                                        </div>
+                                            <span>42</span>
+                                        </div> -->
                                         <div class="overlay-property-box">
-                                            <a href="compare.html" class="effect-round" data-bs-toggle="tooltip"
+                                            <!-- <a href="compare.html" class="effect-round" data-bs-toggle="tooltip"
                                                 data-bs-placement="left" title="Compare">
                                                 <i data-feather="shuffle"></i>
-                                            </a>
+                                            </a> -->
                                             <a href="user-favourites.html" class="effect-round like"
                                                 data-bs-toggle="tooltip" data-bs-placement="left" title="wishlist">
                                                 <i data-feather="heart"></i>
@@ -1103,15 +1129,15 @@
                                             </a>
                                         </div>
 
-                                        <div class="seen-data">
+                                        <!-- <div class="seen-data">
                                             <i data-feather="camera"></i>
-                                            <!-- <span>42</span> -->
-                                        </div>
+                                            <span>42</span>
+                                        </div> -->
                                         <div class="overlay-property-box">
-                                            <a href="compare.html" class="effect-round" data-bs-toggle="tooltip"
+                                            <!-- <a href="compare.html" class="effect-round" data-bs-toggle="tooltip"
                                                 data-bs-placement="left" title="Compare">
                                                 <i data-feather="shuffle"></i>
-                                            </a>
+                                            </a> -->
                                             <a href="user-favourites.html" class="effect-round like"
                                                 data-bs-toggle="tooltip" data-bs-placement="left" title="wishlist">
                                                 <i data-feather="heart"></i>
@@ -1124,12 +1150,6 @@
                                             <h3>Hidden Hideway</h3>
                                         </a>
                                         <h6>₹77.0 L - 80.0L </h6>
-
-
-
-
-
-
 
                                         <ul>
                                             <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -1199,15 +1219,15 @@
                                             </a>
                                         </div>
 
-                                        <div class="seen-data">
+                                        <!-- <div class="seen-data">
                                             <i data-feather="camera"></i>
-                                            <!-- <span>10</span> -->
-                                        </div>
+                                            <span>10</span>
+                                        </div> -->
                                         <div class="overlay-property-box">
-                                            <a href="compare.html" class="effect-round" data-bs-toggle="tooltip"
+                                            <!-- <a href="compare.html" class="effect-round" data-bs-toggle="tooltip"
                                                 data-bs-placement="left" title="Compare">
                                                 <i data-feather="shuffle"></i>
-                                            </a>
+                                            </a> -->
                                             <a href="user-favourites.html" class="effect-round like"
                                                 data-bs-toggle="tooltip" data-bs-placement="left" title="wishlist">
                                                 <i data-feather="heart"></i>
@@ -1220,11 +1240,6 @@
                                             <h3>Merrick in Spring Way</h3>
                                         </a>
                                         <h6>₹90.0 L - 98.0L </h6>
-
-
-
-
-
 
                                         <ul>
                                             <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -1293,15 +1308,15 @@
                                             </a>
                                         </div>
 
-                                        <div class="seen-data">
+                                        <!-- <div class="seen-data">
                                             <i data-feather="camera"></i>
                                             <span>25</span>
-                                        </div>
+                                        </div> -->
                                         <div class="overlay-property-box">
-                                            <a href="compare.html" class="effect-round" data-bs-toggle="tooltip"
+                                            <!-- <a href="compare.html" class="effect-round" data-bs-toggle="tooltip"
                                                 data-bs-placement="left" title="Compare">
                                                 <i data-feather="shuffle"></i>
-                                            </a>
+                                            </a> -->
                                             <a href="user-favourites.html" class="effect-round like"
                                                 data-bs-toggle="tooltip" data-bs-placement="left" title="wishlist">
                                                 <i data-feather="heart"></i>
@@ -1314,8 +1329,6 @@
                                             <h3>Home in Merrick Way</h3>
                                         </a>
                                         <h6>₹58.0 L - 84.0L </h6>
-
-
 
                                         <ul>
                                             <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -1393,15 +1406,15 @@
                                             </div>
                                             <span class="label label-success">open house</span> -->
                                         </div>
-                                        <div class="seen-data">
+                                        <!-- <div class="seen-data">
                                             <i data-feather="camera"></i>
-                                            <!-- <span>42</span> -->
-                                        </div>
+                                            <span>42</span>
+                                        </div> -->
                                         <div class="overlay-property-box">
-                                            <a href="compare.html" class="effect-round" data-bs-toggle="tooltip"
+                                            <!-- <a href="compare.html" class="effect-round" data-bs-toggle="tooltip"
                                                 data-bs-placement="left" title="Compare">
                                                 <i data-feather="shuffle"></i>
-                                            </a>
+                                            </a> -->
                                             <a href="user-favourites.html" class="effect-round like"
                                                 data-bs-toggle="tooltip" data-bs-placement="left" title="wishlist">
                                                 <i data-feather="heart"></i>
@@ -1490,15 +1503,15 @@
                                             </div>
                                             <span class="label label-success">open house</span> -->
                                         </div>
-                                        <div class="seen-data">
+                                        <!-- <div class="seen-data">
                                             <i data-feather="camera"></i>
-                                            <!-- <span>42</span> -->
-                                        </div>
+                                            <span>42</span>
+                                        </div> -->
                                         <div class="overlay-property-box">
-                                            <a href="compare.html" class="effect-round" data-bs-toggle="tooltip"
+                                            <!-- <a href="compare.html" class="effect-round" data-bs-toggle="tooltip"
                                                 data-bs-placement="left" title="Compare">
                                                 <i data-feather="shuffle"></i>
-                                            </a>
+                                            </a> -->
                                             <a href="user-favourites.html" class="effect-round like"
                                                 data-bs-toggle="tooltip" data-bs-placement="left" title="wishlist">
                                                 <i data-feather="heart"></i>
@@ -1587,15 +1600,15 @@
                                             </div>
                                             <span class="label label-success">open house</span> -->
                                         </div>
-                                        <div class="seen-data">
+                                        <!-- <div class="seen-data">
                                             <i data-feather="camera"></i>
-                                            <!-- <span>42</span> -->
-                                        </div>
+                                            <span>42</span>
+                                        </div> -->
                                         <div class="overlay-property-box">
-                                            <a href="compare.html" class="effect-round" data-bs-toggle="tooltip"
+                                            <!-- <a href="compare.html" class="effect-round" data-bs-toggle="tooltip"
                                                 data-bs-placement="left" title="Compare">
                                                 <i data-feather="shuffle"></i>
-                                            </a>
+                                            </a> -->
                                             <a href="user-favourites.html" class="effect-round like"
                                                 data-bs-toggle="tooltip" data-bs-placement="left" title="wishlist">
                                                 <i data-feather="heart"></i>
@@ -1748,7 +1761,8 @@
                                     </ul>
                                     <ul>
                                         <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/square-ruler-tool.svg"
-                                                class="img-fluid ruler-tool" alt="">500 - 1000 Sq Ft</li>
+                                                class="img-fluid ruler-tool" alt="" style="height: 14px;">500 - 1000 Sq
+                                            Ft</li>
 
                                         <!-- <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                 fill="currentColor" class="bi bi-p-circle" viewBox="0 0 16 16"
@@ -1819,7 +1833,8 @@
 
                                     <ul>
                                         <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/square-ruler-tool.svg"
-                                                class="img-fluid ruler-tool" alt="">700 - 1100 Sq Ft</li>
+                                                class="img-fluid ruler-tool" alt="" style="height: 14px;">700 - 1100 Sq
+                                            Ft</li>
 
                                         <!-- <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                 fill="currentColor" class="bi bi-p-circle" viewBox="0 0 16 16"
@@ -1891,7 +1906,8 @@
                                     </ul>
                                     <ul>
                                         <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/square-ruler-tool.svg"
-                                                class="img-fluid ruler-tool" alt="">500 - 1200 Sq Ft</li>
+                                                class="img-fluid ruler-tool" alt="" style="height: 14px;">500 - 1200 Sq
+                                            Ft</li>
 
                                         <!-- <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                 fill="currentColor" class="bi bi-p-circle" viewBox="0 0 16 16"
@@ -1913,12 +1929,12 @@
                                         <img src="../assets/images/property/14.jpg" class="bg-img" alt="">
 
                                     </a>
-                                    <div class="labels-left">
+                                    <!-- <div class="labels-left">
                                         <div>
                                             <span class="label label-success">rent</span>
                                         </div>
                                     </div>
-                                    <!-- <div class="seen-data">
+                                     <div class="seen-data">
                                         <i data-feather="camera"></i>
                                         <span>42</span>
                                     </div>
@@ -1960,19 +1976,20 @@
                                             Aug 4, 2024
                                         </li> -->
                                     </ul>
-                                    <!-- <ul>
+                                    <ul>
                                         <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/square-ruler-tool.svg"
-                                                class="img-fluid ruler-tool" alt="">500 Sq Ft</li>
+                                                class="img-fluid ruler-tool" alt="" style="height: 14px;">500 - 900 Sq
+                                            Ft</li>
 
-                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        <!-- <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                 fill="currentColor" class="bi bi-p-circle" viewBox="0 0 16 16"
                                                 style="margin-right: 5px;">
                                                 <path
                                                     d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.5 4.002h2.962C10.045 4.002 11 5.104 11 6.586c0 1.494-.967 2.578-2.55 2.578H6.784V12H5.5zm2.77 4.072c.893 0 1.419-.545 1.419-1.488s-.526-1.482-1.42-1.482H6.778v2.97z" />
                                             </svg>
                                             Bike
-                                        </li>
-                                    </ul> -->
+                                        </li> -->
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -2010,7 +2027,6 @@
                                     </a>
                                     <h6>₹30 - ₹70Lac</h6>
 
-
                                     <ul class="property-features">
                                         <li>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -2031,19 +2047,20 @@
                                             Nov 10, 2024
                                         </li> -->
                                     </ul>
-                                    <!-- <ul>
+                                    <ul>
                                         <li><img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/square-ruler-tool.svg"
-                                                class="img-fluid ruler-tool" alt="">500 Sq Ft</li>
+                                                class="img-fluid ruler-tool" alt="" style="height: 14px;">500 - 800 Sq
+                                            Ft</li>
 
-                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        <!-- <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                 fill="currentColor" class="bi bi-p-circle" viewBox="0 0 16 16"
                                                 style="margin-right: 5px;">
                                                 <path
                                                     d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.5 4.002h2.962C10.045 4.002 11 5.104 11 6.586c0 1.494-.967 2.578-2.55 2.578H6.784V12H5.5zm2.77 4.072c.893 0 1.419-.545 1.419-1.488s-.526-1.482-1.42-1.482H6.778v2.97z" />
                                             </svg>
                                             Car
-                                        </li>
-                                    </ul> -->
+                                        </li> -->
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -3204,8 +3221,12 @@
         (function ($) {
             "use strict";
 
-            // Handle "Map" click event
+            // Handle "Map View" click event
             $(".view-map").on("click", function () {
+                // Toggle active class
+                $(".view-map").addClass("active1");
+                $(".listdata").removeClass("active1");
+
                 // Hide Section 1
                 $("#section1").hide();
                 // Show Section 2
@@ -3220,8 +3241,12 @@
                 $("#mapModal").show();
             });
 
-            // Handle "List" click event
+            // Handle "List View" click event
             $(".listdata").on("click", function () {
+                // Toggle active class
+                $(".listdata").addClass("active1");
+                $(".view-map").removeClass("active1");
+
                 // Show Section 1
                 $("#section1").show();
                 // Hide Section 2
@@ -3236,6 +3261,7 @@
                 $("#mapModal").hide();
             });
         })(jQuery);
+
     </script>
 
 
@@ -3259,6 +3285,11 @@
 
         #mapModal {
             display: block;
+        }
+
+        .active1 {
+            background-color: #ff5c41;
+            color: white !important;
         }
     </style>
 

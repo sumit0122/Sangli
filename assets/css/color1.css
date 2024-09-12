@@ -4650,7 +4650,7 @@ input[type='radio'].radio_animated {
     -webkit-transition: 0.8s;
     transition: 0.8s; }
   .property-details h3 {
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 10px;
     font-size: calc(16px + (22 - 18) * ((100vw - 320px) / (1920 - 320))); }
   .property-details p {
@@ -4960,7 +4960,7 @@ input[type='radio'].radio_animated {
       opacity: 0; }
   .property-section .property-box .property-details h6 {
     font-weight: 500;
-    font-size: 15px;
+    font-size: 16px;
     color: var(--theme-default3); }
     .property-section .property-box .property-details h6.color-1 {
       color: var(--theme-default); }
