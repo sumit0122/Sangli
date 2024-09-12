@@ -246,7 +246,7 @@
                                     <div class="filter-panel">
                                         <div class="top-panel">
                                             <div>
-                                                <h4 style="color: #ff5c41;font-weight: 600;">Tenants / Buyers who sended request</h2>
+                                                <h4 style="color: #ff5c41;font-weight: 600;">Tenants who sent a maintenance request</h2>
 
                                                 <table>
                                                     <thead>
@@ -264,24 +264,24 @@
                                                         <tr>
                                                             <td><a href="single-property-1.html">1 BHK House for Rent In Sangli City</a></td>
                                                             <td>Dipak Patil</td>
-                                                            <td>9********73</td>
+                                                            <td>9876543210</td>
                                                             <!-- <td>dipak1234@gmail.com</td> -->
                                                             <td>2024-08-25</td>
-                                                            <td>Pending</td>
+                                                            <td style="color:blue">Pending</td>
                                                             <td>
-                                                                <button type="button" class="btn btn-outline-light" style="padding: 8px 10px 7px;" data-bs-toggle="modal"
+                                                                <button type="button" class="btn btn-outline-light" style="padding: 8px 10px 7px; border-color: #00000052;" data-bs-toggle="modal"
                                                                 data-bs-target="#view-request-modal">View Request</button>
                                                             </td>
                                                         </tr>
                                                         <tr>
                                                             <td><a href="single-property-1.html">1 BHK House for Rent In Palus City</a></td>
                                                             <td>Akshay Rathod</td>
-                                                            <td>9********48</td>
+                                                            <td>9234564899</td>
                                                             <!-- <td>yatharthchavan12@gmail.com</td> -->
                                                             <td>2024-08-25</td>
-                                                            <td>Pending</td>
+                                                            <td style="color:green">Approved</td>
                                                             <td>
-                                                                <button type="button" class="btn btn-outline-light" style="padding: 8px 10px 7px;" data-bs-toggle="modal"
+                                                                <button type="button" class="btn btn-outline-light" style="padding: 8px 10px 7px; border-color: #00000052;" data-bs-toggle="modal"
                                                                 data-bs-target="#view-request-modal">View Request</button>
                                                             </td>
                                                         </tr>
@@ -315,18 +315,19 @@
                                     <h2>Maintenance Request</h2>
                                 </div>
     
-                                <form id="maintanance-Form">
+                                <form id="Status-Form">
                                     <div class="form-group">
                                         <div class="input-group">
                                             <!-- Default text in the textarea -->
-                                            <textarea placeholder="Enter your Request" name="maintanance" class="form-control" required>There is a continuous water leak under the kitchen sink, causing water damage to the cabinet. Please inspect and replace the faulty pipe or fixture.
-                                            </textarea>
+                                            <p placeholder="Enter your Request" name="maintanance" class="form-control" required>There is a continuous water leak under the kitchen sink, causing water damage to the cabinet. Please inspect and replace the faulty pipe or fixture.
+                                            </p>
                                         </div>
                                     </div>
                                     
                                     <div style="display: flex; justify-content: flex-end;">
-                                        <button type="button" class="btn btn-gradient color-2 btn-pill" style="margin-right: 10px;">Approve</button>
-                                        <button type="button" class="btn btn-dashed color-2 btn-pill" >Reject</button>
+                                        <button type="button" class="btn btn-gradient color-2 btn-pill" style="margin-right: 10px;"  data-bs-dismiss="modal">Approve</button>
+                                        <button type="button" class="btn btn-dashed color-2 btn-pill" data-bs-toggle="modal"
+                                        data-bs-target="#reject-modal">Reject</button>
                                     </div>
                                 </form>
     
@@ -338,11 +339,41 @@
         </div>
     </div>
     <!-- End View Request modal -->
+
+    <!-- View Request modal -->
+    <div class="modal fade signup-modal" id="reject-modal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body ratio_asos">
+                    <div class="row log-in">
+                        <div class="col-lg-12">
+                            <div class="theme-card">
+                                <div class="title-3 text-start">
+                                    <h2>Request Remark</h2>
+                                </div>
     
+                                <form id="reject-Form">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <!-- Default text in the textarea -->
+                                            <textarea placeholder="Enter your Request" name="reject" class="form-control" required></textarea>
+                                        </div>
+                                    </div>
+                                    
+                                    <div style="display: flex; justify-content: flex-end;">
+                                        <button type="submit" class="btn btn-gradient color-2 btn-pill" style="margin-right: 10px;">Ok</button>
+                                        <button type="button" class="btn btn-dashed color-2 btn-pill"  id="cancel-button">Cancel</button>
+                                    </div>
+                                </form>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- End View Request modal -->
-
-
-    <!-- user dashboard section end -->
 
     <!-- footer start -->
     <footer>
@@ -933,6 +964,26 @@
             height: 221px !important;
         }
     </style>
+
+<script>
+    document.getElementById("reject-Form").addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent form submission
+        alert("Request rejected");
+
+        // Close the modal after request is sent
+        var modal = bootstrap.Modal.getInstance(document.getElementById("reject-modal"));
+        modal.hide();
+    });
+
+    document.getElementById("cancel-button").addEventListener("click", function () {
+        // Close the modal when Cancel button is clicked
+        var modal = bootstrap.Modal.getInstance(document.getElementById("reject-modal"));
+        modal.hide();
+    });
+
+    
+</script>
+
     <script>
         // Listen for the modal close event
         $('#login-modal').on('hide.bs.modal', function () {
