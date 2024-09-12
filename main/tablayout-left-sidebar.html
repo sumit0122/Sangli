@@ -40,30 +40,28 @@
 
 
     <style>
-           /*  */
 
-
-        /* Card Mobile View And Tab View Css */
-
-        
-        /* .property-details {
-            padding: 20px;
+        /* width */
+        ::-webkit-scrollbar {
+            width: 5px;
         }
 
-        .property-features {
-            display: flex;
-            flex-wrap: wrap;
-            list-style-type: none;
-            gap: 10px;
-            margin: 10px 0;
+        /* Track */
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px grey;
+            border-radius: 10px;
         }
 
-        .property-features li {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            font-size: 16px;
-        } */
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #fad7a0;
+            border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #b30000;
+        }
 
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -266,14 +264,10 @@
 
 
     <section style=" padding-bottom: 0px;" class="property-section">
-        <div class="container" style="padding-left: 30px;
-    padding-right: 30px;">
+        <div class="container" style="padding-left: 30px; padding-right: 30px;">
             <div class="col-12">
-
-                <!-- <p>kskskks</p> -->
-
                 <div class="row align-items-center">
-                    <div class="filter-panel" style="    padding: 0px;
+                    <div class="filter-panel" style="padding: 0px;
                         margin-bottom: 0px;
                         border-bottom: none">
                         <div class="top-panel">
@@ -302,9 +296,6 @@
 
                     </div>
                 </div>
-                <!-- </div> -->
-
-
             </div>
         </div>
     </section>
@@ -313,10 +304,7 @@
     <!-- Section 1  start-->
     <section class="property-section" id="section1">
         <div class="container">
-
-
             <div class="row ratio_63">
-
                 <div style="overflow-y: auto; height: auto;" class="col-xl-3 col-lg-4">
                     <div class="left-sidebar">
                         <div class="filter-cards">
@@ -326,32 +314,24 @@
                                 </div>
 
                                 <div style="display: flex; flex-direction: column; gap: 20px;">
-                                    <!-- First Line -->
                                     <div style="display: flex; align-items: center; gap: 20px;">
-
-                                        <div style="width: 50%; text-align: center;">
+                                        <div style="width: 30%; text-align: center;">
                                             <h6 id="bhkFilter" style="cursor: pointer;"
                                                 onclick="showSection('bhkDropdown', 'bhkFilter')"><b>Filter</b></h6>
                                         </div>
-                                        <div style="display: flex; align-items: center; width: 50%;">
+                                        <div style="display: flex; align-items: center; width: 70%;">
                                             <h6 id="premiumFilter" style="cursor: pointer;"
                                                 onclick="showSection('premiumDropdown', 'premiumFilter')"><b>Premium
                                                     Filters</b></h6>
-
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
-                            <!--  -->
 
                             <div class="advance-card">
-                                <!-- First Section: BHK Type Dropdown (Shown by default) -->
                                 <div id="bhkDropdown" class="row gx-2">
                                     <div class="advance-card">
                                         <div class="row gx-2">
-
-                                            <!-- BHK Type Dropdown -->
                                             <div class="col-12">
                                                 <p style="color: black;"><b>BHK Type</b></p>
                                                 <div class="dropdown">
@@ -750,19 +730,9 @@
 
                             </div>
 
-
-                            <!--  -->
                         </div>
                     </div>
-
-
-
-
                 </div>
-
-
-
-
 
                 <div class="col-xl-9 col-lg-8 property-grid-2">
                     <div class="filter-panel">
@@ -806,7 +776,7 @@
 
 
 
-                    <div class="property-wrapper-grid">
+                    <div class="property-wrapper-grid" style="overflow-y: scroll; overflow-x: hidden;">
                         <div class="property-2 row column-sm zoom-gallery property-label property-grid">
                             <div class="col-md-4 wow fadeInUp">
                                 <div class="property-box">
@@ -1686,7 +1656,7 @@
 
                         </div>
                     </div>
-                    <nav class="theme-pagination">
+                    <!-- <nav class="theme-pagination">
                         <ul class="pagination">
                             <li class="page-item">
                                 <a class="page-link" href="javascript:void(0)" aria-label="Previous">
@@ -1704,7 +1674,7 @@
                                 </a>
                             </li>
                         </ul>
-                    </nav>
+                    </nav> -->
                 </div>
 
             </div>

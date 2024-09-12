@@ -31,6 +31,11 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/color1.css">
 
+    <!-- Add Bootstrap JS (If not already included) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+
+
 </head>
 
 <body>
@@ -185,16 +190,12 @@
                             <ul class="nav nav-tabs right-line-tab">
                                 <li class="nav-item"><a class="nav-link " href="user-profile.html">My profile</a></li>
                                 <li class="nav-item"><a class="nav-link" href="user-listing.html">My Listing</a></li>
-                                <li class="nav-item"><a class="nav-link" href="user-create.html">Create Property</a>
-                                </li>
-                                <li class="nav-item"><a class="nav-link" href="properties.html">Interested in Your
-                                        Properties</a></li>
-                                <li class="nav-item"><a class="nav-link" href="Owners.html">Owners you Contacted</a>
-                                </li>
-                                <li class="nav-item"><a class="nav-link active" href="RentedProperties.html">My Rented
-                                        Properties</a></li>
+                                <li class="nav-item"><a class="nav-link" href="user-create.html">Create Property</a></li>
+                                <li class="nav-item"><a class="nav-link" href="maintenance-reqlist.html">Maintenance Request</a></li>
+                                <li class="nav-item"><a class="nav-link" href="properties.html">Interested in Your Properties</a></li>
+                                <li class="nav-item"><a class="nav-link" href="Owners.html">Owners you Contacted</a></li>
+                                <li class="nav-item"><a class="nav-link active" href="RentedProperties.html">My Rented Properties</a></li>
                                 <li class="nav-item"><a class="nav-link" href="Subscription.html">Subscription</a></li>
-                                <!-- <li class="nav-item"><a class="nav-link" href="Payments.html">Your Payments</a></li> -->
                                 <li class="nav-item"><a class="nav-link" href="user-favourites.html">Favourites</a></li>
                                 <li class="nav-item"><a class="nav-link" href="user-privacy.html">Privacy</a></li>
                                 <li class="nav-item"><a href="javascript:void(0)" data-bs-toggle="modal"
@@ -311,7 +312,7 @@
 
                                                         <a href="javascript:void(0)" data-bs-toggle="modal"
                                                             data-bs-target="#maintanance-modal"
-                                                            class="btn btn-solid color-3 btn-flat" style="padding: 8px 14px 7px;">Maintanance Request</a>
+                                                            class="btn btn-solid color-3 btn-flat" style="padding: 8px 14px 7px; border-radius: 9px;">Maintanance Request</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -392,7 +393,7 @@
                                                             </svg> Bike</li>
                                                     </ul>
 
-                                                    <!-- <ul class="property-features" style="display: flex;">
+                                                    <ul class="property-features" style="display: flex;">
                                                         <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg"
                                                                 width="16" height="16" fill="currentColor"
                                                                 class="bi bi-compass" viewBox="0 0 16 16">
@@ -403,14 +404,14 @@
                                                             </svg> North- East</li>
                                                         <li style="gap: 5px;">
                                                             <span>Dec 4, 2012</span>
-                                                    </ul> -->
+                                                    </ul>
 
-                                                    <div>
-                                                        <!-- <h6> Status: Pending</h6> -->
-                                                        <span style="font-size: 13px;">Your maintenance request is pending. You'll be notified via WhatsApp once it's approved or rejected</span>
-                                                        <!-- <a href="javascript:void(0)" data-bs-toggle="modal"
-                                                            data-bs-target="#maintanance-modal"
-                                                            class="btn btn-solid color-3 btn-flat">Send Request</a> -->
+                                                    <div style="display: flex; padding: 15px;">
+                                                        <h6 style="color: #060606bf; margin-right: 5px;">Status:</h6> <h6>Pending <i class="fas fa-info-circle" tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" title="More Info"
+                                                            data-bs-content="Your maintenance request is pending. You'll be notified via WhatsApp once it's approved or rejected">
+                                                        </i></h6>
+                                                        
+                                                        <!-- <span style="font-size: 13px;">Your maintenance request is pending. You'll be notified via WhatsApp once it's approved or rejected</span> -->
                                                     </div>
                                                 </div>
                                             </div>
@@ -431,7 +432,6 @@
 
 
     <!-- Maintanance Request -->
-
     <div class="modal fade signup-modal" id="maintanance-modal">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -1419,6 +1419,18 @@
             otpModal.show(); // Show the modal
         });
     </script>
+
+<!-- Add Bootstrap JS (If not already included) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+
+<script>
+    // Initialize popovers
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+    })
+</script>
 
 </body>
 

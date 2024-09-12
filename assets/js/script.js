@@ -68,7 +68,7 @@
         setTimeout(function(){
             $('.loader-wrapper').fadeOut('slow');
             $('.box').addClass('text-affect');
-        }, 1000);
+        }, 500);
         $('.loader-wrapper').remove('slow');
     });
 

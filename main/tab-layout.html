@@ -114,43 +114,45 @@
             }
         }
 
-        .filter-height{
-            height:990px;
+        .filter-height {
+            height: 990px;
         }
 
-@media screen and (max-width: 990px) {
-    .filter-height{
-        height:0px;
-    }
-}
+        @media screen and (max-width: 990px) {
+            .filter-height {
+                height: 0px;
+            }
+        }
+
         /* End Card View And Tab View css */
     </style>
 
-<style>
-    /* General styling for the nav menu */
-.nav-menu {
-   list-style-type: none;
-   padding: 0;
-}
+    <style>
+        /* General styling for the nav menu */
+        .nav-menu {
+            list-style-type: none;
+            padding: 0;
+        }
 
-/* Styling for the menu-title links */
-.nav-menu .menu-title {
-   text-decoration: none;
-   color: #000; /* Default color */
-   padding: 10px 15px;
-   display: block;
-}
+        /* Styling for the menu-title links */
+        .nav-menu .menu-title {
+            text-decoration: none;
+            color: #000;
+            /* Default color */
+            padding: 10px 15px;
+            display: block;
+        }
 
-/* Hover effect: change color to orange when hovered */
-.nav-menu .menu-title:hover {
-   color: #f35d43;
-}
+        /* Hover effect: change color to #ff5c41 when hovered */
+        .nav-menu .menu-title:hover {
+            color: #f35d43;
+        }
 
-/* Active state: the current page's link will be orange */
-.nav-menu .menu-title.active {
-   color: #f35d43;
-}
-</style>
+        /* Active state: the current page's link will be #ff5c41 */
+        .nav-menu .menu-title.active {
+            color: #f35d43;
+        }
+    </style>
 
 </head>
 
@@ -167,7 +169,6 @@
     <!-- Loader end -->
 
     <!-- header start -->
-
     <header class="inner-page">
         <div class="container">
             <div class="row">
@@ -201,7 +202,8 @@
                                             <a class="menu-title" href="about-us-2.html">About</a>
                                         </li>
                                         <li>
-                                            <a class="menu-title nav-link active" href="tab-layout.html">Property Listing</a>
+                                            <a class="menu-title nav-link active" href="tab-layout.html">Property
+                                                Listing</a>
                                         </li>
 
                                         <li>
@@ -246,7 +248,6 @@
             </div>
         </div>
     </header>
-
     <!--  header end -->
 
 
@@ -268,9 +269,6 @@
         </div>
     </section> -->
     <!-- breadcrumb end -->
-
-    <!-- property grid start -->
-    <!-- Section 1  start-->
 
     <!-- Search bar -->
     <section style="padding-bottom: 0px;" class="property-section">
@@ -314,7 +312,7 @@
 
     <!-- List view -->
     <section id="section1" class="property-section">
-        <div class="container" >
+        <div class="container">
             <div class="col-12">
                 <div class="row ratio_63">
 
@@ -322,7 +320,8 @@
                     <div class="col-xl-3 col-lg-4">
 
                         <!-- filter -->
-                        <div style="overflow-y: auto;  box-shadow: 3.346px 3.716px 22.5px rgba(0, 0, 0, 0.07);" class="filter-height">
+                        <div style="overflow-y: auto;  box-shadow: 3.346px 3.716px 22.5px rgba(0, 0, 0, 0.07);"
+                            class="filter-height">
                             <div class="left-sidebar">
                                 <div class="filter-cards">
                                     <div class="advance-card">
@@ -332,12 +331,12 @@
                                         </div>
                                         <div style="display: flex; flex-direction: column; gap: 20px;">
                                             <div style="display: flex; align-items: center; gap: 20px;">
-                                                <div style="width: 50%; text-align: center;">
+                                                <div style="width: 30%; text-align: center;">
                                                     <h6 id="bhkFilter" style="cursor: pointer;"
                                                         onclick="showSection('bhkDropdown', 'bhkFilter')"><b>Filter</b>
                                                     </h6>
                                                 </div>
-                                                <div style="display: flex; align-items: center; width: 50%;">
+                                                <div style="display: flex; align-items: center; width: 70%;">
                                                     <h6 id="premiumFilter" style="cursor: pointer;"
                                                         onclick="showSection('premiumDropdown', 'premiumFilter')">
                                                         <b>Premium
@@ -1250,7 +1249,7 @@
                             </ul>
                         </div>
 
-                        <div class="property-wrapper-grid">
+                        <div class="property-wrapper-grid" style="overflow-y: scroll; overflow-x: hidden; padding-right: 10px;">
                             <div class="property-2 row column-sm zoom-gallery property-label property-grid">
 
 
@@ -2276,7 +2275,7 @@
 
                             </div>
                         </div>
-                        <nav class="theme-pagination">
+                        <!-- <nav class="theme-pagination">
                             <ul class="pagination">
                                 <li class="page-item">
                                     <a class="page-link" href="javascript:void(0)" aria-label="Previous">
@@ -2294,7 +2293,7 @@
                                     </a>
                                 </li>
                             </ul>
-                        </nav>
+                        </nav> -->
                     </div>
                     <!-- End list view -->
 
@@ -2355,13 +2354,13 @@
                                                     d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
                                             </svg> 2 : BHK
                                         </li>
-                                        <li style="gap: 5px;">
+                                        <!-- <li style="gap: 5px;">
                                             <img src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/square-ruler-tool.svg"
                                                 class="img-fluid ruler-tool" alt="" style="margin-right: 0px;">
                                             5000: Sq Ft
-                                        </li>
+                                        </li> -->
                                     </ul>
-                                    <ul class="property-features">
+                                    <!-- <ul class="property-features">
                                         <li style="gap: 5px;">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                 fill="currentColor" class="bi bi-compass" viewBox="0 0 16 16">
@@ -2376,7 +2375,7 @@
                                                 <path
                                                     d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.5 4.002h2.962C10.045 4.002 11 5.104 11 6.586c0 1.494-.967 2.578-2.55 2.578H6.784V12H5.5zm2.77 4.072c.893 0 1.419-.545 1.419-1.488s-.526-1.482-1.42-1.482H6.778v2.97z" />
                                             </svg> Bike And Car
-                                        </li>
+                                        </li> -->
                                     </ul>
                                 </div>
                             </div>
@@ -2423,14 +2422,14 @@
                                                 <path
                                                     d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
                                             </svg> 2 BHK</li>
-                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        <!-- <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                                                 height="16" fill="currentColor" class="bi bi-key" viewBox="0 0 16 16">
                                                 <path
                                                     d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8m4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5" />
                                                 <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
-                                            </svg>Ready to move</li>
+                                            </svg>Ready to move</li> -->
                                     </ul>
-                                    <ul class="property-features">
+                                    <!-- <ul class="property-features">
                                         <li style="gap: 5px;"><img
                                                 src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/double-bed.svg"
                                                 class="img-fluid" alt="" style="margin-right: 0px;">
@@ -2441,7 +2440,7 @@
                                                 <path
                                                     d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.5 4.002h2.962C10.045 4.002 11 5.104 11 6.586c0 1.494-.967 2.578-2.55 2.578H6.784V12H5.5zm2.77 4.072c.893 0 1.419-.545 1.419-1.488s-.526-1.482-1.42-1.482H6.778v2.97z" />
                                             </svg> Bike And Car</li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
                         </div>
@@ -2487,14 +2486,14 @@
                                                 <path
                                                     d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
                                             </svg> 2 BHK</li>
-                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        <!-- <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                                                 height="16" fill="currentColor" class="bi bi-key" viewBox="0 0 16 16">
                                                 <path
                                                     d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8m4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5" />
                                                 <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
-                                            </svg> Ready to move</li>
+                                            </svg> Ready to move</li> -->
                                     </ul>
-                                    <ul class="property-features">
+                                    <!-- <ul class="property-features">
                                         <li style="gap: 5px;"><img
                                                 src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/double-bed.svg"
                                                 class="img-fluid" alt="" style="margin-right: 0px;">
@@ -2505,7 +2504,7 @@
                                                 <path
                                                     d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.5 4.002h2.962C10.045 4.002 11 5.104 11 6.586c0 1.494-.967 2.578-2.55 2.578H6.784V12H5.5zm2.77 4.072c.893 0 1.419-.545 1.419-1.488s-.526-1.482-1.42-1.482H6.778v2.97z" />
                                             </svg> Bike And Car</li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
                         </div>
@@ -2550,14 +2549,14 @@
                                                 <path
                                                     d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
                                             </svg> 2 BHK</li>
-                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        <!-- <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                                                 height="16" fill="currentColor" class="bi bi-key" viewBox="0 0 16 16">
                                                 <path
                                                     d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8m4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5" />
                                                 <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
-                                            </svg> Ready to move</li>
+                                            </svg> Ready to move</li> -->
                                     </ul>
-                                    <ul class="property-features">
+                                    <!-- <ul class="property-features">
                                         <li style="gap: 5px;"><img
                                                 src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/double-bed.svg"
                                                 class="img-fluid" alt="" style="margin-right: 0px;">
@@ -2569,7 +2568,7 @@
                                                 <path
                                                     d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.5 4.002h2.962C10.045 4.002 11 5.104 11 6.586c0 1.494-.967 2.578-2.55 2.578H6.784V12H5.5zm2.77 4.072c.893 0 1.419-.545 1.419-1.488s-.526-1.482-1.42-1.482H6.778v2.97z" />
                                             </svg> Bike And Car</li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
                         </div>
@@ -2614,12 +2613,12 @@
                                                 <path
                                                     d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
                                             </svg> 2 : BHK</li>
-                                        <li style="gap: 5px;"><img
+                                        <!-- <li style="gap: 5px;"><img
                                                 src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/square-ruler-tool.svg"
                                                 class="img-fluid ruler-tool" alt="" style="margin-right: 0px;">5000:
-                                            Sq Ft</li>
+                                            Sq Ft</li> -->
                                     </ul>
-                                    <ul class="property-features">
+                                    <!-- <ul class="property-features">
                                         <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                                                 height="16" fill="currentColor" class="bi bi-compass"
                                                 viewBox="0 0 16 16">
@@ -2633,7 +2632,7 @@
                                                 <path
                                                     d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.5 4.002h2.962C10.045 4.002 11 5.104 11 6.586c0 1.494-.967 2.578-2.55 2.578H6.784V12H5.5zm2.77 4.072c.893 0 1.419-.545 1.419-1.488s-.526-1.482-1.42-1.482H6.778v2.97z" />
                                             </svg> Bike And Car</li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
                         </div>
@@ -2678,14 +2677,14 @@
                                                 <path
                                                     d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
                                             </svg> 2 BHK</li>
-                                        <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        <!-- <li style="gap: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                                                 height="16" fill="currentColor" class="bi bi-key" viewBox="0 0 16 16">
                                                 <path
                                                     d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8m4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5" />
                                                 <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
-                                            </svg> Ready to move</li>
+                                            </svg> Ready to move</li> -->
                                     </ul>
-                                    <ul class="property-features">
+                                    <!-- <ul class="property-features">
                                         <li style="gap: 5px;"><img
                                                 src="https://themes.pixelstrap.com/sheltos/assets/images/svg/icon/double-bed.svg"
                                                 class="img-fluid" alt="" style="margin-right: 0px;">
@@ -2696,7 +2695,7 @@
                                                 <path
                                                     d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.5 4.002h2.962C10.045 4.002 11 5.104 11 6.586c0 1.494-.967 2.578-2.55 2.578H6.784V12H5.5zm2.77 4.072c.893 0 1.419-.545 1.419-1.488s-.526-1.482-1.42-1.482H6.778v2.97z" />
                                             </svg> Bike And Car</li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
                         </div>
@@ -3409,24 +3408,21 @@
                     </div>
                     <div class="blog-1">
                         <div>
-
                             <div class="blog-box">
                                 <div class="img-box">
-                                    <!-- <img src="../assets/images/blog/4.jpg" alt="" class="img-fluid"> -->
                                     <img src="../assets/images/blog/5.jpg" alt="" class="img-fluid">
                                 </div>
                                 <div class="blog-content">
                                     <h3 style="color: #f5b041;">Little Acorn Farm</h3>
-                                    <p style="font-weight: 500;"><b>Address &nbsp;: &nbsp;</b>Flat No. 12B, Shree
-                                        Apartments, 3rd Cross Road, Karnataka 560034</p>
+                                    <p style="font-weight: 500; margin-bottom: 7px;">
+                                        <b>Address: &nbsp;</b>Flat No. 12B, Shree
+                                        Apartments, 3rd Cross Road, Karnataka 560034
+                                    </p>
                                     <div class="col-12">
-
-
                                         <div style="display: flex; flex-direction: column; gap: 7px;">
-
                                             <div style="display: flex; align-items: center; gap: 20px;">
                                                 <div style="display: flex; align-items: center; width: 50%;">
-                                                    <svg style="color: orange;" xmlns="http://www.w3.org/2000/svg"
+                                                    <svg style="color: #ff5c41;" xmlns="http://www.w3.org/2000/svg"
                                                         width="16" height="16" fill="currentColor" class="bi bi-house"
                                                         viewBox="0 0 16 16">
                                                         <path
@@ -3434,10 +3430,8 @@
                                                     </svg>
                                                     &nbsp;&nbsp; <p style="margin: 0;">3 BHK</p>
                                                 </div>
-
-
                                                 <div style="display: flex; align-items: center; width: 50%;">
-                                                    <svg style="color: orange;" xmlns="http://www.w3.org/2000/svg"
+                                                    <svg style="color: #ff5c41;" xmlns="http://www.w3.org/2000/svg"
                                                         width="16" height="16" fill="currentColor"
                                                         class="bi bi-p-circle" viewBox="0 0 16 16">
                                                         <path
@@ -3446,8 +3440,6 @@
                                                     &nbsp;&nbsp; <p style="margin: 0;">Bike And Car</p>
                                                 </div>
                                             </div>
-
-
                                             <div style="display: flex; align-items: center; gap: 20px;">
                                                 <div style="display: flex; align-items: center; width: 50%;">
                                                     <img src="../assets/images/icon/bed.png" class="img-fluid img-icon"
@@ -3456,7 +3448,7 @@
                                                 </div>
                                                 <div style="display: flex; align-items: center; width: 50%;">
 
-                                                    <svg style="color: orange;" xmlns="http://www.w3.org/2000/svg"
+                                                    <svg style="color: #ff5c41;" xmlns="http://www.w3.org/2000/svg"
                                                         width="16" height="16" fill="currentColor" class="bi bi-compass"
                                                         viewBox="0 0 16 16">
                                                         <path
@@ -3468,9 +3460,6 @@
                                                 </div>
                                             </div>
                                         </div>
-
-
-
                                     </div>
 
                                     <ul class="feature-price">
@@ -3497,9 +3486,6 @@
                                                     style="width: 16px;height: 17px;margin-top: 3px;margin-right: 5px;"></i>
                                                 Call
                                             </button>
-
-
-
                                             <div id="extraButtons" style="display: none; margin-top: 10px;">
                                                 <a style="width: 130px;" href="#"
                                                     class="btn btn-gradient btn-pill color-1 btn-md">Chat</a>
@@ -3510,8 +3496,8 @@
                                     </ul>
                                 </div>
                             </div>
-
                         </div>
+
                         <div>
                             <div class="blog-box">
                                 <div class="img-box">
@@ -3519,14 +3505,14 @@
                                 </div>
                                 <div class="blog-content">
                                     <h3 style="color: #f5b041;">Sunny Meadows</h3>
-                                    <p style="font-weight: 500;"><b>Address &nbsp;: &nbsp;</b>House No. 45, Green
+                                    <p style="font-weight: 500;margin-bottom: 7px;"><b>Address: &nbsp;</b>House No. 45, Green
                                         Valley, MG Road, New Delhi 110001</p>
                                     <div class="col-12">
                                         <div style="display: flex; flex-direction: column; gap: 7px;">
 
                                             <div style="display: flex; align-items: center; gap: 20px;">
                                                 <div style="display: flex; align-items: center; width: 50%;">
-                                                    <svg style="color: orange;" xmlns="http://www.w3.org/2000/svg"
+                                                    <svg style="color: #ff5c41;" xmlns="http://www.w3.org/2000/svg"
                                                         width="16" height="16" fill="currentColor" class="bi bi-house"
                                                         viewBox="0 0 16 16">
                                                         <path
@@ -3535,9 +3521,8 @@
                                                     &nbsp;&nbsp; <p style="margin: 0;">3 BHK</p>
                                                 </div>
 
-
                                                 <div style="display: flex; align-items: center; width: 50%;">
-                                                    <svg style="color: orange;" xmlns="http://www.w3.org/2000/svg"
+                                                    <svg style="color: #ff5c41;" xmlns="http://www.w3.org/2000/svg"
                                                         width="16" height="16" fill="currentColor"
                                                         class="bi bi-p-circle" viewBox="0 0 16 16">
                                                         <path
@@ -3556,7 +3541,7 @@
                                                 </div>
                                                 <div style="display: flex; align-items: center; width: 50%;">
 
-                                                    <svg style="color: orange;" xmlns="http://www.w3.org/2000/svg"
+                                                    <svg style="color: #ff5c41;" xmlns="http://www.w3.org/2000/svg"
                                                         width="16" height="16" fill="currentColor" class="bi bi-compass"
                                                         viewBox="0 0 16 16">
                                                         <path
@@ -3579,8 +3564,6 @@
                                         <li>
                                             <a class="btn btn-gradient btn-pill color-2 btn-lg" data-bs-toggle="modal"
                                                 data-bs-target="#login-modal">Contact Info</a>
-
-
                                             <div id="extraButtons" style="display: none; margin-top: 10px;">
                                                 <a style="width: 130px;" href="#"
                                                     class="btn btn-gradient btn-pill color-1 btn-md">Chat</a>
@@ -3599,7 +3582,7 @@
                                 </div>
                                 <div class="blog-content">
                                     <h3 style="color: #f5b041;">Ocean Breeze Villa</h3>
-                                    <p style="font-weight: 500;"><b>Address &nbsp;: &nbsp;</b>Plot No. 123, Beachside
+                                    <p style="font-weight: 500;margin-bottom: 7px;"><b>Address: &nbsp;</b>Plot No. 123, Beachside
                                         Avenue, Mumbai, Maharashtra 400001</p>
                                     <div class="col-12">
                                         <div style="display: flex; flex-direction: column; gap: 7px;">
@@ -3607,7 +3590,7 @@
 
                                                 <div style="display: flex; align-items: center; gap: 20px;">
                                                     <div style="display: flex; align-items: center; width: 50%;">
-                                                        <svg style="color: orange;" xmlns="http://www.w3.org/2000/svg"
+                                                        <svg style="color: #ff5c41;" xmlns="http://www.w3.org/2000/svg"
                                                             width="16" height="16" fill="currentColor"
                                                             class="bi bi-house" viewBox="0 0 16 16">
                                                             <path
@@ -3616,9 +3599,8 @@
                                                         &nbsp;&nbsp; <p style="margin: 0;">3 BHK</p>
                                                     </div>
 
-
                                                     <div style="display: flex; align-items: center; width: 50%;">
-                                                        <svg style="color: orange;" xmlns="http://www.w3.org/2000/svg"
+                                                        <svg style="color: #ff5c41;" xmlns="http://www.w3.org/2000/svg"
                                                             width="16" height="16" fill="currentColor"
                                                             class="bi bi-p-circle" viewBox="0 0 16 16">
                                                             <path
@@ -3628,7 +3610,6 @@
                                                     </div>
                                                 </div>
 
-
                                                 <div style="display: flex; align-items: center; gap: 20px;">
                                                     <div style="display: flex; align-items: center; width: 50%;">
                                                         <img src="../assets/images/icon/bed.png"
@@ -3637,7 +3618,7 @@
                                                     </div>
                                                     <div style="display: flex; align-items: center; width: 50%;">
 
-                                                        <svg style="color: orange;" xmlns="http://www.w3.org/2000/svg"
+                                                        <svg style="color: #ff5c41;" xmlns="http://www.w3.org/2000/svg"
                                                             width="16" height="16" fill="currentColor"
                                                             class="bi bi-compass" viewBox="0 0 16 16">
                                                             <path
@@ -4615,8 +4596,8 @@
             document.getElementById('bhkFilter').style.color = '';
             document.getElementById('premiumFilter').style.color = '';
 
-            // Apply orange color to the selected filter
-            document.getElementById(filterId).style.color = 'orange';
+            // Apply #ff5c41 color to the selected filter
+            document.getElementById(filterId).style.color = '#ff5c41';
         }
 
         // By default, show the filter section
@@ -4794,24 +4775,24 @@
 
     </script>
 
-<script>
-    function moveTestimonial() {
-        const testimonialSection = document.querySelector('.testimonial-style-2');
-        const propertyGrid = document.querySelector('.property-grid-2');
+    <script>
+        function moveTestimonial() {
+            const testimonialSection = document.querySelector('.testimonial-style-2');
+            const propertyGrid = document.querySelector('.property-grid-2');
 
-        // Check if the screen width is less than or equal to 990px
-        if (window.innerWidth <= 990) {
-            // Move testimonial section after property grid
-            propertyGrid.insertAdjacentElement('afterend', testimonialSection);
+            // Check if the screen width is less than or equal to 990px
+            if (window.innerWidth <= 990) {
+                // Move testimonial section after property grid
+                propertyGrid.insertAdjacentElement('afterend', testimonialSection);
+            }
         }
-    }
 
-    // Run on page load
-    document.addEventListener('DOMContentLoaded', moveTestimonial);
+        // Run on page load
+        document.addEventListener('DOMContentLoaded', moveTestimonial);
 
-    // Run on window resize
-    window.addEventListener('resize', moveTestimonial);
-</script>
+        // Run on window resize
+        window.addEventListener('resize', moveTestimonial);
+    </script>
 
 </body>
 

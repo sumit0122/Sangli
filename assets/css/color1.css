@@ -206,7 +206,7 @@ h1 {
 
 h2 {
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.001em;
   line-height: 1.1;
   text-transform: capitalize;
@@ -4650,9 +4650,9 @@ input[type='radio'].radio_animated {
     -webkit-transition: 0.8s;
     transition: 0.8s; }
   .property-details h3 {
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 10px;
-    font-size: calc(17px + (22 - 18) * ((100vw - 320px) / (1920 - 320))); }
+    font-size: calc(16px + (22 - 18) * ((100vw - 320px) / (1920 - 320))); }
   .property-details p {
     line-height: 1.6;
     font-size: 15px;
@@ -4959,8 +4959,8 @@ input[type='radio'].radio_animated {
     .property-section .property-box .property-image .slider-for .slick-arrow {
       opacity: 0; }
   .property-section .property-box .property-details h6 {
-    font-weight: 600;
-    font-size: 17px;
+    font-weight: 500;
+    font-size: 15px;
     color: var(--theme-default3); }
     .property-section .property-box .property-details h6.color-1 {
       color: var(--theme-default); }
@@ -5137,6 +5137,7 @@ input[type='radio'].radio_animated {
   .property-section .property-2 .property-box .property-details > span {
     display: block;
     margin-top: -3px;
+    font-size: 14px;
     margin-bottom: 5px; }
   .property-section .property-2 .property-box:hover .property-details > a {
     background: var(--theme-gradient6);
@@ -16541,7 +16542,7 @@ ol {
     min-width: 245px;
     height: 100%; }
   .blog-1 .blog-box .blog-content {
-    padding: 25px 30px; }
+    padding: 13px 30px; }
     .blog-1 .blog-box .blog-content h3,
     .blog-1 .blog-box .blog-content p {
       display: -webkit-box;
