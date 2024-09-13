@@ -12140,7 +12140,8 @@ body.rtl.dark-layout .blog-single-detail .blog-title .post-detail li + li {
       .pricing-section .pricing-box .price .label.label-light.color-7::before {
         background-color: var(--theme-default10); }
     .pricing-section .pricing-box .price .light-text {
-      color: rgba(59, 66, 73, 0.3);
+      /* color: rgba(59, 66, 73, 0.3); */
+      color: rgb(59 66 73 / 54%);
       text-transform: uppercase;
       font-weight: 700; }
   .pricing-section .pricing-box:hover::after {
