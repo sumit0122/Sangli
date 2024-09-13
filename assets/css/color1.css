@@ -12121,7 +12121,7 @@ body.rtl.dark-layout .blog-single-detail .blog-title .post-detail li + li {
       margin-top: 0;
       margin-bottom: 12px;
       font-size: calc(22px + (30 - 22) * ((100vw - 320px) / (1920 - 320)));
-      font-weight: 700; }
+      font-weight: 650; }
     .pricing-section .pricing-box .price .label {
       font-weight: 600;
       font-size: 14px;
@@ -13317,8 +13317,9 @@ body.rtl.dark-layout .blog-single-detail .blog-title .post-detail li + li {
   .property-wizard .dropdown .dropdown-item {
     color: rgba(88, 97, 103, 0.6); }
 
-.property-wizard input {
-  padding: 12px 20px 10px; }
+/* .property-wizard input {
+  padding: 12px 20px 10px;
+ } */
 
 .property-wizard label {
   font-weight: 500;
@@ -16730,7 +16731,7 @@ ol {
       .feature-section .feature-content .detail-list li .d-flex h6 {
         margin-right: 10px; }
   .pricing-section .pricing-box {
-    padding: 40px; }
+    padding: 20px; }
   .pricing-section.pricing-inner .title-2 h2 {
     margin-top: -1px; }
   .offer-section.offer-inner .title-2 h2 {
