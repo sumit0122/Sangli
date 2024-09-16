@@ -3750,12 +3750,6 @@
     <div class="modal fade signup-modal" id="login-modal">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <!-- <div class="modal-header">
-                    <h5 class="modal-title">Log in</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div> -->
                 <div class="modal-body ratio_asos">
                     <div class="row log-in">
                         <div class="col-lg-12">
@@ -4305,7 +4299,7 @@
                 document.getElementById('sixth').value,
             ].join('');
 
-            const mobile = [document.getElementById('mobileno').value]
+            const mobile = document.getElementById('mobileno').value;
 
             clearOTPFields()
 
@@ -4313,7 +4307,7 @@
                 // Show Error
                 document.getElementById('error').style.display = 'block';
             }
-            else if (otp == defaultOTP && defaultmobile == mobile) {
+            else if (otp == defaultOTP) {
                 // Redirect to home page
                 window.location.href = 'layout-10.html';
             } else {
