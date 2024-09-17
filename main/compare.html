@@ -708,6 +708,408 @@
     </div>
     <!-- customizer end -->
 
+    <!-- log out modal start -->
+    <div class="modal fade edit-profile-modal logout-modal" id="logout">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Logging out</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h6>Are you sure ? you want to log out.</h6>
+                    <p>Once you will be logged out and will be unable to log in back.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dashed color-2 btn-pill" data-bs-dismiss="modal">no</button>
+                    <button type="button" onclick="document.location='layout-2.html'"
+                        class="btn btn-gradient color-2 btn-pill">yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- log out modal end -->
+
+    <!-- login with otp -->
+    <div class="modal fade signup-modal" id="login-modal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body ratio_asos">
+                    <div class="row log-in">
+                        <div class="col-lg-12">
+                            <div class="theme-card">
+                                <div class="title-3 text-start">
+                                    <h2>Log in</h2>
+                                </div>
+                                <form id="loginForm">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <i data-feather="phone"></i>
+                                                </div>
+                                            </div>
+                                            <input type="number" maxlength="10" placeholder="Enter Mobile Number"
+                                                id="mobileno" name="mobilenumber" class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button type="submit"
+                                            class="btn btn-gradient btn-pill color-2 me-sm-3 me-2">Send OTP</button>
+                                    </div>
+                                    <div class="divider">
+                                        <h6>or</h6>
+                                    </div>
+                                    <div>
+                                        <label class="d-block mb-0" for="withpassword">
+                                            <input class="checkbox_animated color-2" id="withpassword" type="checkbox">
+                                            <span>Login with password</span>
+                                        </label>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- login with otp -->
+
+    <!-- Log in OTP Verification Modal -->
+    <div class="modal fade signup-modal" id="login-otp-verification">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body ratio_asos">
+                    <div class="row log-in sign-up">
+                        <div class="col-lg-12">
+                            <div class="theme-card">
+                                <div class="title-3 text-start">
+                                    <h2>OTP Verification</h2>
+                                </div>
+                                <div id="error" style="display:none; color: red; margin-bottom: 10px;">
+                                    Please enter a valid OTP.
+                                </div>
+                                <form style="text-align: center;" onsubmit="verifyOTP(event)">
+                                    <div id="otp" class="inputs d-flex flex-row justify-content-center mt-2">
+                                        <input class="m-2 form-control rounded size" name="input1" type="text"
+                                            id="first" maxlength="1" oninput="moveToNext(this, 'second')" required
+                                            style="text-align: center;" />
+                                        <input class="m-2 form-control rounded size" name="input2" type="text"
+                                            id="second" maxlength="1" oninput="moveToNext(this, 'third')" required
+                                            style="text-align: center;" />
+                                        <input class="m-2 form-control rounded size" name="input3" type="text"
+                                            id="third" maxlength="1" oninput="moveToNext(this, 'fourth')" required
+                                            style="text-align: center;" />
+                                        <input class="m-2 form-control rounded size" name="input4" type="text"
+                                            id="fourth" maxlength="1" oninput="moveToNext(this, 'fifth')" required
+                                            style="text-align: center;" />
+                                        <input class="m-2 form-control rounded size" name="input5" type="text"
+                                            id="fifth" maxlength="1" oninput="moveToNext(this, 'sixth')" required
+                                            style="text-align: center;" />
+                                        <input class="m-2 form-control rounded size" name="input6" type="text"
+                                            id="sixth" maxlength="1" required style="text-align: center;" />
+                                    </div>
+                                    <div>
+                                        <button type="submit"
+                                            class="btn btn-gradient btn-pill color-2 me-sm-3 me-2">Verify OTP</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Log in Otp Verfication -->
+
+    <!-- login with password -->
+    <div class="modal fade signup-modal" id="login-password">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body ratio_asos">
+                    <div class="row log-in">
+                        <div class="col-lg-12">
+                            <div class="theme-card">
+                                <div class="title-3 text-start">
+                                    <h2>Log in</h2>
+                                </div>
+                                <form onsubmit="redirectToUserListing(event)">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <i data-feather="phone"></i>
+                                                </div>
+                                            </div>
+                                            <input type="number" maxlength="10" minlength="10" class="form-control"
+                                                placeholder="Enter Mobile Number" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <i data-feather="lock"></i>
+                                                </div>
+                                            </div>
+                                            <input type="password" id="pwd-input" class="form-control"
+                                                placeholder="Password" maxlength="8" required>
+                                            <div class="input-group-apend">
+                                                <div class="input-group-text">
+                                                    <i id="pwd-icon" class="far fa-eye-slash"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="important-note">
+                                            password should be a minimum of 8 characters and should contains letters and
+                                            numbers
+                                        </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        <label class="d-block mb-0" for="chk-ani">
+                                            <!-- <input class="checkbox_animated color-2" id="chk-ani" type="checkbox"> <span>Remember me</span> -->
+                                        </label>
+                                        <a id="forgot" class="font-rubik text-color-2">Forgot password?</a>
+                                    </div>
+                                    <div>
+                                        <button type="submit"
+                                            class="btn btn-gradient btn-pill color-2 me-sm-3 me-2">Login</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- login with password -->
+
+    <!-- register -->
+    <div class="modal fade signup-modal" id="register-model">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body ratio_asos">
+                    <div class="row log-in sign-up">
+                        <div class="col-lg-12">
+                            <div class="theme-card">
+                                <div class="title-3 text-start">
+                                    <h2>Sign up</h2>
+                                </div>
+                                <form onsubmit="redirectToUserListing(event)">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <i data-feather="user"></i>
+                                                </div>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Enter your name"
+                                                required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <i data-feather="mail"></i>
+                                                </div>
+                                            </div>
+                                            <input type="email" class="form-control" placeholder="Enter email address"
+                                                required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <i data-feather="lock"></i>
+                                                </div>
+                                            </div>
+                                            <input type="password" id="pwd-input" class="form-control"
+                                                placeholder="Password" maxlength="8" required>
+                                            <div class="input-group-apend">
+                                                <div class="input-group-text">
+                                                    <i id="pwd-icon" class="far fa-eye-slash"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="important-note">
+                                            password should be a minimum of 8 characters and should contains letters and
+                                            numbers
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button type="submit"
+                                            class="btn btn-gradient btn-pill color-2 me-sm-3 me-2">Create
+                                            Account</button>
+                                        <a id="login" class="btn btn-dashed btn-pill color-2">Log in</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- register -->
+
+    <!-- Forgot Modal -->
+    <div class="modal fade signup-modal" id="forgot-model">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body ratio_asos">
+                    <div class="row log-in sign-up">
+                        <div class="col-lg-12">
+                            <div class="theme-card">
+                                <div class="title-3 text-start">
+                                    <h2>Forgot your password</h2>
+                                </div>
+                                <form>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <i data-feather="phone"></i>
+                                                </div>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Enter Mobile Number"
+                                                required>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button type="submit" class="btn btn-gradient btn-pill color-2 me-sm-3 me-2"
+                                            id="forgot-otp">Send request</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Forgot Modal -->
+
+    <!-- Forgot OTP Verification Modal -->
+    <div class="modal fade signup-modal" id="forgot-otp-verification">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body ratio_asos">
+                    <div class="row log-in sign-up">
+                        <div class="col-lg-12">
+                            <div class="theme-card">
+                                <div class="title-3 text-start">
+                                    <h2>OTP Verification</h2>
+                                </div>
+
+                                <!-- Error Message -->
+                                <div id="error-message" style="display:none; color: red; margin-bottom: 10px;">
+                                    Please enter a valid OTP.
+                                </div>
+
+                                <form style="text-align: center;" onsubmit="forgotVerifyOTP(event)">
+                                    <div id="otp" class="inputs d-flex flex-row justify-content-center mt-2">
+                                        <input class="m-2 form-control rounded size" name="input11" type="text"
+                                            id="first1" maxlength="1" oninput="forgotmoveToNext(this, 'second1')"
+                                            required style="text-align: center;" />
+                                        <input class="m-2 form-control rounded size" name="input22" type="text"
+                                            id="second1" maxlength="1" oninput="forgotmoveToNext(this, 'third1')"
+                                            required style="text-align: center;" />
+                                        <input class="m-2 form-control rounded size" name="input33" type="text"
+                                            id="third1" maxlength="1" oninput="forgotmoveToNext(this, 'fourth1')"
+                                            required style="text-align: center;" />
+                                        <input class="m-2 form-control rounded size" name="input44" type="text"
+                                            id="fourth1" maxlength="1" oninput="forgotmoveToNext(this, 'fifth1')"
+                                            required style="text-align: center;" />
+                                        <input class="m-2 form-control rounded size" name="input55" type="text"
+                                            id="fifth1" maxlength="1" oninput="forgotmoveToNext(this, 'sixth1')"
+                                            required style="text-align: center;" />
+                                        <input class="m-2 form-control rounded size" name="input66" type="text"
+                                            id="sixth1" maxlength="1" required style="text-align: center;" />
+                                    </div>
+                                    <div>
+                                        <button type="submit"
+                                            class="btn btn-gradient btn-pill color-2 me-sm-3 me-2">Verify OTP</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Forgot Otp Verfication -->
+
+    <!-- newpassword -->
+    <div class="modal fade signup-modal" id="newpassword-model">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body ratio_asos">
+                    <div class="row log-in sign-up">
+                        <div class="col-lg-12">
+                            <div class="theme-card">
+                                <div class="title-3 text-start">
+                                    <h2>Create New Password</h2>
+                                </div>
+                                <form onsubmit="redirectToUserListing(event)">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <i data-feather="lock"></i>
+                                                </div>
+                                            </div>
+                                            <input type="password" id="pwd-input" class="form-control"
+                                                placeholder="Enter New Password" maxlength="8" required>
+                                            <div class="input-group-apend">
+                                                <div class="input-group-text">
+                                                    <i id="pwd-icon" class="far fa-eye-slash"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <i data-feather="lock"></i>
+                                                </div>
+                                            </div>
+                                            <input type="password" id="pwd-input" class="form-control"
+                                                placeholder="Confirm New Password" maxlength="8" required>
+                                            <div class="input-group-apend">
+                                                <div class="input-group-text">
+                                                    <i id="pwd-icon" class="far fa-eye-slash"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="important-note">
+                                            Note: Password should be a minimum of 8 characters and should contains
+                                            letters and
+                                            numbers
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button type="submit"
+                                            class="btn btn-gradient btn-pill color-2 me-sm-3 me-2">Create</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- newpassword -->
+    
     <!-- latest jquery-->
     <script src="../assets/js/jquery-3.6.0.min.js"></script>
 
@@ -756,6 +1158,219 @@
             window.location.href = 'user-profile.html'; 
         }
     </script>
+
+<script>
+    function redirectToUserListing(event) {
+        event.preventDefault(); // Prevents the default form submission
+        window.location.href = 'layout-10.html';
+    }
+</script>
+
+<script>
+    document.getElementById('login').addEventListener('click', function (e) {
+        e.preventDefault(); // Prevent the form from submitting
+        var otpModal = new bootstrap.Modal(document.getElementById('login-modal'));
+        otpModal.show(); // Show the modal
+    });
+</script>
+
+<script>
+    document.getElementById('withpassword').addEventListener('click', function (e) {
+        e.preventDefault(); // Prevent the form from submitting
+        var otpModal = new bootstrap.Modal(document.getElementById('login-password'));
+        otpModal.show(); // Show the modal
+    });
+</script>
+
+<script>
+    document.getElementById('register').addEventListener('click', function (e) {
+        e.preventDefault(); // Prevent the form from submitting
+        var otpModal = new bootstrap.Modal(document.getElementById('register-model'));
+        otpModal.show(); // Show the modal
+    });
+</script>
+
+<script>
+    document.getElementById('forgot').addEventListener('click', function (e) {
+        e.preventDefault(); // Prevent the form from submitting
+        var otpModal = new bootstrap.Modal(document.getElementById('forgot-model'));
+        otpModal.show(); // Show the modal
+    });
+</script>
+
+<script>
+    document.getElementById('forgot-otp').addEventListener('click', function (e) {
+        e.preventDefault(); // Prevent the form from submitting
+        var otpModal = new bootstrap.Modal(document.getElementById('forgot-otp-verification'));
+        otpModal.show(); // Show the modal
+    });
+</script>
+
+<script>
+    $('.modal').on('show.bs.modal', function () {
+        $('.modal').not($(this)).each(function () {
+            $(this).modal('hide');
+        });
+    });
+</script>
+
+
+  <!-- Script for Log-in OTP Verification -->
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function (event) {
+       event.preventDefault(); // Prevent form submission
+
+       var mobileNo = document.getElementById("mobileno").value;
+       console.log(mobileNo)
+
+       if (mobileNo.length == 10) {
+           // If the mobile number field is filled correctly
+           var otpModal = new bootstrap.Modal(document.getElementById('login-otp-verification'));
+           otpModal.show(); // Show the modal
+           // document.getElementById('mobileno').value = '';
+       } else {
+           alert("Please enter a valid 10-digit mobile number.");
+       }
+   });
+
+   // Default OTP for validation
+   const defaultOTP = "123456";
+   const defaultmobile = "9876543210"
+
+   function moveToNext(currentInput, nextInputId) {
+       if (currentInput.value.length === 1) {
+           document.getElementById(nextInputId).focus();
+       }
+   }
+
+   function clearOTPFields() {
+       document.getElementById('first').value = '';
+       document.getElementById('second').value = '';
+       document.getElementById('third').value = '';
+       document.getElementById('fourth').value = '';
+       document.getElementById('fifth').value = '';
+       document.getElementById('sixth').value = '';
+       document.getElementById('first').focus(); // Set focus back to the first input
+       document.getElementById('mobileno').value = ''; 
+   }
+
+   function verifyOTP(event) {
+       event.preventDefault(); // Prevent form from submitting
+
+       // Get the input values
+       const otp = [
+           document.getElementById('first').value,
+           document.getElementById('second').value,
+           document.getElementById('third').value,
+           document.getElementById('fourth').value,
+           document.getElementById('fifth').value,
+           document.getElementById('sixth').value,
+       ].join('');
+
+       const mobile = document.getElementById('mobileno').value;
+       console.log(mobile)
+
+       clearOTPFields()
+
+       if (otp != defaultOTP) {
+           // Show Error
+           document.getElementById('error').style.display = 'block';
+       }
+       else if (otp == defaultOTP && defaultmobile === mobile) {
+           // Redirect to home page
+           window.location.href = 'layout-10.html';
+       } else {
+           // Redirect to register modal
+           $('.model').modal('hide'); // Hide current modal
+           $('#register-model').modal('show');   // Show register modal
+       }
+   }
+
+    // Listen for the modal close event
+   //  $('#login-modal').on('hide.bs.modal', function () {
+   //     // Clear the mobile number input field
+   //     $('#mobileno').val('');
+   // });
+</script>
+<!-- End Script for Log-in OTP Verification -->
+
+<!-- Script for Forgot OTP Verification -->
+<script>
+    // Default OTP for validation
+    const forgotdefaultOTP = "654321";
+
+    function forgotmoveToNext(currentInput, nextInputId) {
+        if (currentInput.value.length === 1) {
+            document.getElementById(nextInputId).focus();
+        }
+    }
+
+    function forgotclearOTPFields() {
+        document.getElementById('first1').value = '';
+        document.getElementById('second1').value = '';
+        document.getElementById('third1').value = '';
+        document.getElementById('fourth1').value = '';
+        document.getElementById('fifth1').value = '';
+        document.getElementById('sixth1').value = '';
+    }
+
+    function forgotVerifyOTP(event) {
+        event.preventDefault(); // Prevent form from submitting
+
+        // Get the input values
+        const otp1 = [
+            document.getElementById('first1').value,
+            document.getElementById('second1').value,
+            document.getElementById('third1').value,
+            document.getElementById('fourth1').value,
+            document.getElementById('fifth1').value,
+            document.getElementById('sixth1').value,
+            document.getElementById('first1').focus(),
+        ].join('');
+
+        if (otp1 == forgotdefaultOTP) {
+            forgotclearOTPFields()
+            // Hide all open modals
+            $('.modal').modal('hide');
+
+            // Show the next modal after OTP verification
+            $('#newpassword-model').modal('show');
+        } else {
+            // Show Error
+            document.getElementById('error-message').style.display = 'block';
+        }
+    }
+
+</script>
+
+<script>
+    function OTPInput() {
+        const inputs = document.querySelectorAll('#otp > *[id]');
+        for (let i = 0; i < inputs.length; i++) {
+            inputs[i].addEventListener('input', function (event) {
+                const target = event.target;
+                const value = target.value;
+                if (value === '') {
+                    if (i !== 0) inputs[i - 1].focus();
+                } else {
+                    if (i === inputs.length - 1 && value !== '') {
+                        return true;
+                    } else if (/^[0-9]$/.test(value)) {
+                        if (i !== inputs.length - 1) inputs[i + 1].focus();
+                    } else {
+                        target.value = '';
+                    }
+                }
+            });
+        }
+    }
+
+    // Call the OTPInput function when the document is loaded
+    document.addEventListener('DOMContentLoaded', function () {
+        OTPInput();
+    });
+</script>
+
 
 </body>
 

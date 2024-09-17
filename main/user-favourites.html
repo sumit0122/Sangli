@@ -1978,32 +1978,6 @@
     <!-- Color-picker js-->
     <script src="../assets/js/color/template-color.js"></script>
 
-    
-
-    <script>
-        // Listen for the modal close event
-        $('#login-modal').on('hide.bs.modal', function () {
-            // Clear the mobile number input field
-            $('#mobileno').val('');
-        });
-    </script>
-
-    <script>
-        document.getElementById("loginForm").addEventListener("submit", function (event) {
-            event.preventDefault(); // Prevent form submission
-
-            var mobileNo = document.getElementById("mobileno").value;
-
-            if (mobileNo.length == 10) {
-                // If the mobile number field is filled correctly
-                var otpModal = new bootstrap.Modal(document.getElementById('login-otp-verification'));
-                otpModal.show(); // Show the modal
-                document.getElementById('mobileno').value = '';
-            } else {
-                alert("Please enter a valid 10-digit mobile number.");
-            }
-        });
-    </script>
 
     <script>
         function redirectToUserListing(event) {
@@ -2060,61 +2034,84 @@
         });
     </script>
 
-    <!-- Script for Log-in OTP Verification -->
-    <script>
-        // Default OTP for validation
-        const defaultOTP = "123456";
-        const defaultmobile = "9876543210"
+      <!-- Script for Log-in OTP Verification -->
+      <script>
+        document.getElementById("loginForm").addEventListener("submit", function (event) {
+           event.preventDefault(); // Prevent form submission
 
-        function moveToNext(currentInput, nextInputId) {
-            if (currentInput.value.length === 1) {
-                document.getElementById(nextInputId).focus();
-            }
-        }
+           var mobileNo = document.getElementById("mobileno").value;
+           console.log(mobileNo)
 
-        function clearOTPFields() {
-            document.getElementById('first').value = '';
-            document.getElementById('second').value = '';
-            document.getElementById('third').value = '';
-            document.getElementById('fourth').value = '';
-            document.getElementById('fifth').value = '';
-            document.getElementById('sixth').value = '';
-            document.getElementById('first').focus(); // Set focus back to the first input
-        }
+           if (mobileNo.length == 10) {
+               // If the mobile number field is filled correctly
+               var otpModal = new bootstrap.Modal(document.getElementById('login-otp-verification'));
+               otpModal.show(); // Show the modal
+               // document.getElementById('mobileno').value = '';
+           } else {
+               alert("Please enter a valid 10-digit mobile number.");
+           }
+       });
 
-        function verifyOTP(event) {
-            event.preventDefault(); // Prevent form from submitting
+       // Default OTP for validation
+       const defaultOTP = "123456";
+       const defaultmobile = "9876543210"
 
-            // Get the input values
-            const otp = [
-                document.getElementById('first').value,
-                document.getElementById('second').value,
-                document.getElementById('third').value,
-                document.getElementById('fourth').value,
-                document.getElementById('fifth').value,
-                document.getElementById('sixth').value,
-            ].join('');
+       function moveToNext(currentInput, nextInputId) {
+           if (currentInput.value.length === 1) {
+               document.getElementById(nextInputId).focus();
+           }
+       }
 
-            const mobile = [document.getElementById('mobileno').value]
+       function clearOTPFields() {
+           document.getElementById('first').value = '';
+           document.getElementById('second').value = '';
+           document.getElementById('third').value = '';
+           document.getElementById('fourth').value = '';
+           document.getElementById('fifth').value = '';
+           document.getElementById('sixth').value = '';
+           document.getElementById('first').focus(); // Set focus back to the first input
+           document.getElementById('mobileno').value = ''; 
+       }
 
-            clearOTPFields()
+       function verifyOTP(event) {
+           event.preventDefault(); // Prevent form from submitting
 
-            if (otp != defaultOTP) {
-                // Show Error
-                document.getElementById('error').style.display = 'block';
-            }
-            else if (otp == defaultOTP && defaultmobile == mobile) {
-                // Redirect to home page
-                window.location.href = 'layout-10.html';
-            } else {
-                // Redirect to register modal
-                $('.model').modal('hide'); // Hide current modal
-                $('#register-model').modal('show');   // Show register modal
-            }
-        }
+           // Get the input values
+           const otp = [
+               document.getElementById('first').value,
+               document.getElementById('second').value,
+               document.getElementById('third').value,
+               document.getElementById('fourth').value,
+               document.getElementById('fifth').value,
+               document.getElementById('sixth').value,
+           ].join('');
 
-    </script>
-    <!-- End Script for Log-in OTP Verification -->
+           const mobile = document.getElementById('mobileno').value;
+           console.log(mobile)
+
+           clearOTPFields()
+
+           if (otp != defaultOTP) {
+               // Show Error
+               document.getElementById('error').style.display = 'block';
+           }
+           else if (otp == defaultOTP && defaultmobile === mobile) {
+               // Redirect to home page
+               window.location.href = 'layout-10.html';
+           } else {
+               // Redirect to register modal
+               $('.model').modal('hide'); // Hide current modal
+               $('#register-model').modal('show');   // Show register modal
+           }
+       }
+
+        // Listen for the modal close event
+       //  $('#login-modal').on('hide.bs.modal', function () {
+       //     // Clear the mobile number input field
+       //     $('#mobileno').val('');
+       // });
+   </script>
+   <!-- End Script for Log-in OTP Verification -->
 
     <!-- Script for Forgot OTP Verification -->
     <script>
