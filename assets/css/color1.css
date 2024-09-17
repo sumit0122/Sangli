@@ -11901,7 +11901,8 @@ body.rtl.dark-layout .blog-single-detail .blog-title .post-detail li + li {
         width: 180px;
         height: 100%;
         right: -54px;
-        background-color: rgba(255, 255, 255, 0.2); }
+        background-color: rgba(255, 255, 255, 0.2);
+       }
       .my-gallery .find-cities .citi-overlay h6:hover::after {
         -webkit-transition: all 0.3s ease;
         transition: all 0.3s ease;
@@ -11918,7 +11919,9 @@ body.rtl.dark-layout .blog-single-detail .blog-title .post-detail li + li {
     opacity: 1; }
 
 .my-gallery.gallery-6 .find-cities::after {
-  background-image: var(--theme-gradient13); }
+  /* background-image: var(--theme-gradient13);  */
+  background-image: none; 
+}
 
 .offer-section .title-1 h2 {
   margin-bottom: -9px; }
