@@ -4307,7 +4307,7 @@
                 // Show Error
                 document.getElementById('error').style.display = 'block';
             }
-            else if (otp == defaultOTP) {
+            else if (otp == defaultOTP && defaultmobile === mobile) {
                 // Redirect to home page
                 window.location.href = 'layout-10.html';
             } else {
